@@ -99,3 +99,21 @@ CREATE TABLE province ( -- 16
     name                        VARCHAR2(30)    CONSTRAINT province_name_nn NOT NULL,
     id_country                  NUMBER(4)       CONSTRAINT province_idCountry_nn NOT NULL
 );
+
+CREATE TABLE city ( -- 17
+    id                          NUMBER(4)       CONSTRAINT city_id_nn NOT NULL,
+    name                        VARCHAR2(30)    CONSTRAINT city_name_nn NOT NULL,
+    id_province                 NUMBER(4)       CONSTRAINT city_idProvince_nn NOT NULL
+);
+
+CREATE TABLE address ( -- 18
+    id                          NUMBER(4)       CONSTRAINT address_id_nn NOT NULL,
+    detail                      VARCHAR2(180)   CONSTRAINT address_detail_nn NOT NULL,
+    id_city                     NUMBER(4)       CONSTRAINT address_idCity_nn NOT NULL
+);
+
+CREATE TABLE address_filmP ( -- 19
+    id                          NUMBER(4)       CONSTRAINT addressFilmP_id_nn NOT NULL,
+    id_person                   NUMBER(4)       CONSTRAINT addressFilmP_idPerson_nn NOT NULL,
+    id_address                  NUMBER(4)       CONSTRAINT addressFilmP_idAddress_nn NOT NULL
+);

@@ -142,7 +142,7 @@ create table regular_user(--35
 
 create table text( --36
     id                           NUMBER(4)       PRIMARY KEY CONSTRAINT text_textId_nn NOT NULL,
-    body                         VARCHAR2(240)   CONSTRAINT textBody_nn NOT NULL,
+    body                         VARCHAR2(280)   CONSTRAINT textBody_nn NOT NULL,
     public_text                  NUMBER(1),
     date_of                      DATE default sysdate   CONSTRAINT textDate_nn NOT NULL
     );
@@ -159,3 +159,31 @@ CREATE TABLE comment(--38
     id_reply                     NUMBER(4)        CONSTRAINT CommentAuthor_nn NOT NULL
     );
     
+CREATE TABLE review(--39
+    id_review                    NUMBER(4)       PRIMARY KEY CONSTRAINT reviewId_nn NOT NULL,
+    raiting                      NUMBER(1)       CONSTRAINT raitingreview_nn NOT NULL,
+    title                        VARCHAR2(30)    CONSTRAINT reviewTitle_nn NOT NULL,
+    author                       NUMBER(4)       CONSTRAINT reviewAuthor_nn NOT NULL,
+    id_series                    NUMBER(4),
+    id_season                    NUMBER(4),
+    id_production                NUMBER(4)    --Dios mio en serio que son ambisiosos ustedes dos -_-   
+    );
+
+CREATE TABLE wish_list(--40
+    id                           NUMBER(4)       PRIMARY KEY CONSTRAINT wishlistId_nn NOT NULL,
+    id_user                      NUMBER(4)       CONSTRAINT wishListUserid_nn NOT NULL,
+    id_production                NUMBER(4)       CONSTRAINT WishListProdictionId_nn NOT NULL
+    );
+
+CREATE TABLE SeenRecently(--40
+    id                           NUMBER(4)       PRIMARY KEY CONSTRAINT SeenRecentlyId_nn NOT NULL,
+    id_user                      NUMBER(4)       CONSTRAINT SeenRecentlyUserid_nn NOT NULL,
+    id_production                NUMBER(4)       CONSTRAINT SeenRecentlyProdictionId_nn NOT NULL
+    );
+
+CREATE TABLE Cart(--40
+    id                           NUMBER(4)       PRIMARY KEY CONSTRAINT CartId_nn NOT NULL,
+    id_user                      NUMBER(4)       CONSTRAINT CartUserid_nn NOT NULL,
+    id_production                NUMBER(4)       CONSTRAINT CartProdictionId_nn NOT NULL
+    );
+

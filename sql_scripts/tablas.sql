@@ -118,6 +118,22 @@ CREATE TABLE address_filmP ( -- 19
     id_address                  NUMBER(4)       CONSTRAINT addressFilmP_idAddress_nn NOT NULL
 );
 
+CREATE TABLE media_type    ( --30
+    id                          NUMBER(4)       CONSTRAINT mediaTypeid_nn NOT NULL,
+    name                        VARCHAR2(20)    CONSTRAINT metyaTypeName_nn NOT NULL
+);
+
+CREATE TABLE media_of_production (--31
+    id                          NUMBER(4)       CONSTRAINT mediaOfProduction_id_nn NOT NULL,
+    id_production               NUMBER(4)       CONSTRAINT FkMoP_idProduction_nn NOT NULL,
+    id_supportMedia             NUMBER(4)       CONSTRAINT FkMoP_supporMediaID_id_nn NOT NULL
+);
+
+CREATE TABLE media_of_crew_member (--32
+    id                          NUMBER(4)       CONSTRAINT mediaOfProduction_id_nn NOT NULL,
+    id_crew_member              NUMBER(4)       CONSTRAINT FkMoCM_crewMember_id_nn NOT NULL,
+    id_supportMedia             NUMBER(4)       CONSTRAINT FkMoCM_supporMediaID_id_nn NOT NULL
+);
 
 
 CREATE TABLE userr( --33
@@ -175,15 +191,55 @@ CREATE TABLE wish_list(--40
     id_production                NUMBER(4)       CONSTRAINT WishListProdictionId_nn NOT NULL
     );
 
-CREATE TABLE SeenRecently(--40
+CREATE TABLE seen_recently(--41
     id                           NUMBER(4)       PRIMARY KEY CONSTRAINT SeenRecentlyId_nn NOT NULL,
     id_user                      NUMBER(4)       CONSTRAINT SeenRecentlyUserid_nn NOT NULL,
     id_production                NUMBER(4)       CONSTRAINT SeenRecentlyProdictionId_nn NOT NULL
     );
 
-CREATE TABLE Cart(--40
+CREATE TABLE cart(--42
     id                           NUMBER(4)       PRIMARY KEY CONSTRAINT CartId_nn NOT NULL,
     id_user                      NUMBER(4)       CONSTRAINT CartUserid_nn NOT NULL,
     id_production                NUMBER(4)       CONSTRAINT CartProdictionId_nn NOT NULL
     );
 
+CREATE TABLE purchase(--43
+    id                           NUMBER(4)       PRIMARY KEY CONSTRAINT purchaseId_nn NOT NULL,
+    date                         DATE            CONSTRAINT purchase_logDate_nn NOT NULL,
+    tax                          NUMBER(8,2)     CONSTRAINT purchase_taxId_nn NOT NULL,
+    id_user                      NUMBER(4)       CONSTRAINT purchase_idUserId_nn NOT NULL,
+    id_payment_method            NUMBER(4)       CONSTRAINT purchase_paymentMethod_nn NOT NULL
+);
+
+CREATE TABLE purchase_production(--44
+     id                          NUMBER(4)       PRIMARY KEY CONSTRAINT purchaseProductionId_nn NOT NULL,
+     id_production               NUMBER(4)       CONSTRAINT purchaseProductionIdProduction_nn NOT NULL,
+     id_purchase                 NUMBER(4)       CONSTRAINT purchaseProductionIdPurchase_nn NOT NULL
+);
+
+CREATE TABLE payment_method(--45
+     id                          NUMBER(4)       PRIMARY KEY CONSTRAINT paymentMethodId_nn NOT NULL,
+     owner                       NUMBER(4)       CONSTRAINT PaymentOwner_nn NOT NULL
+);
+
+CREATE TABLE paypal(--46
+    id_paypal                    NUMBER(4)       PRIMARY KEY CONSTRAINT idPaypal_nn NOT NULL,
+    acount                       VARCHAR2(20)    CONSTRAINT acountPaypal_nn NOT NULL
+);
+
+CREATE TABLE creditCard(--46
+    id                          NUMBER(4)       PRIMARY KEY CONSTRAINT creditCardId_nn NOT NULL,
+    name                        VARCHAR(20)     CONSTRAINT creditCardName NOT NULL,
+    number                      NUMMBER(20)     CONSTRAINT creditCardnumber NOT NULL,
+    --ccv                         NUMBER(4)       CONSTRAINT creditCardCCV_nn NOT NULL, el CCV no se guarda por motivos de seguridad.
+    expiration                  DATE            CONSTRAINT creditCardExpiration NOT NULL
+    --brand (Puede calcularse en java con el front end)
+);
+     
+     
+     
+     
+     
+     
+     
+     

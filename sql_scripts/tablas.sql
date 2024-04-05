@@ -130,7 +130,7 @@ CREATE TABLE userr( --33
 
 Create table adminisrator( --34
     id                          NUMBER(4)       PRIMARY KEY CONSTRAINT admin_id_nn NOT NULL
-)
+);
 
 create table regular_user(--35
     id_regular_user             NUMBER(4)       PRIMARY KEY CONSTRAINT regularUser_id_nn NOT NULL,
@@ -138,13 +138,24 @@ create table regular_user(--35
     id_cart                     NUMBER(4)       CONSTRAINT userCart_fk_nn NOT NULL,
     id_recent_views             NUMBER(4)       CONSTRAINT userRecentViews_fk_nn NOT NULL,
     id_wishlist                 NUMBER(4)       CONSTRAINT userwishlist_fk_nn NOT NULL
-    )
+    );
 
-CREATE TABLE text(--36
-    id             NUMBER(4)       PRIMARY KEY CONSTRAINT textId_nn NOT NULL,
-    body           VARCHAR2(240)   CONSTRAINT textBody_nn NOT NULL,
-    public         NUMBER(1),
-    date           date default sysdate CONSTRAINT textDate_nn NOT NULL
-    )
+create table text( --36
+    id                           NUMBER(4)       PRIMARY KEY CONSTRAINT text_textId_nn NOT NULL,
+    body                         VARCHAR2(240)   CONSTRAINT textBody_nn NOT NULL,
+    public_text                  NUMBER(1),
+    date_of                      DATE default sysdate   CONSTRAINT textDate_nn NOT NULL
+    );
+
+CREATE TABLE synopsis(--37
+    id_synopsis                  NUMBER(4)       PRIMARY KEY CONSTRAINT SynopsisId_nn NOT NULL,
+    spoiler                      NUMBER(1),
+    author                       NUMBER(4)       CONSTRAINT author_synopsis_fk_nn NOT NULL    
+    );
     
-
+CREATE TABLE comment(--38
+    id                           NUMBER(4)       PRIMARY KEY CONSTRAINT comment_textId_nn NOT NULL,
+    author                       NUMBER(4)        CONSTRAINT CommentAuthor_nn NOT NULL,
+    id_reply                     NUMBER(4)        CONSTRAINT CommentAuthor_nn NOT NULL
+    );
+    

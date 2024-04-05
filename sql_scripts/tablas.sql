@@ -117,3 +117,17 @@ CREATE TABLE address_filmP ( -- 19
     id_person                   NUMBER(4)       CONSTRAINT addressFilmP_idPerson_nn NOT NULL,
     id_address                  NUMBER(4)       CONSTRAINT addressFilmP_idAddress_nn NOT NULL
 );
+
+
+
+CREATE TABLE userr( --33
+    id                          NUMBER(6)       CONSTRAINT user_id_nn not null,
+    username                    VARCHAR2(30)    CONSTRAINT user_username_nn NOT NULL,
+    password                    VARCHAR2(20)    CONSTRAINT user_password_nn NOT NULL,
+    email                       VARCHAR2(20)    CONSTRAINT user_email_nn NOT NULL,
+    legal_identification        VARCHAR2(8)     CONSTRAINT user_legalId_nn NOT NULL
+);
+
+
+
+

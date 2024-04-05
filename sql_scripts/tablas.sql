@@ -128,6 +128,23 @@ CREATE TABLE userr( --33
     legal_identification        VARCHAR2(8)     CONSTRAINT user_legalId_nn NOT NULL
 );
 
+Create table adminisrator( --34
+    id                          NUMBER(4)       PRIMARY KEY CONSTRAINT admin_id_nn NOT NULL
+)
 
+create table regular_user(--35
+    id_regular_user             NUMBER(4)       PRIMARY KEY CONSTRAINT regularUser_id_nn NOT NULL,
+    is_banned                   NUMBER(1), -- Si no esta baneado esto es nulo. SI lo esta se pone cualquier cosa aqui
+    id_cart                     NUMBER(4)       CONSTRAINT userCart_fk_nn NOT NULL,
+    id_recent_views             NUMBER(4)       CONSTRAINT userRecentViews_fk_nn NOT NULL,
+    id_wishlist                 NUMBER(4)       CONSTRAINT userwishlist_fk_nn NOT NULL
+    )
 
+CREATE TABLE text(--36
+    id             NUMBER(4)       PRIMARY KEY CONSTRAINT textId_nn NOT NULL,
+    body           VARCHAR2(240)   CONSTRAINT textBody_nn NOT NULL,
+    public         NUMBER(1),
+    date           date default sysdate CONSTRAINT textDate_nn NOT NULL
+    )
+    
 

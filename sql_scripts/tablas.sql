@@ -165,7 +165,7 @@ create table text( --36
 
 CREATE TABLE synopsis(--37
     id_synopsis                  NUMBER(4)       PRIMARY KEY CONSTRAINT SynopsisId_nn NOT NULL,
-    spoiler                      NUMBER(1),
+    --spoiler                      NUMBER(1),
     author                       NUMBER(4)       CONSTRAINT author_synopsis_fk_nn NOT NULL    
     );
     

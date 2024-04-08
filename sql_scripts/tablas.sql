@@ -9,7 +9,6 @@ CREATE TABLE production ( -- 1 Production for all series and movies
     created_by                  NUMBER(4)       CONSTRAINT production_createdBy_nn NOT NULL
 );
 
-
 CREATE TABLE genre ( -- 2 Genre of the productions
     id                          NUMBER(4)       CONSTRAINT genre_id_nn NOT NULL,
     name                        VARCHAR2(30)    CONSTRAINT genre_name_nn NOT NULL,
@@ -104,7 +103,7 @@ CREATE TABLE person ( -- 19
     middle_name                 VARCHAR(20)    CONSTRAINT person_midlename_nn NOT NULL,
     last_name                   VARCHAR2(20)   CONSTRAINT person_lastname_nn NOT NULL,
     nickname                    VARCHAR2(20)   CONSTRAINT person_nickname_nn NOT NULL,
-    image                       blob,
+    image                       BLOB,
     gender                      NUMBER(4),     --NULL = prefer not to say
     partner                     NUMBER(4)      CONSTRAINT Person_partner_nn NOT NULL
 );
@@ -223,10 +222,11 @@ CREATE TABLE creditCard(--46  Creddit card for payment methods
     expiration                  DATE            CONSTRAINT creditCardExpiration NOT NULL
 );
 
-CREATE TABLE production image(--47
-    id                         
-    id_production
-    image
+CREATE TABLE production_image(--47
+    id                          NUMBER(4)       CONSTRAINT productionImage_id_nn NOT NULL,    
+    id_production               NUMBER(4)       CONSTRAINT prodImage_productionid_nn NOT NULL,
+    image                       BLOB            CONSTRAINT production_image_nn NOT NULL
+    );
      
      
      

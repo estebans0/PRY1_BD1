@@ -4,26 +4,32 @@
  */
 package UI;
 
+import java.awt.Color;
 import java.awt.Image;
+import javax.swing.BorderFactory;
 import javax.swing.ImageIcon;
+import javax.swing.border.Border;
+import javax.swing.*;
+import java.awt.*;
 
 /**
  *
  * @author esteb
  */
 public class Interface extends javax.swing.JFrame {
-
     /**
      * Creates new form Interface
      */
     public Interface() {
         initComponents();
+        
         // Setear texto subrayado del link de nuevo usuario
         newUser_link.setText("<html><u> Are you a new user? Register here</u></html>");
         // Escalar icono al JPanel del boton de login
         Image imagen = new ImageIcon(getClass().getResource("/Images/login.png")).getImage(); // Buscar la imagen por su ruta
         ImageIcon icono = new ImageIcon(imagen.getScaledInstance(login_btn.getWidth(), login_btn.getHeight(), Image.SCALE_SMOOTH));
         login_btn.setIcon(icono);
+        sideMenu_panel.setVisible(false);
     }
 
     /**
@@ -35,10 +41,11 @@ public class Interface extends javax.swing.JFrame {
     // <editor-fold defaultstate="collapsed" desc="Generated Code">//GEN-BEGIN:initComponents
     private void initComponents() {
 
-        app_panel = new javax.swing.JPanel();
+        top_panel = new javax.swing.JPanel();
         logo_img = new javax.swing.JLabel();
         appName_txt = new javax.swing.JLabel();
-        login_panel = new javax.swing.JPanel();
+        paneles = new javax.swing.JTabbedPane();
+        login = new javax.swing.JPanel();
         newUser_link = new javax.swing.JLabel();
         login_txt = new javax.swing.JLabel();
         user_txt = new javax.swing.JLabel();
@@ -46,88 +53,1255 @@ public class Interface extends javax.swing.JFrame {
         enterUser_txtField = new javax.swing.JTextField();
         pass_txt = new javax.swing.JLabel();
         login_btn = new javax.swing.JLabel();
+        register = new javax.swing.JPanel();
+        back_btn = new javax.swing.JLabel();
+        register_txt = new javax.swing.JLabel();
+        registerUser_txt = new javax.swing.JLabel();
+        registerUser_txtField = new javax.swing.JTextField();
+        registerEmail_txt = new javax.swing.JLabel();
+        registerEmail_txtField = new javax.swing.JTextField();
+        registerPass_txt = new javax.swing.JLabel();
+        registerPass_txtField = new javax.swing.JTextField();
+        registerIdType_txt = new javax.swing.JLabel();
+        registerIdType_cBox = new javax.swing.JComboBox<>();
+        registerId_txt = new javax.swing.JLabel();
+        registerId_txtField = new javax.swing.JTextField();
+        registerName_txt = new javax.swing.JLabel();
+        registerFirstName_txtField = new javax.swing.JTextField();
+        registerMiddleName_txtField = new javax.swing.JTextField();
+        registerLastName_txtField = new javax.swing.JTextField();
+        registerNickname_txtField = new javax.swing.JTextField();
+        registerGender_txt = new javax.swing.JLabel();
+        registerGender_cBox = new javax.swing.JComboBox<>();
+        registerDob_txt = new javax.swing.JLabel();
+        registerDob_chooser = new com.toedter.calendar.JDateChooser();
+        register_btn = new javax.swing.JLabel();
+        main_menu = new javax.swing.JPanel();
+        sideMenu_panel = new javax.swing.JPanel();
+        sideMenu_txt = new javax.swing.JLabel();
+        exitSideMenu_btn = new javax.swing.JLabel();
+        logOut_btn = new javax.swing.JLabel();
+        purchases_btn = new javax.swing.JLabel();
+        cart_btn = new javax.swing.JLabel();
+        wishList_btn = new javax.swing.JLabel();
+        menu_btn = new javax.swing.JLabel();
+        titulo_txt = new javax.swing.JLabel();
+        logo_lbl = new javax.swing.JLabel();
+        search_txt = new javax.swing.JLabel();
+        search_txtField = new javax.swing.JTextField();
+        search_btn = new javax.swing.JLabel();
+        advSearch_btn = new javax.swing.JLabel();
+        topMedia_scroll = new javax.swing.JScrollPane();
+        topMovies_panel = new javax.swing.JPanel();
+        movie_btn1 = new javax.swing.JPanel();
+        movie_logo1 = new javax.swing.JLabel();
+        movie_name1 = new javax.swing.JLabel();
+        movie_btn2 = new javax.swing.JPanel();
+        movie_logo2 = new javax.swing.JLabel();
+        movie_name2 = new javax.swing.JLabel();
+        movie_btn3 = new javax.swing.JPanel();
+        movie_logo3 = new javax.swing.JLabel();
+        movie_name3 = new javax.swing.JLabel();
+        movie_btn4 = new javax.swing.JPanel();
+        movie_logo4 = new javax.swing.JLabel();
+        movie_name4 = new javax.swing.JLabel();
+        movie_btn6 = new javax.swing.JPanel();
+        movie_logo6 = new javax.swing.JLabel();
+        movie_name6 = new javax.swing.JLabel();
+        movie_btn7 = new javax.swing.JPanel();
+        movie_logo7 = new javax.swing.JLabel();
+        movie_name7 = new javax.swing.JLabel();
+        movie_btn5 = new javax.swing.JPanel();
+        movie_logo5 = new javax.swing.JLabel();
+        movie_name5 = new javax.swing.JLabel();
+        moreMovies_btn = new javax.swing.JLabel();
+        lastMedia_txt = new javax.swing.JLabel();
+        latestMedia_scroll = new javax.swing.JScrollPane();
+        latestMovies_panel = new javax.swing.JPanel();
+        movie_btn8 = new javax.swing.JPanel();
+        movie_logo8 = new javax.swing.JLabel();
+        movie_name8 = new javax.swing.JLabel();
+        movie_btn9 = new javax.swing.JPanel();
+        movie_logo9 = new javax.swing.JLabel();
+        movie_name9 = new javax.swing.JLabel();
+        movie_btn10 = new javax.swing.JPanel();
+        movie_logo10 = new javax.swing.JLabel();
+        movie_name10 = new javax.swing.JLabel();
+        movie_btn11 = new javax.swing.JPanel();
+        movie_logo11 = new javax.swing.JLabel();
+        movie_name11 = new javax.swing.JLabel();
+        movie_btn12 = new javax.swing.JPanel();
+        movie_logo12 = new javax.swing.JLabel();
+        movie_name12 = new javax.swing.JLabel();
+        movie_btn13 = new javax.swing.JPanel();
+        movie_logo13 = new javax.swing.JLabel();
+        movie_name13 = new javax.swing.JLabel();
+        movie_btn14 = new javax.swing.JPanel();
+        movie_logo14 = new javax.swing.JLabel();
+        movie_name14 = new javax.swing.JLabel();
+        moreMovies_btn2 = new javax.swing.JLabel();
+        topMedia_txt = new javax.swing.JLabel();
+        moreRecentMedia_cBox = new javax.swing.JComboBox<>();
+        moreTopMedia_cBox = new javax.swing.JComboBox<>();
+        search_results = new javax.swing.JPanel();
+        return_btn = new javax.swing.JLabel();
+        titulo_txt1 = new javax.swing.JLabel();
+        topMedia_scroll1 = new javax.swing.JScrollPane();
+        topMovies_panel1 = new javax.swing.JPanel();
+        movie_btn15 = new javax.swing.JPanel();
+        movie_logo15 = new javax.swing.JLabel();
+        movie_name15 = new javax.swing.JLabel();
+        movie_btn16 = new javax.swing.JPanel();
+        movie_logo16 = new javax.swing.JLabel();
+        movie_name16 = new javax.swing.JLabel();
+        movie_btn17 = new javax.swing.JPanel();
+        movie_logo17 = new javax.swing.JLabel();
+        movie_name17 = new javax.swing.JLabel();
+        movie_btn18 = new javax.swing.JPanel();
+        movie_logo18 = new javax.swing.JLabel();
+        movie_name18 = new javax.swing.JLabel();
+        movie_btn19 = new javax.swing.JPanel();
+        movie_logo19 = new javax.swing.JLabel();
+        movie_name19 = new javax.swing.JLabel();
+        movie_btn20 = new javax.swing.JPanel();
+        movie_logo20 = new javax.swing.JLabel();
+        movie_name20 = new javax.swing.JLabel();
+        movie_btn21 = new javax.swing.JPanel();
+        movie_logo21 = new javax.swing.JLabel();
+        movie_name21 = new javax.swing.JLabel();
+        advanced_search = new javax.swing.JPanel();
+        return_btn_Adv = new javax.swing.JLabel();
+        titulo_txt2 = new javax.swing.JLabel();
+        typeFilter_txt = new javax.swing.JLabel();
+        typeFilter_cBox = new javax.swing.JComboBox<>();
+        genreFilter_txt = new javax.swing.JLabel();
+        genreFilter_cBox = new javax.swing.JComboBox<>();
+        actorFilter_txt = new javax.swing.JLabel();
+        actorFilter_cBox = new javax.swing.JComboBox<>();
+        producerFilter_txt = new javax.swing.JLabel();
+        producerFilter_cBox = new javax.swing.JComboBox<>();
+        countryFilter_txt1 = new javax.swing.JLabel();
+        countryFilter_cBox = new javax.swing.JComboBox<>();
+        sortByFilter_txt = new javax.swing.JLabel();
+        highRated_radioB = new javax.swing.JRadioButton();
+        lowRated_radioB = new javax.swing.JRadioButton();
+        popular_radioB = new javax.swing.JRadioButton();
+        newest_radioB = new javax.swing.JRadioButton();
+        oldest_radioB = new javax.swing.JRadioButton();
+        search_btn_Adv = new javax.swing.JLabel();
+        bottom_panel = new javax.swing.JPanel();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
+        getContentPane().setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
 
-        app_panel.setBackground(new java.awt.Color(255, 255, 255));
-        app_panel.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(0, 0, 0), 5));
-        app_panel.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
+        top_panel.setBackground(new java.awt.Color(255, 255, 255));
+        top_panel.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(0, 0, 0), 5));
+        top_panel.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
 
         logo_img.setFont(new java.awt.Font("Cascadia Code", 0, 16)); // NOI18N
         logo_img.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
         logo_img.setText("Logo");
-        app_panel.add(logo_img, new org.netbeans.lib.awtextra.AbsoluteConstraints(130, 10, 100, 30));
+        top_panel.add(logo_img, new org.netbeans.lib.awtextra.AbsoluteConstraints(130, 10, 100, 30));
 
         appName_txt.setFont(new java.awt.Font("Cascadia Code", 0, 16)); // NOI18N
         appName_txt.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
         appName_txt.setText("App Name");
-        app_panel.add(appName_txt, new org.netbeans.lib.awtextra.AbsoluteConstraints(20, 10, 100, 30));
+        top_panel.add(appName_txt, new org.netbeans.lib.awtextra.AbsoluteConstraints(20, 10, 100, 30));
 
-        login_panel.setBackground(new java.awt.Color(255, 255, 255));
-        login_panel.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(0, 0, 0), 5));
-        login_panel.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
+        getContentPane().add(top_panel, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, 1100, 50));
+
+        login.setBackground(new java.awt.Color(255, 255, 255));
+        login.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(0, 0, 0), 5));
+        login.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseClicked(java.awt.event.MouseEvent evt) {
+                loginMouseClicked(evt);
+            }
+        });
+        login.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
 
         newUser_link.setFont(new java.awt.Font("Cascadia Code", 0, 14)); // NOI18N
         newUser_link.setForeground(new java.awt.Color(0, 51, 204));
         newUser_link.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
         newUser_link.setText("Are you a new user? Register here");
         newUser_link.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
-        login_panel.add(newUser_link, new org.netbeans.lib.awtextra.AbsoluteConstraints(380, 390, 330, 40));
+        newUser_link.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseClicked(java.awt.event.MouseEvent evt) {
+                newUser_linkMouseClicked(evt);
+            }
+        });
+        login.add(newUser_link, new org.netbeans.lib.awtextra.AbsoluteConstraints(380, 390, 330, 40));
 
         login_txt.setFont(new java.awt.Font("Cascadia Code", 1, 48)); // NOI18N
         login_txt.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
         login_txt.setText("Log In");
-        login_panel.add(login_txt, new org.netbeans.lib.awtextra.AbsoluteConstraints(270, 100, -1, 60));
+        login.add(login_txt, new org.netbeans.lib.awtextra.AbsoluteConstraints(270, 100, -1, 60));
 
         user_txt.setFont(new java.awt.Font("Cascadia Code", 0, 18)); // NOI18N
         user_txt.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
         user_txt.setText("Username");
-        login_panel.add(user_txt, new org.netbeans.lib.awtextra.AbsoluteConstraints(270, 220, 90, 40));
+        login.add(user_txt, new org.netbeans.lib.awtextra.AbsoluteConstraints(270, 220, 90, 40));
 
         enterPass_txtField.setFont(new java.awt.Font("Cascadia Code", 0, 12)); // NOI18N
         enterPass_txtField.setForeground(new java.awt.Color(204, 204, 204));
         enterPass_txtField.setHorizontalAlignment(javax.swing.JTextField.CENTER);
-        enterPass_txtField.setText("enter password");
         enterPass_txtField.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(0, 0, 0), 4));
         enterPass_txtField.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 enterPass_txtFieldActionPerformed(evt);
             }
         });
-        login_panel.add(enterPass_txtField, new org.netbeans.lib.awtextra.AbsoluteConstraints(440, 300, 350, 40));
+        login.add(enterPass_txtField, new org.netbeans.lib.awtextra.AbsoluteConstraints(440, 300, 350, 40));
 
         enterUser_txtField.setFont(new java.awt.Font("Cascadia Code", 0, 12)); // NOI18N
         enterUser_txtField.setForeground(new java.awt.Color(204, 204, 204));
         enterUser_txtField.setHorizontalAlignment(javax.swing.JTextField.CENTER);
-        enterUser_txtField.setText("enter username");
         enterUser_txtField.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(0, 0, 0), 4));
+        enterUser_txtField.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseClicked(java.awt.event.MouseEvent evt) {
+                enterUser_txtFieldMouseClicked(evt);
+            }
+            public void mouseExited(java.awt.event.MouseEvent evt) {
+                enterUser_txtFieldMouseExited(evt);
+            }
+        });
         enterUser_txtField.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 enterUser_txtFieldActionPerformed(evt);
             }
         });
-        login_panel.add(enterUser_txtField, new org.netbeans.lib.awtextra.AbsoluteConstraints(440, 220, 350, 40));
+        login.add(enterUser_txtField, new org.netbeans.lib.awtextra.AbsoluteConstraints(440, 220, 350, 40));
 
         pass_txt.setFont(new java.awt.Font("Cascadia Code", 0, 18)); // NOI18N
         pass_txt.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
         pass_txt.setText("Password");
-        login_panel.add(pass_txt, new org.netbeans.lib.awtextra.AbsoluteConstraints(270, 300, 90, 40));
+        login.add(pass_txt, new org.netbeans.lib.awtextra.AbsoluteConstraints(270, 300, 90, 40));
 
         login_btn.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
-        login_panel.add(login_btn, new org.netbeans.lib.awtextra.AbsoluteConstraints(830, 300, 40, 40));
+        login_btn.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseClicked(java.awt.event.MouseEvent evt) {
+                login_btnMouseClicked(evt);
+            }
+        });
+        login.add(login_btn, new org.netbeans.lib.awtextra.AbsoluteConstraints(830, 300, 40, 40));
 
-        app_panel.add(login_panel, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 50, 1090, 540));
+        paneles.addTab("tab1", login);
 
-        javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
-        getContentPane().setLayout(layout);
-        layout.setHorizontalGroup(
-            layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addComponent(app_panel, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-        );
-        layout.setVerticalGroup(
-            layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addComponent(app_panel, javax.swing.GroupLayout.DEFAULT_SIZE, 614, Short.MAX_VALUE)
-        );
+        register.setBackground(new java.awt.Color(255, 255, 255));
+        register.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(0, 0, 0), 5));
+        register.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
+
+        back_btn.setBackground(new java.awt.Color(255, 255, 255));
+        back_btn.setFont(new java.awt.Font("Cascadia Code", 1, 16)); // NOI18N
+        back_btn.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
+        back_btn.setText("Go back");
+        back_btn.setBorder(new javax.swing.border.LineBorder(new java.awt.Color(0, 0, 0), 4, true));
+        back_btn.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
+        back_btn.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseClicked(java.awt.event.MouseEvent evt) {
+                back_btnMouseClicked(evt);
+            }
+        });
+        register.add(back_btn, new org.netbeans.lib.awtextra.AbsoluteConstraints(40, 40, 100, 60));
+
+        register_txt.setFont(new java.awt.Font("Cascadia Code", 1, 48)); // NOI18N
+        register_txt.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
+        register_txt.setText("Register");
+        register.add(register_txt, new org.netbeans.lib.awtextra.AbsoluteConstraints(200, 40, -1, 60));
+
+        registerUser_txt.setFont(new java.awt.Font("Cascadia Code", 0, 16)); // NOI18N
+        registerUser_txt.setHorizontalAlignment(javax.swing.SwingConstants.LEFT);
+        registerUser_txt.setText("Username");
+        register.add(registerUser_txt, new org.netbeans.lib.awtextra.AbsoluteConstraints(200, 150, 80, 30));
+
+        registerUser_txtField.setFont(new java.awt.Font("Cascadia Code", 0, 12)); // NOI18N
+        registerUser_txtField.setForeground(new java.awt.Color(204, 204, 204));
+        registerUser_txtField.setHorizontalAlignment(javax.swing.JTextField.CENTER);
+        registerUser_txtField.setBorder(new javax.swing.border.LineBorder(new java.awt.Color(0, 0, 0), 4, true));
+        registerUser_txtField.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                registerUser_txtFieldActionPerformed(evt);
+            }
+        });
+        register.add(registerUser_txtField, new org.netbeans.lib.awtextra.AbsoluteConstraints(360, 150, 170, 40));
+
+        registerEmail_txt.setFont(new java.awt.Font("Cascadia Code", 0, 16)); // NOI18N
+        registerEmail_txt.setHorizontalAlignment(javax.swing.SwingConstants.LEFT);
+        registerEmail_txt.setText("Email");
+        register.add(registerEmail_txt, new org.netbeans.lib.awtextra.AbsoluteConstraints(200, 210, 50, 30));
+
+        registerEmail_txtField.setFont(new java.awt.Font("Cascadia Code", 0, 12)); // NOI18N
+        registerEmail_txtField.setForeground(new java.awt.Color(204, 204, 204));
+        registerEmail_txtField.setHorizontalAlignment(javax.swing.JTextField.CENTER);
+        registerEmail_txtField.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(0, 0, 0), 4));
+        registerEmail_txtField.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                registerEmail_txtFieldActionPerformed(evt);
+            }
+        });
+        register.add(registerEmail_txtField, new org.netbeans.lib.awtextra.AbsoluteConstraints(360, 210, 170, 40));
+
+        registerPass_txt.setFont(new java.awt.Font("Cascadia Code", 0, 16)); // NOI18N
+        registerPass_txt.setHorizontalAlignment(javax.swing.SwingConstants.LEFT);
+        registerPass_txt.setText("Password");
+        register.add(registerPass_txt, new org.netbeans.lib.awtextra.AbsoluteConstraints(200, 270, 80, 30));
+
+        registerPass_txtField.setFont(new java.awt.Font("Cascadia Code", 0, 12)); // NOI18N
+        registerPass_txtField.setForeground(new java.awt.Color(204, 204, 204));
+        registerPass_txtField.setHorizontalAlignment(javax.swing.JTextField.CENTER);
+        registerPass_txtField.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(0, 0, 0), 4));
+        registerPass_txtField.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                registerPass_txtFieldActionPerformed(evt);
+            }
+        });
+        register.add(registerPass_txtField, new org.netbeans.lib.awtextra.AbsoluteConstraints(360, 270, 170, 40));
+
+        registerIdType_txt.setFont(new java.awt.Font("Cascadia Code", 0, 16)); // NOI18N
+        registerIdType_txt.setHorizontalAlignment(javax.swing.SwingConstants.LEFT);
+        registerIdType_txt.setText("ID type");
+        register.add(registerIdType_txt, new org.netbeans.lib.awtextra.AbsoluteConstraints(200, 330, 70, 30));
+
+        registerIdType_cBox.setFont(new java.awt.Font("Cascadia Code", 0, 12)); // NOI18N
+        registerIdType_cBox.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "Item 1", "Item 2", "Item 3", "Item 4" }));
+        registerIdType_cBox.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(0, 0, 0), 4));
+        register.add(registerIdType_cBox, new org.netbeans.lib.awtextra.AbsoluteConstraints(360, 330, 170, 40));
+
+        registerId_txt.setFont(new java.awt.Font("Cascadia Code", 0, 16)); // NOI18N
+        registerId_txt.setHorizontalAlignment(javax.swing.SwingConstants.LEFT);
+        registerId_txt.setText("ID");
+        register.add(registerId_txt, new org.netbeans.lib.awtextra.AbsoluteConstraints(200, 390, 70, 30));
+
+        registerId_txtField.setFont(new java.awt.Font("Cascadia Code", 0, 12)); // NOI18N
+        registerId_txtField.setForeground(new java.awt.Color(204, 204, 204));
+        registerId_txtField.setHorizontalAlignment(javax.swing.JTextField.CENTER);
+        registerId_txtField.setBorder(new javax.swing.border.LineBorder(new java.awt.Color(0, 0, 0), 4, true));
+        registerId_txtField.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                registerId_txtFieldActionPerformed(evt);
+            }
+        });
+        register.add(registerId_txtField, new org.netbeans.lib.awtextra.AbsoluteConstraints(360, 390, 170, 40));
+
+        registerName_txt.setFont(new java.awt.Font("Cascadia Code", 0, 16)); // NOI18N
+        registerName_txt.setHorizontalAlignment(javax.swing.SwingConstants.LEFT);
+        registerName_txt.setText("Name");
+        register.add(registerName_txt, new org.netbeans.lib.awtextra.AbsoluteConstraints(580, 150, 70, 30));
+
+        registerFirstName_txtField.setFont(new java.awt.Font("Cascadia Code", 0, 12)); // NOI18N
+        registerFirstName_txtField.setForeground(new java.awt.Color(204, 204, 204));
+        registerFirstName_txtField.setHorizontalAlignment(javax.swing.JTextField.CENTER);
+        registerFirstName_txtField.setText("first name");
+        registerFirstName_txtField.setBorder(new javax.swing.border.LineBorder(new java.awt.Color(0, 0, 0), 4, true));
+        registerFirstName_txtField.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                registerFirstName_txtFieldActionPerformed(evt);
+            }
+        });
+        register.add(registerFirstName_txtField, new org.netbeans.lib.awtextra.AbsoluteConstraints(740, 150, 140, 40));
+
+        registerMiddleName_txtField.setFont(new java.awt.Font("Cascadia Code", 0, 12)); // NOI18N
+        registerMiddleName_txtField.setForeground(new java.awt.Color(204, 204, 204));
+        registerMiddleName_txtField.setHorizontalAlignment(javax.swing.JTextField.CENTER);
+        registerMiddleName_txtField.setText("middle name");
+        registerMiddleName_txtField.setBorder(new javax.swing.border.LineBorder(new java.awt.Color(0, 0, 0), 4, true));
+        registerMiddleName_txtField.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                registerMiddleName_txtFieldActionPerformed(evt);
+            }
+        });
+        register.add(registerMiddleName_txtField, new org.netbeans.lib.awtextra.AbsoluteConstraints(890, 150, 140, 40));
+
+        registerLastName_txtField.setFont(new java.awt.Font("Cascadia Code", 0, 12)); // NOI18N
+        registerLastName_txtField.setForeground(new java.awt.Color(204, 204, 204));
+        registerLastName_txtField.setHorizontalAlignment(javax.swing.JTextField.CENTER);
+        registerLastName_txtField.setText("last name");
+        registerLastName_txtField.setBorder(new javax.swing.border.LineBorder(new java.awt.Color(0, 0, 0), 4, true));
+        registerLastName_txtField.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                registerLastName_txtFieldActionPerformed(evt);
+            }
+        });
+        register.add(registerLastName_txtField, new org.netbeans.lib.awtextra.AbsoluteConstraints(740, 200, 140, 40));
+
+        registerNickname_txtField.setFont(new java.awt.Font("Cascadia Code", 0, 12)); // NOI18N
+        registerNickname_txtField.setForeground(new java.awt.Color(204, 204, 204));
+        registerNickname_txtField.setHorizontalAlignment(javax.swing.JTextField.CENTER);
+        registerNickname_txtField.setText("nickname");
+        registerNickname_txtField.setBorder(new javax.swing.border.LineBorder(new java.awt.Color(0, 0, 0), 4, true));
+        registerNickname_txtField.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                registerNickname_txtFieldActionPerformed(evt);
+            }
+        });
+        register.add(registerNickname_txtField, new org.netbeans.lib.awtextra.AbsoluteConstraints(890, 200, 140, 40));
+
+        registerGender_txt.setFont(new java.awt.Font("Cascadia Code", 0, 16)); // NOI18N
+        registerGender_txt.setHorizontalAlignment(javax.swing.SwingConstants.LEFT);
+        registerGender_txt.setText("Gender");
+        register.add(registerGender_txt, new org.netbeans.lib.awtextra.AbsoluteConstraints(580, 270, 70, 30));
+
+        registerGender_cBox.setFont(new java.awt.Font("Cascadia Code", 0, 12)); // NOI18N
+        registerGender_cBox.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "Item 1", "Item 2", "Item 3", "Item 4" }));
+        registerGender_cBox.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(0, 0, 0), 4));
+        register.add(registerGender_cBox, new org.netbeans.lib.awtextra.AbsoluteConstraints(740, 270, 190, 40));
+
+        registerDob_txt.setFont(new java.awt.Font("Cascadia Code", 0, 16)); // NOI18N
+        registerDob_txt.setHorizontalAlignment(javax.swing.SwingConstants.LEFT);
+        registerDob_txt.setText("Date of birth");
+        register.add(registerDob_txt, new org.netbeans.lib.awtextra.AbsoluteConstraints(580, 340, -1, 30));
+
+        registerDob_chooser.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(0, 0, 0), 4));
+        register.add(registerDob_chooser, new org.netbeans.lib.awtextra.AbsoluteConstraints(740, 340, 190, 40));
+
+        register_btn.setBackground(new java.awt.Color(255, 255, 255));
+        register_btn.setFont(new java.awt.Font("Cascadia Code", 1, 16)); // NOI18N
+        register_btn.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
+        register_btn.setText("Register");
+        register_btn.setBorder(new javax.swing.border.LineBorder(new java.awt.Color(0, 0, 0), 4, true));
+        register_btn.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
+        register.add(register_btn, new org.netbeans.lib.awtextra.AbsoluteConstraints(950, 420, 110, 60));
+
+        paneles.addTab("tab2", register);
+
+        main_menu.setBackground(new java.awt.Color(255, 255, 255));
+        main_menu.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(0, 0, 0), 5));
+        main_menu.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
+
+        sideMenu_panel.setBackground(new java.awt.Color(255, 255, 255));
+        sideMenu_panel.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(0, 0, 0), 5));
+        sideMenu_panel.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
+
+        sideMenu_txt.setFont(new java.awt.Font("Cascadia Code", 1, 26)); // NOI18N
+        sideMenu_txt.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
+        sideMenu_txt.setText("Side menu");
+        sideMenu_txt.setBorder(javax.swing.BorderFactory.createMatteBorder(0, 0, 4, 0, new java.awt.Color(0, 0, 0)));
+        sideMenu_panel.add(sideMenu_txt, new org.netbeans.lib.awtextra.AbsoluteConstraints(40, 20, 190, 40));
+
+        exitSideMenu_btn.setBackground(new java.awt.Color(255, 255, 255));
+        exitSideMenu_btn.setFont(new java.awt.Font("Cascadia Code", 1, 16)); // NOI18N
+        exitSideMenu_btn.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
+        exitSideMenu_btn.setText("X");
+        exitSideMenu_btn.setBorder(new javax.swing.border.LineBorder(new java.awt.Color(0, 0, 0), 4, true));
+        exitSideMenu_btn.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
+        exitSideMenu_btn.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseClicked(java.awt.event.MouseEvent evt) {
+                exitSideMenu_btnMouseClicked(evt);
+            }
+        });
+        sideMenu_panel.add(exitSideMenu_btn, new org.netbeans.lib.awtextra.AbsoluteConstraints(230, 10, 30, 30));
+
+        logOut_btn.setBackground(new java.awt.Color(255, 255, 255));
+        logOut_btn.setFont(new java.awt.Font("Cascadia Code", 1, 14)); // NOI18N
+        logOut_btn.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
+        logOut_btn.setText("Log out");
+        logOut_btn.setBorder(new javax.swing.border.LineBorder(new java.awt.Color(0, 0, 0), 4, true));
+        logOut_btn.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
+        logOut_btn.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseClicked(java.awt.event.MouseEvent evt) {
+                logOut_btnMouseClicked(evt);
+            }
+        });
+        sideMenu_panel.add(logOut_btn, new org.netbeans.lib.awtextra.AbsoluteConstraints(60, 430, 150, 50));
+
+        purchases_btn.setBackground(new java.awt.Color(255, 255, 255));
+        purchases_btn.setFont(new java.awt.Font("Cascadia Code", 1, 14)); // NOI18N
+        purchases_btn.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
+        purchases_btn.setText("Purchases");
+        purchases_btn.setBorder(new javax.swing.border.LineBorder(new java.awt.Color(0, 0, 0), 4, true));
+        purchases_btn.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
+        sideMenu_panel.add(purchases_btn, new org.netbeans.lib.awtextra.AbsoluteConstraints(60, 90, 150, 50));
+
+        cart_btn.setBackground(new java.awt.Color(255, 255, 255));
+        cart_btn.setFont(new java.awt.Font("Cascadia Code", 1, 14)); // NOI18N
+        cart_btn.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
+        cart_btn.setText("Cart");
+        cart_btn.setBorder(new javax.swing.border.LineBorder(new java.awt.Color(0, 0, 0), 4, true));
+        cart_btn.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
+        sideMenu_panel.add(cart_btn, new org.netbeans.lib.awtextra.AbsoluteConstraints(60, 170, 150, 50));
+
+        wishList_btn.setBackground(new java.awt.Color(255, 255, 255));
+        wishList_btn.setFont(new java.awt.Font("Cascadia Code", 1, 14)); // NOI18N
+        wishList_btn.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
+        wishList_btn.setText("Wish list");
+        wishList_btn.setBorder(new javax.swing.border.LineBorder(new java.awt.Color(0, 0, 0), 4, true));
+        wishList_btn.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
+        sideMenu_panel.add(wishList_btn, new org.netbeans.lib.awtextra.AbsoluteConstraints(60, 250, 150, 50));
+
+        main_menu.add(sideMenu_panel, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 10, 270, 530));
+
+        menu_btn.setBackground(new java.awt.Color(255, 255, 255));
+        menu_btn.setFont(new java.awt.Font("Cascadia Code", 1, 16)); // NOI18N
+        menu_btn.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
+        menu_btn.setText("Menu");
+        menu_btn.setBorder(new javax.swing.border.LineBorder(new java.awt.Color(0, 0, 0), 4, true));
+        menu_btn.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
+        menu_btn.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseClicked(java.awt.event.MouseEvent evt) {
+                menu_btnMouseClicked(evt);
+            }
+        });
+        main_menu.add(menu_btn, new org.netbeans.lib.awtextra.AbsoluteConstraints(30, 30, 70, 60));
+
+        titulo_txt.setFont(new java.awt.Font("Cascadia Code", 1, 48)); // NOI18N
+        titulo_txt.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
+        titulo_txt.setText("[Titulo de la app]");
+        main_menu.add(titulo_txt, new org.netbeans.lib.awtextra.AbsoluteConstraints(160, 30, 780, 60));
+
+        logo_lbl.setBackground(new java.awt.Color(255, 255, 255));
+        logo_lbl.setFont(new java.awt.Font("Cascadia Code", 1, 16)); // NOI18N
+        logo_lbl.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
+        logo_lbl.setText("logo");
+        logo_lbl.setBorder(new javax.swing.border.LineBorder(new java.awt.Color(0, 0, 0), 4, true));
+        logo_lbl.setCursor(new java.awt.Cursor(java.awt.Cursor.DEFAULT_CURSOR));
+        logo_lbl.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseClicked(java.awt.event.MouseEvent evt) {
+                logo_lblMouseClicked(evt);
+            }
+        });
+        main_menu.add(logo_lbl, new org.netbeans.lib.awtextra.AbsoluteConstraints(990, 30, 80, 70));
+
+        search_txt.setFont(new java.awt.Font("Cascadia Code", 0, 15)); // NOI18N
+        search_txt.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
+        search_txt.setText("Search:");
+        main_menu.add(search_txt, new org.netbeans.lib.awtextra.AbsoluteConstraints(120, 120, 80, 40));
+
+        search_txtField.setFont(new java.awt.Font("Cascadia Code", 0, 12)); // NOI18N
+        search_txtField.setForeground(new java.awt.Color(204, 204, 204));
+        search_txtField.setHorizontalAlignment(javax.swing.JTextField.CENTER);
+        search_txtField.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(0, 0, 0), 4));
+        search_txtField.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                search_txtFieldActionPerformed(evt);
+            }
+        });
+        main_menu.add(search_txtField, new org.netbeans.lib.awtextra.AbsoluteConstraints(210, 120, 610, 40));
+
+        search_btn.setBackground(new java.awt.Color(255, 255, 255));
+        search_btn.setFont(new java.awt.Font("Cascadia Code", 1, 10)); // NOI18N
+        search_btn.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
+        search_btn.setText("Search");
+        search_btn.setBorder(new javax.swing.border.LineBorder(new java.awt.Color(0, 0, 0), 4, true));
+        search_btn.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
+        search_btn.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseClicked(java.awt.event.MouseEvent evt) {
+                search_btnMouseClicked(evt);
+            }
+        });
+        main_menu.add(search_btn, new org.netbeans.lib.awtextra.AbsoluteConstraints(840, 120, 80, 30));
+
+        advSearch_btn.setBackground(new java.awt.Color(255, 255, 255));
+        advSearch_btn.setFont(new java.awt.Font("Cascadia Code", 1, 10)); // NOI18N
+        advSearch_btn.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
+        advSearch_btn.setText("Advanced search");
+        advSearch_btn.setBorder(new javax.swing.border.LineBorder(new java.awt.Color(0, 0, 0), 4, true));
+        advSearch_btn.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
+        advSearch_btn.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseClicked(java.awt.event.MouseEvent evt) {
+                advSearch_btnMouseClicked(evt);
+            }
+        });
+        main_menu.add(advSearch_btn, new org.netbeans.lib.awtextra.AbsoluteConstraints(840, 160, 130, 30));
+
+        topMedia_scroll.setHorizontalScrollBarPolicy(javax.swing.ScrollPaneConstants.HORIZONTAL_SCROLLBAR_ALWAYS);
+
+        topMovies_panel.setBackground(new java.awt.Color(255, 255, 255));
+        topMovies_panel.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
+
+        movie_btn1.setBackground(new java.awt.Color(255, 255, 255));
+        movie_btn1.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
+
+        movie_logo1.setBackground(new java.awt.Color(255, 255, 255));
+        movie_logo1.setFont(new java.awt.Font("Cascadia Code", 1, 12)); // NOI18N
+        movie_logo1.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
+        movie_logo1.setBorder(new javax.swing.border.LineBorder(new java.awt.Color(0, 0, 0), 4, true));
+        movie_logo1.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
+        movie_logo1.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseClicked(java.awt.event.MouseEvent evt) {
+                movie_logo1MouseClicked(evt);
+            }
+        });
+        movie_btn1.add(movie_logo1, new org.netbeans.lib.awtextra.AbsoluteConstraints(10, 0, 60, 50));
+
+        movie_name1.setFont(new java.awt.Font("Cascadia Code", 0, 12)); // NOI18N
+        movie_name1.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
+        movie_name1.setText("movie");
+        movie_btn1.add(movie_name1, new org.netbeans.lib.awtextra.AbsoluteConstraints(10, 50, 60, 30));
+
+        topMovies_panel.add(movie_btn1, new org.netbeans.lib.awtextra.AbsoluteConstraints(10, 10, 80, -1));
+
+        movie_btn2.setBackground(new java.awt.Color(255, 255, 255));
+        movie_btn2.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
+
+        movie_logo2.setBackground(new java.awt.Color(255, 255, 255));
+        movie_logo2.setFont(new java.awt.Font("Cascadia Code", 1, 12)); // NOI18N
+        movie_logo2.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
+        movie_logo2.setBorder(new javax.swing.border.LineBorder(new java.awt.Color(0, 0, 0), 4, true));
+        movie_logo2.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
+        movie_logo2.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseClicked(java.awt.event.MouseEvent evt) {
+                movie_logo2MouseClicked(evt);
+            }
+        });
+        movie_btn2.add(movie_logo2, new org.netbeans.lib.awtextra.AbsoluteConstraints(10, 0, 60, 50));
+
+        movie_name2.setFont(new java.awt.Font("Cascadia Code", 0, 12)); // NOI18N
+        movie_name2.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
+        movie_name2.setText("movie");
+        movie_btn2.add(movie_name2, new org.netbeans.lib.awtextra.AbsoluteConstraints(10, 50, 60, 30));
+
+        topMovies_panel.add(movie_btn2, new org.netbeans.lib.awtextra.AbsoluteConstraints(100, 10, 80, -1));
+
+        movie_btn3.setBackground(new java.awt.Color(255, 255, 255));
+        movie_btn3.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
+
+        movie_logo3.setBackground(new java.awt.Color(255, 255, 255));
+        movie_logo3.setFont(new java.awt.Font("Cascadia Code", 1, 12)); // NOI18N
+        movie_logo3.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
+        movie_logo3.setBorder(new javax.swing.border.LineBorder(new java.awt.Color(0, 0, 0), 4, true));
+        movie_logo3.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
+        movie_logo3.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseClicked(java.awt.event.MouseEvent evt) {
+                movie_logo3MouseClicked(evt);
+            }
+        });
+        movie_btn3.add(movie_logo3, new org.netbeans.lib.awtextra.AbsoluteConstraints(10, 0, 60, 50));
+
+        movie_name3.setFont(new java.awt.Font("Cascadia Code", 0, 12)); // NOI18N
+        movie_name3.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
+        movie_name3.setText("movie");
+        movie_btn3.add(movie_name3, new org.netbeans.lib.awtextra.AbsoluteConstraints(10, 50, 60, 30));
+
+        topMovies_panel.add(movie_btn3, new org.netbeans.lib.awtextra.AbsoluteConstraints(190, 10, 80, -1));
+
+        movie_btn4.setBackground(new java.awt.Color(255, 255, 255));
+        movie_btn4.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
+
+        movie_logo4.setBackground(new java.awt.Color(255, 255, 255));
+        movie_logo4.setFont(new java.awt.Font("Cascadia Code", 1, 12)); // NOI18N
+        movie_logo4.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
+        movie_logo4.setBorder(new javax.swing.border.LineBorder(new java.awt.Color(0, 0, 0), 4, true));
+        movie_logo4.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
+        movie_logo4.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseClicked(java.awt.event.MouseEvent evt) {
+                movie_logo4MouseClicked(evt);
+            }
+        });
+        movie_btn4.add(movie_logo4, new org.netbeans.lib.awtextra.AbsoluteConstraints(10, 0, 60, 50));
+
+        movie_name4.setFont(new java.awt.Font("Cascadia Code", 0, 12)); // NOI18N
+        movie_name4.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
+        movie_name4.setText("movie");
+        movie_btn4.add(movie_name4, new org.netbeans.lib.awtextra.AbsoluteConstraints(10, 50, 60, 30));
+
+        topMovies_panel.add(movie_btn4, new org.netbeans.lib.awtextra.AbsoluteConstraints(280, 10, 80, -1));
+
+        movie_btn6.setBackground(new java.awt.Color(255, 255, 255));
+        movie_btn6.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
+
+        movie_logo6.setBackground(new java.awt.Color(255, 255, 255));
+        movie_logo6.setFont(new java.awt.Font("Cascadia Code", 1, 12)); // NOI18N
+        movie_logo6.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
+        movie_logo6.setBorder(new javax.swing.border.LineBorder(new java.awt.Color(0, 0, 0), 4, true));
+        movie_logo6.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
+        movie_logo6.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseClicked(java.awt.event.MouseEvent evt) {
+                movie_logo6MouseClicked(evt);
+            }
+        });
+        movie_btn6.add(movie_logo6, new org.netbeans.lib.awtextra.AbsoluteConstraints(10, 0, 60, 50));
+
+        movie_name6.setFont(new java.awt.Font("Cascadia Code", 0, 12)); // NOI18N
+        movie_name6.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
+        movie_name6.setText("movie");
+        movie_btn6.add(movie_name6, new org.netbeans.lib.awtextra.AbsoluteConstraints(10, 50, 60, 30));
+
+        topMovies_panel.add(movie_btn6, new org.netbeans.lib.awtextra.AbsoluteConstraints(370, 10, 80, -1));
+
+        movie_btn7.setBackground(new java.awt.Color(255, 255, 255));
+        movie_btn7.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
+
+        movie_logo7.setBackground(new java.awt.Color(255, 255, 255));
+        movie_logo7.setFont(new java.awt.Font("Cascadia Code", 1, 12)); // NOI18N
+        movie_logo7.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
+        movie_logo7.setBorder(new javax.swing.border.LineBorder(new java.awt.Color(0, 0, 0), 4, true));
+        movie_logo7.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
+        movie_logo7.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseClicked(java.awt.event.MouseEvent evt) {
+                movie_logo7MouseClicked(evt);
+            }
+        });
+        movie_btn7.add(movie_logo7, new org.netbeans.lib.awtextra.AbsoluteConstraints(10, 0, 60, 50));
+
+        movie_name7.setFont(new java.awt.Font("Cascadia Code", 0, 12)); // NOI18N
+        movie_name7.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
+        movie_name7.setText("movie");
+        movie_btn7.add(movie_name7, new org.netbeans.lib.awtextra.AbsoluteConstraints(10, 50, 60, 30));
+
+        topMovies_panel.add(movie_btn7, new org.netbeans.lib.awtextra.AbsoluteConstraints(460, 10, 80, -1));
+
+        movie_btn5.setBackground(new java.awt.Color(255, 255, 255));
+        movie_btn5.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
+
+        movie_logo5.setBackground(new java.awt.Color(255, 255, 255));
+        movie_logo5.setFont(new java.awt.Font("Cascadia Code", 1, 12)); // NOI18N
+        movie_logo5.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
+        movie_logo5.setBorder(new javax.swing.border.LineBorder(new java.awt.Color(0, 0, 0), 4, true));
+        movie_logo5.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
+        movie_logo5.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseClicked(java.awt.event.MouseEvent evt) {
+                movie_logo5MouseClicked(evt);
+            }
+        });
+        movie_btn5.add(movie_logo5, new org.netbeans.lib.awtextra.AbsoluteConstraints(10, 0, 60, 50));
+
+        movie_name5.setFont(new java.awt.Font("Cascadia Code", 0, 12)); // NOI18N
+        movie_name5.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
+        movie_name5.setText("movie");
+        movie_btn5.add(movie_name5, new org.netbeans.lib.awtextra.AbsoluteConstraints(10, 50, 60, 30));
+
+        topMovies_panel.add(movie_btn5, new org.netbeans.lib.awtextra.AbsoluteConstraints(550, 10, 80, -1));
+
+        moreMovies_btn.setBackground(new java.awt.Color(255, 255, 255));
+        moreMovies_btn.setFont(new java.awt.Font("Cascadia Code", 1, 18)); // NOI18N
+        moreMovies_btn.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
+        moreMovies_btn.setText("...");
+        moreMovies_btn.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
+        moreMovies_btn.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseClicked(java.awt.event.MouseEvent evt) {
+                moreMovies_btnMouseClicked(evt);
+            }
+        });
+        topMovies_panel.add(moreMovies_btn, new org.netbeans.lib.awtextra.AbsoluteConstraints(640, 10, 60, 50));
+
+        topMedia_scroll.setViewportView(topMovies_panel);
+
+        main_menu.add(topMedia_scroll, new org.netbeans.lib.awtextra.AbsoluteConstraints(190, 220, 650, 110));
+
+        lastMedia_txt.setFont(new java.awt.Font("Cascadia Code", 1, 24)); // NOI18N
+        lastMedia_txt.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
+        lastMedia_txt.setText("Last media releases");
+        main_menu.add(lastMedia_txt, new org.netbeans.lib.awtextra.AbsoluteConstraints(180, 350, 290, 40));
+
+        latestMedia_scroll.setHorizontalScrollBarPolicy(javax.swing.ScrollPaneConstants.HORIZONTAL_SCROLLBAR_ALWAYS);
+
+        latestMovies_panel.setBackground(new java.awt.Color(255, 255, 255));
+        latestMovies_panel.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
+
+        movie_btn8.setBackground(new java.awt.Color(255, 255, 255));
+        movie_btn8.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
+
+        movie_logo8.setBackground(new java.awt.Color(255, 255, 255));
+        movie_logo8.setFont(new java.awt.Font("Cascadia Code", 1, 12)); // NOI18N
+        movie_logo8.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
+        movie_logo8.setBorder(new javax.swing.border.LineBorder(new java.awt.Color(0, 0, 0), 4, true));
+        movie_logo8.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
+        movie_logo8.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseClicked(java.awt.event.MouseEvent evt) {
+                movie_logo8MouseClicked(evt);
+            }
+        });
+        movie_btn8.add(movie_logo8, new org.netbeans.lib.awtextra.AbsoluteConstraints(10, 0, 60, 50));
+
+        movie_name8.setFont(new java.awt.Font("Cascadia Code", 0, 12)); // NOI18N
+        movie_name8.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
+        movie_name8.setText("movie");
+        movie_btn8.add(movie_name8, new org.netbeans.lib.awtextra.AbsoluteConstraints(10, 50, 60, 30));
+
+        latestMovies_panel.add(movie_btn8, new org.netbeans.lib.awtextra.AbsoluteConstraints(10, 10, 80, -1));
+
+        movie_btn9.setBackground(new java.awt.Color(255, 255, 255));
+        movie_btn9.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
+
+        movie_logo9.setBackground(new java.awt.Color(255, 255, 255));
+        movie_logo9.setFont(new java.awt.Font("Cascadia Code", 1, 12)); // NOI18N
+        movie_logo9.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
+        movie_logo9.setBorder(new javax.swing.border.LineBorder(new java.awt.Color(0, 0, 0), 4, true));
+        movie_logo9.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
+        movie_logo9.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseClicked(java.awt.event.MouseEvent evt) {
+                movie_logo9MouseClicked(evt);
+            }
+        });
+        movie_btn9.add(movie_logo9, new org.netbeans.lib.awtextra.AbsoluteConstraints(10, 0, 60, 50));
+
+        movie_name9.setFont(new java.awt.Font("Cascadia Code", 0, 12)); // NOI18N
+        movie_name9.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
+        movie_name9.setText("movie");
+        movie_btn9.add(movie_name9, new org.netbeans.lib.awtextra.AbsoluteConstraints(10, 50, 60, 30));
+
+        latestMovies_panel.add(movie_btn9, new org.netbeans.lib.awtextra.AbsoluteConstraints(100, 10, 80, -1));
+
+        movie_btn10.setBackground(new java.awt.Color(255, 255, 255));
+        movie_btn10.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
+
+        movie_logo10.setBackground(new java.awt.Color(255, 255, 255));
+        movie_logo10.setFont(new java.awt.Font("Cascadia Code", 1, 12)); // NOI18N
+        movie_logo10.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
+        movie_logo10.setBorder(new javax.swing.border.LineBorder(new java.awt.Color(0, 0, 0), 4, true));
+        movie_logo10.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
+        movie_logo10.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseClicked(java.awt.event.MouseEvent evt) {
+                movie_logo10MouseClicked(evt);
+            }
+        });
+        movie_btn10.add(movie_logo10, new org.netbeans.lib.awtextra.AbsoluteConstraints(10, 0, 60, 50));
+
+        movie_name10.setFont(new java.awt.Font("Cascadia Code", 0, 12)); // NOI18N
+        movie_name10.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
+        movie_name10.setText("movie");
+        movie_btn10.add(movie_name10, new org.netbeans.lib.awtextra.AbsoluteConstraints(10, 50, 60, 30));
+
+        latestMovies_panel.add(movie_btn10, new org.netbeans.lib.awtextra.AbsoluteConstraints(190, 10, 80, -1));
+
+        movie_btn11.setBackground(new java.awt.Color(255, 255, 255));
+        movie_btn11.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
+
+        movie_logo11.setBackground(new java.awt.Color(255, 255, 255));
+        movie_logo11.setFont(new java.awt.Font("Cascadia Code", 1, 12)); // NOI18N
+        movie_logo11.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
+        movie_logo11.setBorder(new javax.swing.border.LineBorder(new java.awt.Color(0, 0, 0), 4, true));
+        movie_logo11.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
+        movie_logo11.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseClicked(java.awt.event.MouseEvent evt) {
+                movie_logo11MouseClicked(evt);
+            }
+        });
+        movie_btn11.add(movie_logo11, new org.netbeans.lib.awtextra.AbsoluteConstraints(10, 0, 60, 50));
+
+        movie_name11.setFont(new java.awt.Font("Cascadia Code", 0, 12)); // NOI18N
+        movie_name11.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
+        movie_name11.setText("movie");
+        movie_btn11.add(movie_name11, new org.netbeans.lib.awtextra.AbsoluteConstraints(10, 50, 60, 30));
+
+        latestMovies_panel.add(movie_btn11, new org.netbeans.lib.awtextra.AbsoluteConstraints(280, 10, 80, -1));
+
+        movie_btn12.setBackground(new java.awt.Color(255, 255, 255));
+        movie_btn12.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
+
+        movie_logo12.setBackground(new java.awt.Color(255, 255, 255));
+        movie_logo12.setFont(new java.awt.Font("Cascadia Code", 1, 12)); // NOI18N
+        movie_logo12.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
+        movie_logo12.setBorder(new javax.swing.border.LineBorder(new java.awt.Color(0, 0, 0), 4, true));
+        movie_logo12.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
+        movie_logo12.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseClicked(java.awt.event.MouseEvent evt) {
+                movie_logo12MouseClicked(evt);
+            }
+        });
+        movie_btn12.add(movie_logo12, new org.netbeans.lib.awtextra.AbsoluteConstraints(10, 0, 60, 50));
+
+        movie_name12.setFont(new java.awt.Font("Cascadia Code", 0, 12)); // NOI18N
+        movie_name12.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
+        movie_name12.setText("movie");
+        movie_btn12.add(movie_name12, new org.netbeans.lib.awtextra.AbsoluteConstraints(10, 50, 60, 30));
+
+        latestMovies_panel.add(movie_btn12, new org.netbeans.lib.awtextra.AbsoluteConstraints(370, 10, 80, -1));
+
+        movie_btn13.setBackground(new java.awt.Color(255, 255, 255));
+        movie_btn13.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
+
+        movie_logo13.setBackground(new java.awt.Color(255, 255, 255));
+        movie_logo13.setFont(new java.awt.Font("Cascadia Code", 1, 12)); // NOI18N
+        movie_logo13.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
+        movie_logo13.setBorder(new javax.swing.border.LineBorder(new java.awt.Color(0, 0, 0), 4, true));
+        movie_logo13.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
+        movie_logo13.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseClicked(java.awt.event.MouseEvent evt) {
+                movie_logo13MouseClicked(evt);
+            }
+        });
+        movie_btn13.add(movie_logo13, new org.netbeans.lib.awtextra.AbsoluteConstraints(10, 0, 60, 50));
+
+        movie_name13.setFont(new java.awt.Font("Cascadia Code", 0, 12)); // NOI18N
+        movie_name13.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
+        movie_name13.setText("movie");
+        movie_btn13.add(movie_name13, new org.netbeans.lib.awtextra.AbsoluteConstraints(10, 50, 60, 30));
+
+        latestMovies_panel.add(movie_btn13, new org.netbeans.lib.awtextra.AbsoluteConstraints(460, 10, 80, -1));
+
+        movie_btn14.setBackground(new java.awt.Color(255, 255, 255));
+        movie_btn14.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
+
+        movie_logo14.setBackground(new java.awt.Color(255, 255, 255));
+        movie_logo14.setFont(new java.awt.Font("Cascadia Code", 1, 12)); // NOI18N
+        movie_logo14.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
+        movie_logo14.setBorder(new javax.swing.border.LineBorder(new java.awt.Color(0, 0, 0), 4, true));
+        movie_logo14.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
+        movie_logo14.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseClicked(java.awt.event.MouseEvent evt) {
+                movie_logo14MouseClicked(evt);
+            }
+        });
+        movie_btn14.add(movie_logo14, new org.netbeans.lib.awtextra.AbsoluteConstraints(10, 0, 60, 50));
+
+        movie_name14.setFont(new java.awt.Font("Cascadia Code", 0, 12)); // NOI18N
+        movie_name14.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
+        movie_name14.setText("movie");
+        movie_btn14.add(movie_name14, new org.netbeans.lib.awtextra.AbsoluteConstraints(10, 50, 60, 30));
+
+        latestMovies_panel.add(movie_btn14, new org.netbeans.lib.awtextra.AbsoluteConstraints(550, 10, 80, -1));
+
+        moreMovies_btn2.setBackground(new java.awt.Color(255, 255, 255));
+        moreMovies_btn2.setFont(new java.awt.Font("Cascadia Code", 1, 18)); // NOI18N
+        moreMovies_btn2.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
+        moreMovies_btn2.setText("...");
+        moreMovies_btn2.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
+        moreMovies_btn2.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseClicked(java.awt.event.MouseEvent evt) {
+                moreMovies_btn2MouseClicked(evt);
+            }
+        });
+        latestMovies_panel.add(moreMovies_btn2, new org.netbeans.lib.awtextra.AbsoluteConstraints(640, 10, 60, 50));
+
+        latestMedia_scroll.setViewportView(latestMovies_panel);
+
+        main_menu.add(latestMedia_scroll, new org.netbeans.lib.awtextra.AbsoluteConstraints(190, 400, 650, 110));
+
+        topMedia_txt.setFont(new java.awt.Font("Cascadia Code", 1, 24)); // NOI18N
+        topMedia_txt.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
+        topMedia_txt.setText("Top rated media");
+        main_menu.add(topMedia_txt, new org.netbeans.lib.awtextra.AbsoluteConstraints(180, 170, 230, 40));
+
+        moreRecentMedia_cBox.setFont(new java.awt.Font("Cascadia Code", 0, 12)); // NOI18N
+        moreRecentMedia_cBox.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "Item 1", "Item 2", "Item 3", "Item 4" }));
+        main_menu.add(moreRecentMedia_cBox, new org.netbeans.lib.awtextra.AbsoluteConstraints(850, 410, 190, 20));
+
+        moreTopMedia_cBox.setFont(new java.awt.Font("Cascadia Code", 0, 12)); // NOI18N
+        moreTopMedia_cBox.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "Item 1", "Item 2", "Item 3", "Item 4" }));
+        main_menu.add(moreTopMedia_cBox, new org.netbeans.lib.awtextra.AbsoluteConstraints(850, 230, 190, 20));
+
+        paneles.addTab("tab2", main_menu);
+
+        search_results.setBackground(new java.awt.Color(255, 255, 255));
+        search_results.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(0, 0, 0), 5));
+        search_results.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
+
+        return_btn.setBackground(new java.awt.Color(255, 255, 255));
+        return_btn.setFont(new java.awt.Font("Cascadia Code", 1, 16)); // NOI18N
+        return_btn.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
+        return_btn.setText("return");
+        return_btn.setBorder(new javax.swing.border.LineBorder(new java.awt.Color(0, 0, 0), 4, true));
+        return_btn.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
+        return_btn.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseClicked(java.awt.event.MouseEvent evt) {
+                return_btnMouseClicked(evt);
+            }
+        });
+        search_results.add(return_btn, new org.netbeans.lib.awtextra.AbsoluteConstraints(30, 30, 90, 60));
+
+        titulo_txt1.setFont(new java.awt.Font("Cascadia Code", 1, 48)); // NOI18N
+        titulo_txt1.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
+        titulo_txt1.setText("Search results");
+        search_results.add(titulo_txt1, new org.netbeans.lib.awtextra.AbsoluteConstraints(160, 30, 780, 60));
+
+        topMedia_scroll1.setHorizontalScrollBarPolicy(javax.swing.ScrollPaneConstants.HORIZONTAL_SCROLLBAR_ALWAYS);
+
+        topMovies_panel1.setBackground(new java.awt.Color(255, 255, 255));
+        topMovies_panel1.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
+
+        movie_btn15.setBackground(new java.awt.Color(255, 255, 255));
+        movie_btn15.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
+
+        movie_logo15.setBackground(new java.awt.Color(255, 255, 255));
+        movie_logo15.setFont(new java.awt.Font("Cascadia Code", 1, 12)); // NOI18N
+        movie_logo15.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
+        movie_logo15.setBorder(new javax.swing.border.LineBorder(new java.awt.Color(0, 0, 0), 4, true));
+        movie_logo15.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
+        movie_logo15.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseClicked(java.awt.event.MouseEvent evt) {
+                movie_logo15MouseClicked(evt);
+            }
+        });
+        movie_btn15.add(movie_logo15, new org.netbeans.lib.awtextra.AbsoluteConstraints(10, 0, 60, 50));
+
+        movie_name15.setFont(new java.awt.Font("Cascadia Code", 0, 12)); // NOI18N
+        movie_name15.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
+        movie_name15.setText("movie");
+        movie_btn15.add(movie_name15, new org.netbeans.lib.awtextra.AbsoluteConstraints(10, 50, 60, 30));
+
+        topMovies_panel1.add(movie_btn15, new org.netbeans.lib.awtextra.AbsoluteConstraints(10, 10, 80, -1));
+
+        movie_btn16.setBackground(new java.awt.Color(255, 255, 255));
+        movie_btn16.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
+
+        movie_logo16.setBackground(new java.awt.Color(255, 255, 255));
+        movie_logo16.setFont(new java.awt.Font("Cascadia Code", 1, 12)); // NOI18N
+        movie_logo16.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
+        movie_logo16.setBorder(new javax.swing.border.LineBorder(new java.awt.Color(0, 0, 0), 4, true));
+        movie_logo16.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
+        movie_logo16.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseClicked(java.awt.event.MouseEvent evt) {
+                movie_logo16MouseClicked(evt);
+            }
+        });
+        movie_btn16.add(movie_logo16, new org.netbeans.lib.awtextra.AbsoluteConstraints(10, 0, 60, 50));
+
+        movie_name16.setFont(new java.awt.Font("Cascadia Code", 0, 12)); // NOI18N
+        movie_name16.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
+        movie_name16.setText("movie");
+        movie_btn16.add(movie_name16, new org.netbeans.lib.awtextra.AbsoluteConstraints(10, 50, 60, 30));
+
+        topMovies_panel1.add(movie_btn16, new org.netbeans.lib.awtextra.AbsoluteConstraints(100, 10, 80, -1));
+
+        movie_btn17.setBackground(new java.awt.Color(255, 255, 255));
+        movie_btn17.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
+
+        movie_logo17.setBackground(new java.awt.Color(255, 255, 255));
+        movie_logo17.setFont(new java.awt.Font("Cascadia Code", 1, 12)); // NOI18N
+        movie_logo17.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
+        movie_logo17.setBorder(new javax.swing.border.LineBorder(new java.awt.Color(0, 0, 0), 4, true));
+        movie_logo17.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
+        movie_logo17.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseClicked(java.awt.event.MouseEvent evt) {
+                movie_logo17MouseClicked(evt);
+            }
+        });
+        movie_btn17.add(movie_logo17, new org.netbeans.lib.awtextra.AbsoluteConstraints(10, 0, 60, 50));
+
+        movie_name17.setFont(new java.awt.Font("Cascadia Code", 0, 12)); // NOI18N
+        movie_name17.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
+        movie_name17.setText("movie");
+        movie_btn17.add(movie_name17, new org.netbeans.lib.awtextra.AbsoluteConstraints(10, 50, 60, 30));
+
+        topMovies_panel1.add(movie_btn17, new org.netbeans.lib.awtextra.AbsoluteConstraints(190, 10, 80, -1));
+
+        movie_btn18.setBackground(new java.awt.Color(255, 255, 255));
+        movie_btn18.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
+
+        movie_logo18.setBackground(new java.awt.Color(255, 255, 255));
+        movie_logo18.setFont(new java.awt.Font("Cascadia Code", 1, 12)); // NOI18N
+        movie_logo18.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
+        movie_logo18.setBorder(new javax.swing.border.LineBorder(new java.awt.Color(0, 0, 0), 4, true));
+        movie_logo18.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
+        movie_logo18.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseClicked(java.awt.event.MouseEvent evt) {
+                movie_logo18MouseClicked(evt);
+            }
+        });
+        movie_btn18.add(movie_logo18, new org.netbeans.lib.awtextra.AbsoluteConstraints(10, 0, 60, 50));
+
+        movie_name18.setFont(new java.awt.Font("Cascadia Code", 0, 12)); // NOI18N
+        movie_name18.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
+        movie_name18.setText("movie");
+        movie_btn18.add(movie_name18, new org.netbeans.lib.awtextra.AbsoluteConstraints(10, 50, 60, 30));
+
+        topMovies_panel1.add(movie_btn18, new org.netbeans.lib.awtextra.AbsoluteConstraints(280, 10, 80, -1));
+
+        movie_btn19.setBackground(new java.awt.Color(255, 255, 255));
+        movie_btn19.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
+
+        movie_logo19.setBackground(new java.awt.Color(255, 255, 255));
+        movie_logo19.setFont(new java.awt.Font("Cascadia Code", 1, 12)); // NOI18N
+        movie_logo19.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
+        movie_logo19.setBorder(new javax.swing.border.LineBorder(new java.awt.Color(0, 0, 0), 4, true));
+        movie_logo19.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
+        movie_logo19.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseClicked(java.awt.event.MouseEvent evt) {
+                movie_logo19MouseClicked(evt);
+            }
+        });
+        movie_btn19.add(movie_logo19, new org.netbeans.lib.awtextra.AbsoluteConstraints(10, 0, 60, 50));
+
+        movie_name19.setFont(new java.awt.Font("Cascadia Code", 0, 12)); // NOI18N
+        movie_name19.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
+        movie_name19.setText("movie");
+        movie_btn19.add(movie_name19, new org.netbeans.lib.awtextra.AbsoluteConstraints(10, 50, 60, 30));
+
+        topMovies_panel1.add(movie_btn19, new org.netbeans.lib.awtextra.AbsoluteConstraints(370, 10, 80, -1));
+
+        movie_btn20.setBackground(new java.awt.Color(255, 255, 255));
+        movie_btn20.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
+
+        movie_logo20.setBackground(new java.awt.Color(255, 255, 255));
+        movie_logo20.setFont(new java.awt.Font("Cascadia Code", 1, 12)); // NOI18N
+        movie_logo20.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
+        movie_logo20.setBorder(new javax.swing.border.LineBorder(new java.awt.Color(0, 0, 0), 4, true));
+        movie_logo20.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
+        movie_logo20.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseClicked(java.awt.event.MouseEvent evt) {
+                movie_logo20MouseClicked(evt);
+            }
+        });
+        movie_btn20.add(movie_logo20, new org.netbeans.lib.awtextra.AbsoluteConstraints(10, 0, 60, 50));
+
+        movie_name20.setFont(new java.awt.Font("Cascadia Code", 0, 12)); // NOI18N
+        movie_name20.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
+        movie_name20.setText("movie");
+        movie_btn20.add(movie_name20, new org.netbeans.lib.awtextra.AbsoluteConstraints(10, 50, 60, 30));
+
+        topMovies_panel1.add(movie_btn20, new org.netbeans.lib.awtextra.AbsoluteConstraints(460, 10, 80, -1));
+
+        movie_btn21.setBackground(new java.awt.Color(255, 255, 255));
+        movie_btn21.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
+
+        movie_logo21.setBackground(new java.awt.Color(255, 255, 255));
+        movie_logo21.setFont(new java.awt.Font("Cascadia Code", 1, 12)); // NOI18N
+        movie_logo21.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
+        movie_logo21.setBorder(new javax.swing.border.LineBorder(new java.awt.Color(0, 0, 0), 4, true));
+        movie_logo21.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
+        movie_logo21.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseClicked(java.awt.event.MouseEvent evt) {
+                movie_logo21MouseClicked(evt);
+            }
+        });
+        movie_btn21.add(movie_logo21, new org.netbeans.lib.awtextra.AbsoluteConstraints(10, 0, 60, 50));
+
+        movie_name21.setFont(new java.awt.Font("Cascadia Code", 0, 12)); // NOI18N
+        movie_name21.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
+        movie_name21.setText("movie");
+        movie_btn21.add(movie_name21, new org.netbeans.lib.awtextra.AbsoluteConstraints(10, 50, 60, 30));
+
+        topMovies_panel1.add(movie_btn21, new org.netbeans.lib.awtextra.AbsoluteConstraints(550, 10, 80, -1));
+
+        topMedia_scroll1.setViewportView(topMovies_panel1);
+
+        search_results.add(topMedia_scroll1, new org.netbeans.lib.awtextra.AbsoluteConstraints(100, 140, 900, 340));
+
+        paneles.addTab("tab2", search_results);
+
+        advanced_search.setBackground(new java.awt.Color(255, 255, 255));
+        advanced_search.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(0, 0, 0), 5));
+        advanced_search.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
+
+        return_btn_Adv.setBackground(new java.awt.Color(255, 255, 255));
+        return_btn_Adv.setFont(new java.awt.Font("Cascadia Code", 1, 16)); // NOI18N
+        return_btn_Adv.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
+        return_btn_Adv.setText("return");
+        return_btn_Adv.setBorder(new javax.swing.border.LineBorder(new java.awt.Color(0, 0, 0), 4, true));
+        return_btn_Adv.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
+        return_btn_Adv.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseClicked(java.awt.event.MouseEvent evt) {
+                return_btn_AdvMouseClicked(evt);
+            }
+        });
+        advanced_search.add(return_btn_Adv, new org.netbeans.lib.awtextra.AbsoluteConstraints(30, 30, 90, 60));
+
+        titulo_txt2.setFont(new java.awt.Font("Cascadia Code", 1, 48)); // NOI18N
+        titulo_txt2.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
+        titulo_txt2.setText("Advanced search");
+        advanced_search.add(titulo_txt2, new org.netbeans.lib.awtextra.AbsoluteConstraints(160, 30, 780, 60));
+
+        typeFilter_txt.setFont(new java.awt.Font("Cascadia Code", 1, 24)); // NOI18N
+        typeFilter_txt.setHorizontalAlignment(javax.swing.SwingConstants.LEFT);
+        typeFilter_txt.setText("Type");
+        advanced_search.add(typeFilter_txt, new org.netbeans.lib.awtextra.AbsoluteConstraints(120, 140, 100, 40));
+
+        typeFilter_cBox.setFont(new java.awt.Font("Cascadia Code", 0, 12)); // NOI18N
+        typeFilter_cBox.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "Item 1", "Item 2", "Item 3", "Item 4" }));
+        typeFilter_cBox.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(0, 0, 0), 4));
+        advanced_search.add(typeFilter_cBox, new org.netbeans.lib.awtextra.AbsoluteConstraints(300, 140, 170, 40));
+
+        genreFilter_txt.setFont(new java.awt.Font("Cascadia Code", 1, 24)); // NOI18N
+        genreFilter_txt.setHorizontalAlignment(javax.swing.SwingConstants.LEFT);
+        genreFilter_txt.setText("Genre");
+        advanced_search.add(genreFilter_txt, new org.netbeans.lib.awtextra.AbsoluteConstraints(120, 210, 100, 40));
+
+        genreFilter_cBox.setFont(new java.awt.Font("Cascadia Code", 0, 12)); // NOI18N
+        genreFilter_cBox.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "Item 1", "Item 2", "Item 3", "Item 4" }));
+        genreFilter_cBox.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(0, 0, 0), 4));
+        advanced_search.add(genreFilter_cBox, new org.netbeans.lib.awtextra.AbsoluteConstraints(300, 210, 170, 40));
+
+        actorFilter_txt.setFont(new java.awt.Font("Cascadia Code", 1, 24)); // NOI18N
+        actorFilter_txt.setHorizontalAlignment(javax.swing.SwingConstants.LEFT);
+        actorFilter_txt.setText("Actor");
+        advanced_search.add(actorFilter_txt, new org.netbeans.lib.awtextra.AbsoluteConstraints(120, 280, 80, 40));
+
+        actorFilter_cBox.setFont(new java.awt.Font("Cascadia Code", 0, 12)); // NOI18N
+        actorFilter_cBox.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "Item 1", "Item 2", "Item 3", "Item 4" }));
+        actorFilter_cBox.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(0, 0, 0), 4));
+        advanced_search.add(actorFilter_cBox, new org.netbeans.lib.awtextra.AbsoluteConstraints(300, 280, 170, 40));
+
+        producerFilter_txt.setFont(new java.awt.Font("Cascadia Code", 1, 24)); // NOI18N
+        producerFilter_txt.setHorizontalAlignment(javax.swing.SwingConstants.LEFT);
+        producerFilter_txt.setText("Producer");
+        advanced_search.add(producerFilter_txt, new org.netbeans.lib.awtextra.AbsoluteConstraints(120, 350, 130, 40));
+
+        producerFilter_cBox.setFont(new java.awt.Font("Cascadia Code", 0, 12)); // NOI18N
+        producerFilter_cBox.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "Item 1", "Item 2", "Item 3", "Item 4" }));
+        producerFilter_cBox.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(0, 0, 0), 4));
+        advanced_search.add(producerFilter_cBox, new org.netbeans.lib.awtextra.AbsoluteConstraints(300, 350, 170, 40));
+
+        countryFilter_txt1.setFont(new java.awt.Font("Cascadia Code", 1, 24)); // NOI18N
+        countryFilter_txt1.setHorizontalAlignment(javax.swing.SwingConstants.LEFT);
+        countryFilter_txt1.setText("Country");
+        advanced_search.add(countryFilter_txt1, new org.netbeans.lib.awtextra.AbsoluteConstraints(120, 420, 130, 40));
+
+        countryFilter_cBox.setFont(new java.awt.Font("Cascadia Code", 0, 12)); // NOI18N
+        countryFilter_cBox.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "Item 1", "Item 2", "Item 3", "Item 4" }));
+        countryFilter_cBox.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(0, 0, 0), 4));
+        advanced_search.add(countryFilter_cBox, new org.netbeans.lib.awtextra.AbsoluteConstraints(300, 420, 170, 40));
+
+        sortByFilter_txt.setFont(new java.awt.Font("Cascadia Code", 1, 24)); // NOI18N
+        sortByFilter_txt.setHorizontalAlignment(javax.swing.SwingConstants.LEFT);
+        sortByFilter_txt.setText("Sort by");
+        advanced_search.add(sortByFilter_txt, new org.netbeans.lib.awtextra.AbsoluteConstraints(580, 140, 130, 40));
+
+        highRated_radioB.setFont(new java.awt.Font("Cascadia Code", 0, 12)); // NOI18N
+        highRated_radioB.setText("Highest rated");
+        highRated_radioB.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseClicked(java.awt.event.MouseEvent evt) {
+                highRated_radioBMouseClicked(evt);
+            }
+        });
+        advanced_search.add(highRated_radioB, new org.netbeans.lib.awtextra.AbsoluteConstraints(730, 150, -1, -1));
+
+        lowRated_radioB.setFont(new java.awt.Font("Cascadia Code", 0, 12)); // NOI18N
+        lowRated_radioB.setText("Lowest rated");
+        lowRated_radioB.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseClicked(java.awt.event.MouseEvent evt) {
+                lowRated_radioBMouseClicked(evt);
+            }
+        });
+        advanced_search.add(lowRated_radioB, new org.netbeans.lib.awtextra.AbsoluteConstraints(730, 190, -1, -1));
+
+        popular_radioB.setFont(new java.awt.Font("Cascadia Code", 0, 12)); // NOI18N
+        popular_radioB.setText("Most popular");
+        popular_radioB.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseClicked(java.awt.event.MouseEvent evt) {
+                popular_radioBMouseClicked(evt);
+            }
+        });
+        advanced_search.add(popular_radioB, new org.netbeans.lib.awtextra.AbsoluteConstraints(730, 230, -1, -1));
+
+        newest_radioB.setFont(new java.awt.Font("Cascadia Code", 0, 12)); // NOI18N
+        newest_radioB.setText("Most recent");
+        newest_radioB.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseClicked(java.awt.event.MouseEvent evt) {
+                newest_radioBMouseClicked(evt);
+            }
+        });
+        advanced_search.add(newest_radioB, new org.netbeans.lib.awtextra.AbsoluteConstraints(730, 270, -1, -1));
+
+        oldest_radioB.setFont(new java.awt.Font("Cascadia Code", 0, 12)); // NOI18N
+        oldest_radioB.setText("Oldest");
+        oldest_radioB.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseClicked(java.awt.event.MouseEvent evt) {
+                oldest_radioBMouseClicked(evt);
+            }
+        });
+        advanced_search.add(oldest_radioB, new org.netbeans.lib.awtextra.AbsoluteConstraints(730, 310, -1, -1));
+
+        search_btn_Adv.setBackground(new java.awt.Color(255, 255, 255));
+        search_btn_Adv.setFont(new java.awt.Font("Cascadia Code", 1, 16)); // NOI18N
+        search_btn_Adv.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
+        search_btn_Adv.setText("Search");
+        search_btn_Adv.setBorder(new javax.swing.border.LineBorder(new java.awt.Color(0, 0, 0), 4, true));
+        search_btn_Adv.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
+        search_btn_Adv.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseClicked(java.awt.event.MouseEvent evt) {
+                search_btn_AdvMouseClicked(evt);
+            }
+        });
+        advanced_search.add(search_btn_Adv, new org.netbeans.lib.awtextra.AbsoluteConstraints(840, 410, 130, 60));
+
+        paneles.addTab("tab2", advanced_search);
+
+        getContentPane().add(paneles, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 10, 1100, 570));
+
+        bottom_panel.setBackground(new java.awt.Color(255, 255, 255));
+        bottom_panel.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(0, 0, 0), 5));
+        bottom_panel.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
+        getContentPane().add(bottom_panel, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 570, 1100, 40));
 
         pack();
     }// </editor-fold>//GEN-END:initComponents
@@ -139,6 +1313,266 @@ public class Interface extends javax.swing.JFrame {
     private void enterUser_txtFieldActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_enterUser_txtFieldActionPerformed
         // TODO add your handling code here:
     }//GEN-LAST:event_enterUser_txtFieldActionPerformed
+
+    private void newUser_linkMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_newUser_linkMouseClicked
+        // Cuando se presiona 'registrar nuevo usuario'
+        paneles.setSelectedIndex(1);
+    }//GEN-LAST:event_newUser_linkMouseClicked
+
+    private void back_btnMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_back_btnMouseClicked
+        paneles.setSelectedIndex(0);
+    }//GEN-LAST:event_back_btnMouseClicked
+
+    private void enterUser_txtFieldMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_enterUser_txtFieldMouseClicked
+        // Aun nada
+    }//GEN-LAST:event_enterUser_txtFieldMouseClicked
+
+    private void enterUser_txtFieldMouseExited(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_enterUser_txtFieldMouseExited
+        // Nothing here
+    }//GEN-LAST:event_enterUser_txtFieldMouseExited
+
+    private void loginMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_loginMouseClicked
+        // Reset username
+        String valUser = String.valueOf(enterUser_txtField.getText()); 
+        if (valUser.isEmpty() || valUser.equals("enter_username")) {
+            enterUser_txtField.setText("enter_username");
+            enterUser_txtField.setForeground(new Color(204,204,204));
+        }
+        // Reset password
+        if (String.valueOf(enterPass_txtField.getText()).isEmpty()) {
+            enterPass_txtField.setText("enter_password");
+            enterPass_txtField.setForeground(new Color(204,204,204));
+        }
+    }//GEN-LAST:event_loginMouseClicked
+
+    private void search_txtFieldActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_search_txtFieldActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_search_txtFieldActionPerformed
+
+    private void menu_btnMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_menu_btnMouseClicked
+        sideMenu_panel.setVisible(true);
+    }//GEN-LAST:event_menu_btnMouseClicked
+
+    private void logo_lblMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_logo_lblMouseClicked
+        // TODO add your handling code here:
+    }//GEN-LAST:event_logo_lblMouseClicked
+
+    private void advSearch_btnMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_advSearch_btnMouseClicked
+        paneles.setSelectedIndex(4);
+    }//GEN-LAST:event_advSearch_btnMouseClicked
+
+    private void movie_logo1MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_movie_logo1MouseClicked
+        // TODO add your handling code here:
+    }//GEN-LAST:event_movie_logo1MouseClicked
+
+    private void login_btnMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_login_btnMouseClicked
+        moreTopMedia_cBox.setVisible(false);
+        moreRecentMedia_cBox.setVisible(false);
+        paneles.setSelectedIndex(2);
+    }//GEN-LAST:event_login_btnMouseClicked
+
+    private void movie_logo2MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_movie_logo2MouseClicked
+        // TODO add your handling code here:
+    }//GEN-LAST:event_movie_logo2MouseClicked
+
+    private void movie_logo3MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_movie_logo3MouseClicked
+        // TODO add your handling code here:
+    }//GEN-LAST:event_movie_logo3MouseClicked
+
+    private void movie_logo4MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_movie_logo4MouseClicked
+        // TODO add your handling code here:
+    }//GEN-LAST:event_movie_logo4MouseClicked
+
+    private void movie_logo5MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_movie_logo5MouseClicked
+        // TODO add your handling code here:
+    }//GEN-LAST:event_movie_logo5MouseClicked
+
+    private void movie_logo6MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_movie_logo6MouseClicked
+        // TODO add your handling code here:
+    }//GEN-LAST:event_movie_logo6MouseClicked
+
+    private void movie_logo7MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_movie_logo7MouseClicked
+        // TODO add your handling code here:
+    }//GEN-LAST:event_movie_logo7MouseClicked
+
+    private void moreMovies_btnMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_moreMovies_btnMouseClicked
+        moreTopMedia_cBox.setVisible(true);
+        moreRecentMedia_cBox.setVisible(false);
+    }//GEN-LAST:event_moreMovies_btnMouseClicked
+
+    private void movie_logo8MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_movie_logo8MouseClicked
+        // TODO add your handling code here:
+    }//GEN-LAST:event_movie_logo8MouseClicked
+
+    private void movie_logo9MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_movie_logo9MouseClicked
+        // TODO add your handling code here:
+    }//GEN-LAST:event_movie_logo9MouseClicked
+
+    private void movie_logo10MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_movie_logo10MouseClicked
+        // TODO add your handling code here:
+    }//GEN-LAST:event_movie_logo10MouseClicked
+
+    private void movie_logo11MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_movie_logo11MouseClicked
+        // TODO add your handling code here:
+    }//GEN-LAST:event_movie_logo11MouseClicked
+
+    private void movie_logo12MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_movie_logo12MouseClicked
+        // TODO add your handling code here:
+    }//GEN-LAST:event_movie_logo12MouseClicked
+
+    private void movie_logo13MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_movie_logo13MouseClicked
+        // TODO add your handling code here:
+    }//GEN-LAST:event_movie_logo13MouseClicked
+
+    private void movie_logo14MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_movie_logo14MouseClicked
+        // TODO add your handling code here:
+    }//GEN-LAST:event_movie_logo14MouseClicked
+
+    private void moreMovies_btn2MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_moreMovies_btn2MouseClicked
+        moreRecentMedia_cBox.setVisible(true);
+        moreTopMedia_cBox.setVisible(false);
+    }//GEN-LAST:event_moreMovies_btn2MouseClicked
+
+    private void exitSideMenu_btnMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_exitSideMenu_btnMouseClicked
+        sideMenu_panel.setVisible(false);
+    }//GEN-LAST:event_exitSideMenu_btnMouseClicked
+
+    private void logOut_btnMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_logOut_btnMouseClicked
+        sideMenu_panel.setVisible(false);
+        // Reset position de los scrollPanels
+        topMedia_scroll.getViewport().setViewPosition(new java.awt.Point(0, 0));
+        latestMedia_scroll.getViewport().setViewPosition(new java.awt.Point(0, 0));
+        paneles.setSelectedIndex(0);
+        // falta agregarle la parte lógica del log out
+    }//GEN-LAST:event_logOut_btnMouseClicked
+
+    private void registerId_txtFieldActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_registerId_txtFieldActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_registerId_txtFieldActionPerformed
+
+    private void registerPass_txtFieldActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_registerPass_txtFieldActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_registerPass_txtFieldActionPerformed
+
+    private void registerEmail_txtFieldActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_registerEmail_txtFieldActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_registerEmail_txtFieldActionPerformed
+
+    private void registerUser_txtFieldActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_registerUser_txtFieldActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_registerUser_txtFieldActionPerformed
+
+    private void registerNickname_txtFieldActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_registerNickname_txtFieldActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_registerNickname_txtFieldActionPerformed
+
+    private void registerMiddleName_txtFieldActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_registerMiddleName_txtFieldActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_registerMiddleName_txtFieldActionPerformed
+
+    private void registerFirstName_txtFieldActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_registerFirstName_txtFieldActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_registerFirstName_txtFieldActionPerformed
+
+    private void registerLastName_txtFieldActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_registerLastName_txtFieldActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_registerLastName_txtFieldActionPerformed
+
+    private void return_btnMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_return_btnMouseClicked
+        moreTopMedia_cBox.setVisible(false);
+        moreRecentMedia_cBox.setVisible(false);
+        topMedia_scroll.getViewport().setViewPosition(new java.awt.Point(0, 0));
+        latestMedia_scroll.getViewport().setViewPosition(new java.awt.Point(0, 0));
+        paneles.setSelectedIndex(2);
+    }//GEN-LAST:event_return_btnMouseClicked
+
+    private void movie_logo15MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_movie_logo15MouseClicked
+        // TODO add your handling code here:
+    }//GEN-LAST:event_movie_logo15MouseClicked
+
+    private void movie_logo16MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_movie_logo16MouseClicked
+        // TODO add your handling code here:
+    }//GEN-LAST:event_movie_logo16MouseClicked
+
+    private void movie_logo17MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_movie_logo17MouseClicked
+        // TODO add your handling code here:
+    }//GEN-LAST:event_movie_logo17MouseClicked
+
+    private void movie_logo18MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_movie_logo18MouseClicked
+        // TODO add your handling code here:
+    }//GEN-LAST:event_movie_logo18MouseClicked
+
+    private void movie_logo19MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_movie_logo19MouseClicked
+        // TODO add your handling code here:
+    }//GEN-LAST:event_movie_logo19MouseClicked
+
+    private void movie_logo20MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_movie_logo20MouseClicked
+        // TODO add your handling code here:
+    }//GEN-LAST:event_movie_logo20MouseClicked
+
+    private void movie_logo21MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_movie_logo21MouseClicked
+        // TODO add your handling code here:
+    }//GEN-LAST:event_movie_logo21MouseClicked
+
+    private void search_btnMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_search_btnMouseClicked
+        paneles.setSelectedIndex(3);
+    }//GEN-LAST:event_search_btnMouseClicked
+
+    private void return_btn_AdvMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_return_btn_AdvMouseClicked
+        moreTopMedia_cBox.setVisible(false);
+        moreRecentMedia_cBox.setVisible(false);
+        topMedia_scroll.getViewport().setViewPosition(new java.awt.Point(0, 0));
+        latestMedia_scroll.getViewport().setViewPosition(new java.awt.Point(0, 0));
+        paneles.setSelectedIndex(2);
+    }//GEN-LAST:event_return_btn_AdvMouseClicked
+
+    private void search_btn_AdvMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_search_btn_AdvMouseClicked
+        // falta la logica de buscar resultados de acuerdo a los filtros seleccionados
+        paneles.setSelectedIndex(3);
+        JRadioButton[] botonesFiltro = {highRated_radioB, lowRated_radioB, popular_radioB, newest_radioB, oldest_radioB};
+        String seleccionado = "";
+        for (JRadioButton boton : botonesFiltro) {
+            if (boton.isSelected()) {
+                seleccionado = boton.getText();
+                boton.setSelected(false);
+            }
+        }
+    }//GEN-LAST:event_search_btn_AdvMouseClicked
+
+    private void highRated_radioBMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_highRated_radioBMouseClicked
+        lowRated_radioB.setSelected(false);
+        popular_radioB.setSelected(false);
+        newest_radioB.setSelected(false);
+        oldest_radioB.setSelected(false);
+    }//GEN-LAST:event_highRated_radioBMouseClicked
+
+    private void lowRated_radioBMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_lowRated_radioBMouseClicked
+        highRated_radioB.setSelected(false);
+        popular_radioB.setSelected(false);
+        newest_radioB.setSelected(false);
+        oldest_radioB.setSelected(false);
+    }//GEN-LAST:event_lowRated_radioBMouseClicked
+
+    private void popular_radioBMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_popular_radioBMouseClicked
+        highRated_radioB.setSelected(false);
+        lowRated_radioB.setSelected(false);
+        newest_radioB.setSelected(false);
+        oldest_radioB.setSelected(false);
+    }//GEN-LAST:event_popular_radioBMouseClicked
+
+    private void newest_radioBMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_newest_radioBMouseClicked
+        highRated_radioB.setSelected(false);
+        lowRated_radioB.setSelected(false);
+        popular_radioB.setSelected(false);
+        oldest_radioB.setSelected(false);
+    }//GEN-LAST:event_newest_radioBMouseClicked
+
+    private void oldest_radioBMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_oldest_radioBMouseClicked
+        highRated_radioB.setSelected(false);
+        lowRated_radioB.setSelected(false);
+        popular_radioB.setSelected(false);
+        newest_radioB.setSelected(false);
+    }//GEN-LAST:event_oldest_radioBMouseClicked
 
     /**
      * @param args the command line arguments
@@ -176,16 +1610,154 @@ public class Interface extends javax.swing.JFrame {
     }
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
+    private javax.swing.JComboBox<String> actorFilter_cBox;
+    private javax.swing.JLabel actorFilter_txt;
+    private javax.swing.JLabel advSearch_btn;
+    private javax.swing.JPanel advanced_search;
     private javax.swing.JLabel appName_txt;
-    private javax.swing.JPanel app_panel;
+    private javax.swing.JLabel back_btn;
+    private javax.swing.JPanel bottom_panel;
+    private javax.swing.JLabel cart_btn;
+    private javax.swing.JComboBox<String> countryFilter_cBox;
+    private javax.swing.JLabel countryFilter_txt1;
     private javax.swing.JTextField enterPass_txtField;
     private javax.swing.JTextField enterUser_txtField;
+    private javax.swing.JLabel exitSideMenu_btn;
+    private javax.swing.JComboBox<String> genreFilter_cBox;
+    private javax.swing.JLabel genreFilter_txt;
+    private javax.swing.JRadioButton highRated_radioB;
+    private javax.swing.JLabel lastMedia_txt;
+    private javax.swing.JScrollPane latestMedia_scroll;
+    private javax.swing.JPanel latestMovies_panel;
+    private javax.swing.JLabel logOut_btn;
+    private javax.swing.JPanel login;
     private javax.swing.JLabel login_btn;
-    private javax.swing.JPanel login_panel;
     private javax.swing.JLabel login_txt;
     private javax.swing.JLabel logo_img;
+    private javax.swing.JLabel logo_lbl;
+    private javax.swing.JRadioButton lowRated_radioB;
+    private javax.swing.JPanel main_menu;
+    private javax.swing.JLabel menu_btn;
+    private javax.swing.JLabel moreMovies_btn;
+    private javax.swing.JLabel moreMovies_btn2;
+    private javax.swing.JComboBox<String> moreRecentMedia_cBox;
+    private javax.swing.JComboBox<String> moreTopMedia_cBox;
+    private javax.swing.JPanel movie_btn1;
+    private javax.swing.JPanel movie_btn10;
+    private javax.swing.JPanel movie_btn11;
+    private javax.swing.JPanel movie_btn12;
+    private javax.swing.JPanel movie_btn13;
+    private javax.swing.JPanel movie_btn14;
+    private javax.swing.JPanel movie_btn15;
+    private javax.swing.JPanel movie_btn16;
+    private javax.swing.JPanel movie_btn17;
+    private javax.swing.JPanel movie_btn18;
+    private javax.swing.JPanel movie_btn19;
+    private javax.swing.JPanel movie_btn2;
+    private javax.swing.JPanel movie_btn20;
+    private javax.swing.JPanel movie_btn21;
+    private javax.swing.JPanel movie_btn3;
+    private javax.swing.JPanel movie_btn4;
+    private javax.swing.JPanel movie_btn5;
+    private javax.swing.JPanel movie_btn6;
+    private javax.swing.JPanel movie_btn7;
+    private javax.swing.JPanel movie_btn8;
+    private javax.swing.JPanel movie_btn9;
+    private javax.swing.JLabel movie_logo1;
+    private javax.swing.JLabel movie_logo10;
+    private javax.swing.JLabel movie_logo11;
+    private javax.swing.JLabel movie_logo12;
+    private javax.swing.JLabel movie_logo13;
+    private javax.swing.JLabel movie_logo14;
+    private javax.swing.JLabel movie_logo15;
+    private javax.swing.JLabel movie_logo16;
+    private javax.swing.JLabel movie_logo17;
+    private javax.swing.JLabel movie_logo18;
+    private javax.swing.JLabel movie_logo19;
+    private javax.swing.JLabel movie_logo2;
+    private javax.swing.JLabel movie_logo20;
+    private javax.swing.JLabel movie_logo21;
+    private javax.swing.JLabel movie_logo3;
+    private javax.swing.JLabel movie_logo4;
+    private javax.swing.JLabel movie_logo5;
+    private javax.swing.JLabel movie_logo6;
+    private javax.swing.JLabel movie_logo7;
+    private javax.swing.JLabel movie_logo8;
+    private javax.swing.JLabel movie_logo9;
+    private javax.swing.JLabel movie_name1;
+    private javax.swing.JLabel movie_name10;
+    private javax.swing.JLabel movie_name11;
+    private javax.swing.JLabel movie_name12;
+    private javax.swing.JLabel movie_name13;
+    private javax.swing.JLabel movie_name14;
+    private javax.swing.JLabel movie_name15;
+    private javax.swing.JLabel movie_name16;
+    private javax.swing.JLabel movie_name17;
+    private javax.swing.JLabel movie_name18;
+    private javax.swing.JLabel movie_name19;
+    private javax.swing.JLabel movie_name2;
+    private javax.swing.JLabel movie_name20;
+    private javax.swing.JLabel movie_name21;
+    private javax.swing.JLabel movie_name3;
+    private javax.swing.JLabel movie_name4;
+    private javax.swing.JLabel movie_name5;
+    private javax.swing.JLabel movie_name6;
+    private javax.swing.JLabel movie_name7;
+    private javax.swing.JLabel movie_name8;
+    private javax.swing.JLabel movie_name9;
     private javax.swing.JLabel newUser_link;
+    private javax.swing.JRadioButton newest_radioB;
+    private javax.swing.JRadioButton oldest_radioB;
+    private javax.swing.JTabbedPane paneles;
     private javax.swing.JLabel pass_txt;
+    private javax.swing.JRadioButton popular_radioB;
+    private javax.swing.JComboBox<String> producerFilter_cBox;
+    private javax.swing.JLabel producerFilter_txt;
+    private javax.swing.JLabel purchases_btn;
+    private javax.swing.JPanel register;
+    private com.toedter.calendar.JDateChooser registerDob_chooser;
+    private javax.swing.JLabel registerDob_txt;
+    private javax.swing.JLabel registerEmail_txt;
+    private javax.swing.JTextField registerEmail_txtField;
+    private javax.swing.JTextField registerFirstName_txtField;
+    private javax.swing.JComboBox<String> registerGender_cBox;
+    private javax.swing.JLabel registerGender_txt;
+    private javax.swing.JComboBox<String> registerIdType_cBox;
+    private javax.swing.JLabel registerIdType_txt;
+    private javax.swing.JLabel registerId_txt;
+    private javax.swing.JTextField registerId_txtField;
+    private javax.swing.JTextField registerLastName_txtField;
+    private javax.swing.JTextField registerMiddleName_txtField;
+    private javax.swing.JLabel registerName_txt;
+    private javax.swing.JTextField registerNickname_txtField;
+    private javax.swing.JLabel registerPass_txt;
+    private javax.swing.JTextField registerPass_txtField;
+    private javax.swing.JLabel registerUser_txt;
+    private javax.swing.JTextField registerUser_txtField;
+    private javax.swing.JLabel register_btn;
+    private javax.swing.JLabel register_txt;
+    private javax.swing.JLabel return_btn;
+    private javax.swing.JLabel return_btn_Adv;
+    private javax.swing.JLabel search_btn;
+    private javax.swing.JLabel search_btn_Adv;
+    private javax.swing.JPanel search_results;
+    private javax.swing.JLabel search_txt;
+    private javax.swing.JTextField search_txtField;
+    private javax.swing.JPanel sideMenu_panel;
+    private javax.swing.JLabel sideMenu_txt;
+    private javax.swing.JLabel sortByFilter_txt;
+    private javax.swing.JLabel titulo_txt;
+    private javax.swing.JLabel titulo_txt1;
+    private javax.swing.JLabel titulo_txt2;
+    private javax.swing.JScrollPane topMedia_scroll;
+    private javax.swing.JScrollPane topMedia_scroll1;
+    private javax.swing.JLabel topMedia_txt;
+    private javax.swing.JPanel topMovies_panel;
+    private javax.swing.JPanel topMovies_panel1;
+    private javax.swing.JPanel top_panel;
+    private javax.swing.JComboBox<String> typeFilter_cBox;
+    private javax.swing.JLabel typeFilter_txt;
     private javax.swing.JLabel user_txt;
+    private javax.swing.JLabel wishList_btn;
     // End of variables declaration//GEN-END:variables
 }

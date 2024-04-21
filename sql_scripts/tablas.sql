@@ -96,7 +96,7 @@ CREATE TABLE address ( -- 16 Direccion, tiene la ciudad a donde pertenece
 );
 
 CREATE TABLE person ( -- 17 para todos los seres humanos en el sistema, incluyendo a los usuarios.
-    id                          NUMBER(4)      CONSTRAINT address_id_nn NOT NULL,
+    id                          NUMBER(4)      CONSTRAINT person_id_nn NOT NULL,
     birthdate                   DATE           CONSTRAINT person_birthdate_nn NOT NULL,
     firts_name                  VARCHAR2(20)   CONSTRAINT person_firstname_nn NOT NULL,
     middle_name                 VARCHAR(20)    CONSTRAINT person_midlename_nn NOT NULL,
@@ -127,12 +127,12 @@ CREATE TABLE rol ( --20 Rol que hace una persona en una pelicula
     
 
 CREATE TABLE film_person ( -- 21 For celebrities and people of note in the productions
-    id                          NUMBER(4)        CONSTRAINT parent_id_nn NOT NULL,
-    heigth_cm                   NUMBER(3)        CONSTRAINT Actor_heigth_nn NOT NULL,
+    id                          NUMBER(4)        CONSTRAINT filmpId_id_nn NOT NULL,
+    heigth_cm                   NUMBER(3)        CONSTRAINT filmp_heigth_nn NOT NULL,
     trivia                      VARCHAR2(50)     ,
     biography                   VARCHAR2(150)    ,
     nacionality                 NUMBER(4)        CONSTRAINT Actor_nacionality_nn NOT NULL,
-    adress                      NUMBER(4),
+    adress                      NUMBER(4)
 );    
 
 CREATE TABLE userr( --22 for users, both admins and regular users
@@ -157,9 +157,9 @@ create table regular_user(--24 for regular users
     );
 
     
-CREATE TABLE comment(--25 for replies to reviews
+CREATE TABLE comentario(--25 for replies to reviews
     id                           NUMBER(4)       CONSTRAINT comment_Id_nn NOT NULL,
-    text_body                    VARCHAR2(140)   CONSTRAINT commentBody_nn,
+    text_body                    VARCHAR2(140)   CONSTRAINT commentBody_nn NOT NULL,
     author                       NUMBER(4)       CONSTRAINT CommentAuthor_nn NOT NULL,                       
     id_review                    NUMBER(4)       CONSTRAINT Commentreply_nn NOT NULL --review al que esta respondiendo
     );
@@ -186,21 +186,21 @@ CREATE TABLE cart(--28  for buying a series of movies
 
 CREATE TABLE purchase(--29 for remembering purchases(?)
     id                           NUMBER(4)       CONSTRAINT purchaseId_nn NOT NULL,
-    date                         DATE            CONSTRAINT purchase_logDate_nn NOT NULL,
-    --tax                          NUMBER(8,2)     CONSTRAINT purchase_taxId_nn NOT NULL,para qué? ._.
+    dateOfPurchase               DATE            CONSTRAINT purchase_logDate_nn NOT NULL,
+  --tax                          NUMBER(8,2)     CONSTRAINT purchase_taxId_nn NOT NULL,para qué? ._.
     id_user                      NUMBER(4)       CONSTRAINT purchase_idUserId_nn NOT NULL,
     id_payment_method            NUMBER(4)       CONSTRAINT purchase_paymentMethod_nn NOT NULL
 );
 
 CREATE TABLE purchase_production(--30 for remembering
      id                          NUMBER(4)       CONSTRAINT purchaseProductionId_nn NOT NULL,
-     id_production               NUMBER(4)       CONSTRAINT purchaseProductionIdProduction_nn NOT NULL,
-     id_purchase                 NUMBER(4)       CONSTRAINT purchaseProductionIdPurchase_nn NOT NULL
+     id_production               NUMBER(4)       CONSTRAINT purchaseProdIdProdn_nn NOT NULL,
+     id_purchase                 NUMBER(4)       CONSTRAINT pPIdPurchase_nn NOT NULL
 );
 
 CREATE TABLE payment_method(--31 payment method, remembered for quicker purchases
      id                          NUMBER(4)       CONSTRAINT paymentMethodId_nn NOT NULL,
-     owner                       NUMBER(4)       CONSTRAINT PaymentOwner_nn NOT NULL
+     owner                       NUMBER(4)       CONSTRAINT PaymentOwner_nn NOT NULL,
      cc_owner_name               VARCHAR(25)     CONSTRAINT payment_method_name_nn NOT NULL,
      cc_number                   NUMBER(20)      CONSTRAINT payment_method_ccnum_nn NOT NULL,
      cc_expiration               DATE            CONSTRAINT payment_method_expiration_nn NOT NULL
@@ -213,8 +213,8 @@ CREATE TABLE production_image(--32 for the images shown in movies
     );
      
 CREATE TABLE identification_type(--33 for the type of identification the user is using.
-    id                          NUMBER(4)       CONSTRAINT identy_id_nn NOT NUL,
-    name                        VARCHAR(20)     CONSTRAINT identification_name_nn
+    id                          NUMBER(4)       CONSTRAINT identy_id_nn NOT NULL,
+    name                        VARCHAR(20)     CONSTRAINT identification_name_nn NOT NULL
     );  
      
      

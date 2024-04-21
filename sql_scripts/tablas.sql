@@ -221,4 +221,3 @@ CREATE TABLE identification_type(--33 for the type of identification the user is
      
      
      
-     

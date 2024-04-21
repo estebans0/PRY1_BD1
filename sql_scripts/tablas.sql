@@ -95,7 +95,6 @@ CREATE TABLE address ( -- 16 Direccion, tiene la ciudad a donde pertenece
     id_city                     NUMBER(4)       CONSTRAINT address_idCity_nn NOT NULL
 );
 
-
 CREATE TABLE person ( -- 17 para todos los seres humanos en el sistema, incluyendo a los usuarios.
     id                          NUMBER(4)      CONSTRAINT address_id_nn NOT NULL,
     birthdate                   DATE           CONSTRAINT person_birthdate_nn NOT NULL,
@@ -122,7 +121,7 @@ CREATE TABLE parent_of ( -- 19 para recordar relaciones de padres
 CREATE TABLE rol ( --20 Rol que hace una persona en una pelicula
     type                        NUMBER(4)       CONSTRAINT rol_id_nn NOT NULL,
     name                        VARCHAR2(20)    CONSTRAINT rol_name_nn NOT NULL,
-    is_cast_member              NUMBER(1)       CONSTRAINT is_cast_member_nn NOT NULL,
+    is_cast_member              NUMBER(1)       ,
     character_name              VARCHAR2(20)    CONSTRAINT rol_charname_nn NOT NULL
 );
     
@@ -130,10 +129,10 @@ CREATE TABLE rol ( --20 Rol que hace una persona en una pelicula
 CREATE TABLE film_person ( -- 21 For celebrities and people of note in the productions
     id                          NUMBER(4)        CONSTRAINT parent_id_nn NOT NULL,
     heigth_cm                   NUMBER(3)        CONSTRAINT Actor_heigth_nn NOT NULL,
-    trivia                      VARCHAR2(50)     CONSTRAINT Actor_trivia_nn NOT NULL,
-    biography                   VARCHAR2(150)    CONSTRAINT Actor_trivia_nn NOT NULL,
+    trivia                      VARCHAR2(50)     ,
+    biography                   VARCHAR2(150)    ,
     nacionality                 NUMBER(4)        CONSTRAINT Actor_nacionality_nn NOT NULL,
-    adress                      VARCHAR2(150)    CONSTRAINT Actor_trivia_nn NOT NULL
+    adress                      NUMBER(4),
 );    
 
 CREATE TABLE userr( --22 for users, both admins and regular users

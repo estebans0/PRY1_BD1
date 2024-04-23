@@ -9,6 +9,10 @@ import java.util.HashMap;
 import java.util.List;
 import java.util.Map;
 import Modelo.User;
+import com.sun.jdi.connect.spi.Connection;
+import java.sql.SQLException;
+import oracle.jdbc.OracleTypes;
+import java.sql.*;
 /**
  *
  * @author esteb
@@ -18,7 +22,7 @@ public class UserManager {
     private int currentUserId;
     private Map<Integer, User> users;
     
-    // Métodos
+    // Constructor
     public UserManager() { // Constructor sin ingresar id
         this.currentUserId = 0;
         this.users = new HashMap<>();
@@ -27,6 +31,23 @@ public class UserManager {
         this.currentUserId = currentUserId;
         this.users = new HashMap<>();
     }
+    
+    // Setters y Getters
+    public int getCurrentUserId() {
+        return currentUserId;
+    }
+
+    public Map<Integer, User> getUsers() {
+        return users;
+    }
+
+    public void setCurrentUserId(int currentUserId) {
+        this.currentUserId = currentUserId;
+    }
+
+    public void setUsers(Map<Integer, User> users) {
+        this.users = users;
+    }
 
     // Método para obtener un usuario por su id
     public User getUser(int id) {
@@ -34,13 +55,16 @@ public class UserManager {
     }
 
     // Método para verificar el inicio de sesión de un usuario
-    public boolean verifyUserLogin(String username, String password) {
-        for (User user : users.values()) {
-            if (user.getUserName().equals(username) && user.getPassword().equals(password)) {
-                return true;
-            }
-        }
-        return false;
+    public int verifyUserLogin(String username, String password) throws SQLException {
+        java.sql.Connection conn = sysConexion.obtConexion();
+        CallableStatement sql = conn.prepareCall("{? = call verifyUserLogin(?,?)}");
+        sql.registerOutParameter(1, OracleTypes.INTEGER);
+        sql.setString(2, username);
+        sql.setString(3, password);
+        sql.execute();
+        int idUser = (int) sql.getObject(1);
+        this.currentUserId = idUser;
+        return idUser;
     }
 
     // Método para registrar un nuevo usuario

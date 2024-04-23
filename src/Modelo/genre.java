@@ -3,34 +3,31 @@
  * Click nbfs://nbhost/SystemFileSystem/Templates/Classes/Class.java to edit this template
  */
 package Modelo;
-import java.time.LocalDate;
+
 /**
  *
  * @author wess
  */
-
-public class priceLogEntry {
-    private LocalDate date;
-    private long price;
-    
-    public priceLogEntry(int id)
+public class genre {
+    private String name;
+    private int price;
+    public genre(int id)
     {
-
     }
     
-    public LocalDate getDate() {
-        return date;
+    public String getName() {
+        return name;
     }
 
-    public long getPrice() {
+    public int getPrice() {
         return price;
     }
 
-    public void setDate(LocalDate date) {
-        this.date = date;
+    public void setName(String name) {
+        this.name = name;
     }
 
-    public void setPrice(long price) {
+    public void setPrice(int price) {
         this.price = price;
     }
 }

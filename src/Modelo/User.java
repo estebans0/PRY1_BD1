@@ -10,7 +10,7 @@ import java.util.ArrayList;
  *
  * @author esteb
  */
-public class User {
+public class User extends Person{
     // Atributos
     protected int id;
     protected String userName;
@@ -24,6 +24,7 @@ public class User {
     
     // Métodos
     public User(int id) {
+        super(id);
         this.id = id;
         this.userName = "";
         this.password = "";
@@ -34,7 +35,11 @@ public class User {
         this.purchaseHistory = new ArrayList<>();
         this.paymentMethods = new  ArrayList<>();
     }
-    public User(int id, String username, String password, String email) {
+    
+    
+    public User(int id, String username, String password, String email, String gender) {
+        super();
+        super.genderName = gender;
         this.id = id;
         this.userName = username;
         this.password = password;
@@ -45,7 +50,7 @@ public class User {
         this.purchaseHistory = new ArrayList<>();
         this.paymentMethods = new  ArrayList<>();
     }
-
+    
     public int getId() {
         return id;
     }

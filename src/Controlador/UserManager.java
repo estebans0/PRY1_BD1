@@ -44,9 +44,9 @@ public class UserManager {
     }
 
     // Método para registrar un nuevo usuario
-    public void registerUser(String username, String password, String email) {
+    public void registerUser(String username, String password, String email, String gender) {
         int userId = ++currentUserId;
-        User newUser = new User(userId, username, password, email);
+        User newUser = new User(userId, username, password, email, gender);
         users.put(userId, newUser);
     }
 

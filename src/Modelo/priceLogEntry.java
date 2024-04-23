@@ -12,11 +12,25 @@ import java.time.LocalDate;
 public class priceLogEntry {
     private LocalDate date;
     private long price;
+    
+    public priceLogEntry(int id)
+    {
 
+    }
+    
+    public LocalDate getDate() {
+        return date;
+    }
 
-public priceLogEntry(int id)
-{
+    public long getPrice() {
+        return price;
+    }
 
-}
+    public void setDate(LocalDate date) {
+        this.date = date;
+    }
 
+    public void setPrice(long price) {
+        this.price = price;
+    }
 }

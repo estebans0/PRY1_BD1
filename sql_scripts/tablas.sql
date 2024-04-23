@@ -98,13 +98,13 @@ CREATE TABLE address ( -- 16 Direccion, tiene la ciudad a donde pertenece
 CREATE TABLE person ( -- 17 para todos los seres humanos en el sistema, incluyendo a los usuarios.
     id                          NUMBER(4)      CONSTRAINT person_id_nn NOT NULL,
     birthdate                   DATE           CONSTRAINT person_birthdate_nn NOT NULL,
-    firts_name                  VARCHAR2(20)   CONSTRAINT person_firstname_nn NOT NULL,
-    middle_name                 VARCHAR(20)    CONSTRAINT person_midlename_nn NOT NULL,
+    first_name                  VARCHAR2(20)   CONSTRAINT person_firstname_nn NOT NULL,
+    middle_name                 VARCHAR(20),    --CONSTRAINT person_midlename_nn NOT NULL,
     last_name                   VARCHAR2(20)   CONSTRAINT person_lastname_nn NOT NULL,
-    nickname                    VARCHAR2(20)   CONSTRAINT person_nickname_nn NOT NULL,
+    nickname                    VARCHAR2(20),   --CONSTRAINT person_nickname_nn NOT NULL,
     image                       BLOB,
     gender                      NUMBER(4),     --NULL = prefer not to say
-    partner                     NUMBER(4)      CONSTRAINT Person_partner_nn NOT NULL
+    partner                     NUMBER(4)      --CONSTRAINT Person_partner_nn NOT NULL
 );
 
 CREATE TABLE gender ( -- 18 genero, es más apropiado.

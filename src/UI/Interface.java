@@ -14,7 +14,7 @@ import java.awt.*;
 
 /**
  *
- * @author esteb
+ * @author esteban
  */
 public class Interface extends javax.swing.JFrame {
     /**

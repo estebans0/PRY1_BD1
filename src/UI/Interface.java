@@ -1641,20 +1641,18 @@ public class Interface extends javax.swing.JFrame {
     }//GEN-LAST:event_advSearch_btnMouseClicked
 
     private void login_btnMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_login_btnMouseClicked
-        /*try {
+        try {
             int idUser = control.verifyUserLogin(enterUser_txtField.getText(), enterPass_txtField.getText());
             if (idUser != -1) {
                 control.setCurrentUserId(idUser);
-                moreTopMedia_cBox.setVisible(false);
-                moreRecentMedia_cBox.setVisible(false);
                 paneles.setSelectedIndex(2);
             } else {
                 loginError_txt.setText("Error de autentificación. Intente de nuevo.");
             }
         } catch (SQLException ex) {
             loginError_txt.setText("Error de autentificación. Intente de nuevo.");
-        }*/
-        paneles.setSelectedIndex(2);
+        }
+        //paneles.setSelectedIndex(2);
     }//GEN-LAST:event_login_btnMouseClicked
 
     private void exitSideMenu_btnMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_exitSideMenu_btnMouseClicked

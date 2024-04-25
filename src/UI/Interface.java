@@ -247,6 +247,29 @@ public class Interface extends javax.swing.JFrame {
         episodes_selector1 = new javax.swing.JScrollPane();
         episodes_table1 = new javax.swing.JTable();
         goToEpBtn_Episodes1 = new javax.swing.JLabel();
+        crewMember = new javax.swing.JPanel();
+        returnBtn_crewM = new javax.swing.JLabel();
+        titulo_txt_crewM = new javax.swing.JLabel();
+        image_crewM = new javax.swing.JLabel();
+        nameTxt_crewM = new javax.swing.JLabel();
+        nameData_crewM = new javax.swing.JLabel();
+        heightTxt_crewM = new javax.swing.JLabel();
+        heightData_crewM = new javax.swing.JLabel();
+        livesTxt_crewM = new javax.swing.JLabel();
+        livesData_crewM = new javax.swing.JLabel();
+        childrenTxt_crewM = new javax.swing.JLabel();
+        childrenData_crewM = new javax.swing.JLabel();
+        parentsTxt_crewM = new javax.swing.JLabel();
+        parentsData_crewM = new javax.swing.JLabel();
+        relativesTxt_crewM = new javax.swing.JLabel();
+        relativesData_crewM = new javax.swing.JLabel();
+        workedOnTxt_crewM = new javax.swing.JLabel();
+        workedOn_scroll = new javax.swing.JScrollPane();
+        workedOn_table = new javax.swing.JTable();
+        goToProdBtn_crewM = new javax.swing.JLabel();
+        triviaTxt_crewM = new javax.swing.JLabel();
+        trivia_scroll = new javax.swing.JScrollPane();
+        trivia_list = new javax.swing.JList<>();
         bottom_panel = new javax.swing.JPanel();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
@@ -1046,6 +1069,7 @@ public class Interface extends javax.swing.JFrame {
             prevPurchases_table.getColumnModel().getColumn(0).setResizable(false);
             prevPurchases_table.getColumnModel().getColumn(1).setResizable(false);
             prevPurchases_table.getColumnModel().getColumn(2).setResizable(false);
+            prevPurchases_table.getColumnModel().getColumn(2).setHeaderValue("Rating");
             prevPurchases_table.getColumnModel().getColumn(3).setResizable(false);
             prevPurchases_table.getColumnModel().getColumn(3).setHeaderValue("Payment method");
         }
@@ -1805,6 +1829,7 @@ public class Interface extends javax.swing.JFrame {
             episodes_table.getColumnModel().getColumn(0).setResizable(false);
             episodes_table.getColumnModel().getColumn(1).setResizable(false);
             episodes_table.getColumnModel().getColumn(2).setResizable(false);
+            episodes_table.getColumnModel().getColumn(2).setHeaderValue("Rating");
         }
 
         episodes.add(episodes_selector, new org.netbeans.lib.awtextra.AbsoluteConstraints(220, 180, 640, 240));
@@ -1887,6 +1912,7 @@ public class Interface extends javax.swing.JFrame {
             episodes_table1.getColumnModel().getColumn(0).setResizable(false);
             episodes_table1.getColumnModel().getColumn(1).setResizable(false);
             episodes_table1.getColumnModel().getColumn(2).setResizable(false);
+            episodes_table1.getColumnModel().getColumn(2).setHeaderValue("Rating");
         }
 
         userReviews.add(episodes_selector1, new org.netbeans.lib.awtextra.AbsoluteConstraints(220, 130, 640, 240));
@@ -1905,6 +1931,173 @@ public class Interface extends javax.swing.JFrame {
         userReviews.add(goToEpBtn_Episodes1, new org.netbeans.lib.awtextra.AbsoluteConstraints(870, 380, 120, 40));
 
         paneles.addTab("tab2", userReviews);
+
+        crewMember.setBackground(new java.awt.Color(255, 255, 255));
+        crewMember.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(0, 0, 0), 5));
+        crewMember.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseClicked(java.awt.event.MouseEvent evt) {
+                crewMemberMouseClicked(evt);
+            }
+        });
+        crewMember.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
+
+        returnBtn_crewM.setBackground(new java.awt.Color(255, 255, 255));
+        returnBtn_crewM.setFont(new java.awt.Font("Cascadia Code", 1, 16)); // NOI18N
+        returnBtn_crewM.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
+        returnBtn_crewM.setText("return");
+        returnBtn_crewM.setBorder(new javax.swing.border.LineBorder(new java.awt.Color(0, 0, 0), 4, true));
+        returnBtn_crewM.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
+        returnBtn_crewM.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseClicked(java.awt.event.MouseEvent evt) {
+                returnBtn_crewMMouseClicked(evt);
+            }
+        });
+        crewMember.add(returnBtn_crewM, new org.netbeans.lib.awtextra.AbsoluteConstraints(30, 30, 90, 60));
+
+        titulo_txt_crewM.setFont(new java.awt.Font("Cascadia Code", 1, 48)); // NOI18N
+        titulo_txt_crewM.setHorizontalAlignment(javax.swing.SwingConstants.LEFT);
+        titulo_txt_crewM.setText("[Person's name]");
+        crewMember.add(titulo_txt_crewM, new org.netbeans.lib.awtextra.AbsoluteConstraints(160, 30, 540, 60));
+
+        image_crewM.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
+        image_crewM.setText("PERSON'S IMAGE");
+        image_crewM.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(0, 0, 0), 4));
+        crewMember.add(image_crewM, new org.netbeans.lib.awtextra.AbsoluteConstraints(830, 40, 230, 200));
+
+        nameTxt_crewM.setFont(new java.awt.Font("Cascadia Code", 1, 12)); // NOI18N
+        nameTxt_crewM.setHorizontalAlignment(javax.swing.SwingConstants.LEFT);
+        nameTxt_crewM.setText("Full name:");
+        crewMember.add(nameTxt_crewM, new org.netbeans.lib.awtextra.AbsoluteConstraints(100, 130, 80, 30));
+
+        nameData_crewM.setFont(new java.awt.Font("Cascadia Code", 0, 12)); // NOI18N
+        nameData_crewM.setHorizontalAlignment(javax.swing.SwingConstants.LEFT);
+        nameData_crewM.setText("name data");
+        crewMember.add(nameData_crewM, new org.netbeans.lib.awtextra.AbsoluteConstraints(190, 130, 170, 30));
+
+        heightTxt_crewM.setFont(new java.awt.Font("Cascadia Code", 1, 12)); // NOI18N
+        heightTxt_crewM.setHorizontalAlignment(javax.swing.SwingConstants.LEFT);
+        heightTxt_crewM.setText("Height:");
+        crewMember.add(heightTxt_crewM, new org.netbeans.lib.awtextra.AbsoluteConstraints(100, 170, 80, 30));
+
+        heightData_crewM.setFont(new java.awt.Font("Cascadia Code", 0, 12)); // NOI18N
+        heightData_crewM.setHorizontalAlignment(javax.swing.SwingConstants.LEFT);
+        heightData_crewM.setText("height data");
+        crewMember.add(heightData_crewM, new org.netbeans.lib.awtextra.AbsoluteConstraints(190, 170, 170, 30));
+
+        livesTxt_crewM.setFont(new java.awt.Font("Cascadia Code", 1, 12)); // NOI18N
+        livesTxt_crewM.setHorizontalAlignment(javax.swing.SwingConstants.LEFT);
+        livesTxt_crewM.setText("Lives in:");
+        crewMember.add(livesTxt_crewM, new org.netbeans.lib.awtextra.AbsoluteConstraints(100, 210, 80, 30));
+
+        livesData_crewM.setFont(new java.awt.Font("Cascadia Code", 0, 12)); // NOI18N
+        livesData_crewM.setHorizontalAlignment(javax.swing.SwingConstants.LEFT);
+        livesData_crewM.setText("country data");
+        crewMember.add(livesData_crewM, new org.netbeans.lib.awtextra.AbsoluteConstraints(190, 210, 170, 30));
+
+        childrenTxt_crewM.setFont(new java.awt.Font("Cascadia Code", 1, 12)); // NOI18N
+        childrenTxt_crewM.setHorizontalAlignment(javax.swing.SwingConstants.LEFT);
+        childrenTxt_crewM.setText("Children:");
+        crewMember.add(childrenTxt_crewM, new org.netbeans.lib.awtextra.AbsoluteConstraints(370, 130, 80, 30));
+
+        childrenData_crewM.setFont(new java.awt.Font("Cascadia Code", 0, 12)); // NOI18N
+        childrenData_crewM.setHorizontalAlignment(javax.swing.SwingConstants.LEFT);
+        childrenData_crewM.setText("children data");
+        crewMember.add(childrenData_crewM, new org.netbeans.lib.awtextra.AbsoluteConstraints(460, 130, 130, 30));
+
+        parentsTxt_crewM.setFont(new java.awt.Font("Cascadia Code", 1, 12)); // NOI18N
+        parentsTxt_crewM.setHorizontalAlignment(javax.swing.SwingConstants.LEFT);
+        parentsTxt_crewM.setText("Parents:");
+        crewMember.add(parentsTxt_crewM, new org.netbeans.lib.awtextra.AbsoluteConstraints(370, 170, 80, 30));
+
+        parentsData_crewM.setFont(new java.awt.Font("Cascadia Code", 0, 12)); // NOI18N
+        parentsData_crewM.setHorizontalAlignment(javax.swing.SwingConstants.LEFT);
+        parentsData_crewM.setText("parent data");
+        crewMember.add(parentsData_crewM, new org.netbeans.lib.awtextra.AbsoluteConstraints(460, 170, 130, 30));
+
+        relativesTxt_crewM.setFont(new java.awt.Font("Cascadia Code", 1, 12)); // NOI18N
+        relativesTxt_crewM.setHorizontalAlignment(javax.swing.SwingConstants.LEFT);
+        relativesTxt_crewM.setText("Relatives:");
+        crewMember.add(relativesTxt_crewM, new org.netbeans.lib.awtextra.AbsoluteConstraints(370, 210, 80, 30));
+
+        relativesData_crewM.setFont(new java.awt.Font("Cascadia Code", 0, 12)); // NOI18N
+        relativesData_crewM.setHorizontalAlignment(javax.swing.SwingConstants.LEFT);
+        relativesData_crewM.setText("other family data");
+        crewMember.add(relativesData_crewM, new org.netbeans.lib.awtextra.AbsoluteConstraints(460, 210, 130, 30));
+
+        workedOnTxt_crewM.setFont(new java.awt.Font("Cascadia Code", 1, 18)); // NOI18N
+        workedOnTxt_crewM.setHorizontalAlignment(javax.swing.SwingConstants.LEFT);
+        workedOnTxt_crewM.setText("Worked on:");
+        crewMember.add(workedOnTxt_crewM, new org.netbeans.lib.awtextra.AbsoluteConstraints(100, 270, 120, 30));
+
+        workedOn_scroll.setBackground(new java.awt.Color(255, 255, 255));
+        workedOn_scroll.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(0, 0, 0), 4));
+        workedOn_scroll.setFont(new java.awt.Font("Cascadia Code", 0, 12)); // NOI18N
+        workedOn_scroll.setOpaque(false);
+
+        workedOn_table.setFont(new java.awt.Font("Cascadia Code", 0, 12)); // NOI18N
+        workedOn_table.setModel(new javax.swing.table.DefaultTableModel(
+            new Object [][] {
+                {null, null},
+                {null, null},
+                {null, null},
+                {null, null}
+            },
+            new String [] {
+                "Name", "Role"
+            }
+        ) {
+            Class[] types = new Class [] {
+                java.lang.String.class, java.lang.String.class
+            };
+
+            public Class getColumnClass(int columnIndex) {
+                return types [columnIndex];
+            }
+        });
+        workedOn_table.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
+        workedOn_table.setGridColor(new java.awt.Color(255, 255, 255));
+        workedOn_table.setOpaque(false);
+        workedOn_table.setSelectionBackground(new java.awt.Color(229, 229, 229));
+        workedOn_table.getTableHeader().setResizingAllowed(false);
+        workedOn_table.getTableHeader().setReorderingAllowed(false);
+        workedOn_scroll.setViewportView(workedOn_table);
+        if (workedOn_table.getColumnModel().getColumnCount() > 0) {
+            workedOn_table.getColumnModel().getColumn(0).setResizable(false);
+            workedOn_table.getColumnModel().getColumn(1).setResizable(false);
+        }
+
+        crewMember.add(workedOn_scroll, new org.netbeans.lib.awtextra.AbsoluteConstraints(100, 310, 490, 150));
+
+        goToProdBtn_crewM.setBackground(new java.awt.Color(255, 255, 255));
+        goToProdBtn_crewM.setFont(new java.awt.Font("Cascadia Code", 1, 12)); // NOI18N
+        goToProdBtn_crewM.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
+        goToProdBtn_crewM.setText("go to production");
+        goToProdBtn_crewM.setBorder(new javax.swing.border.LineBorder(new java.awt.Color(0, 0, 0), 4, true));
+        goToProdBtn_crewM.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
+        goToProdBtn_crewM.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseClicked(java.awt.event.MouseEvent evt) {
+                goToProdBtn_crewMMouseClicked(evt);
+            }
+        });
+        crewMember.add(goToProdBtn_crewM, new org.netbeans.lib.awtextra.AbsoluteConstraints(440, 470, 150, 40));
+
+        triviaTxt_crewM.setFont(new java.awt.Font("Cascadia Code", 1, 18)); // NOI18N
+        triviaTxt_crewM.setHorizontalAlignment(javax.swing.SwingConstants.LEFT);
+        triviaTxt_crewM.setText("Trivia:");
+        crewMember.add(triviaTxt_crewM, new org.netbeans.lib.awtextra.AbsoluteConstraints(610, 270, 120, 30));
+
+        trivia_list.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(0, 0, 0), 4));
+        trivia_list.setFont(new java.awt.Font("Cascadia Code", 0, 14)); // NOI18N
+        trivia_list.setModel(new javax.swing.AbstractListModel<String>() {
+            String[] strings = { "Item 1", "Item 2", "Item 3", "Item 4", "Item 5" };
+            public int getSize() { return strings.length; }
+            public String getElementAt(int i) { return strings[i]; }
+        });
+        trivia_scroll.setViewportView(trivia_list);
+
+        crewMember.add(trivia_scroll, new org.netbeans.lib.awtextra.AbsoluteConstraints(610, 310, 450, 150));
+
+        paneles.addTab("tab2", crewMember);
 
         getContentPane().add(paneles, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 10, 1100, 570));
 
@@ -2422,6 +2615,18 @@ public class Interface extends javax.swing.JFrame {
         paneles.setSelectedIndex(11);
     }//GEN-LAST:event_userReviews_btn_ProdMouseClicked
 
+    private void returnBtn_crewMMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_returnBtn_crewMMouseClicked
+        // TODO add your handling code here:
+    }//GEN-LAST:event_returnBtn_crewMMouseClicked
+
+    private void goToProdBtn_crewMMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_goToProdBtn_crewMMouseClicked
+        // TODO add your handling code here:
+    }//GEN-LAST:event_goToProdBtn_crewMMouseClicked
+
+    private void crewMemberMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_crewMemberMouseClicked
+        // TODO add your handling code here:
+    }//GEN-LAST:event_crewMemberMouseClicked
+
     /**
      * @param args the command line arguments
      */
@@ -2474,8 +2679,11 @@ public class Interface extends javax.swing.JFrame {
     private javax.swing.JLabel cart_btn;
     private javax.swing.JScrollPane cart_selector;
     private javax.swing.JTable cart_table;
+    private javax.swing.JLabel childrenData_crewM;
+    private javax.swing.JLabel childrenTxt_crewM;
     private javax.swing.JComboBox<String> countryFilter_cBox;
     private javax.swing.JLabel countryFilter_txt1;
+    private javax.swing.JPanel crewMember;
     private javax.swing.JComboBox<String> crew_list;
     private javax.swing.JLabel crew_txt_Production;
     private javax.swing.JTextField cvv_txtField_Payment;
@@ -2505,13 +2713,19 @@ public class Interface extends javax.swing.JFrame {
     private javax.swing.JLabel goToItem_btn_PrevPurchases;
     private javax.swing.JLabel goToItem_btn_Search;
     private javax.swing.JLabel goToItem_btn_TopMedia;
+    private javax.swing.JLabel goToProdBtn_crewM;
     private javax.swing.JLabel goToProd_btn_WishList;
+    private javax.swing.JLabel heightData_crewM;
+    private javax.swing.JLabel heightTxt_crewM;
     private javax.swing.JRadioButton highRated_radioB;
     private javax.swing.JLabel image_Production;
+    private javax.swing.JLabel image_crewM;
     private javax.swing.JLabel info_txt_Payment;
     private javax.swing.JLabel lastMedia_txt;
     private javax.swing.JList<String> latestMedia_list;
     private javax.swing.JScrollPane latestMedia_selector;
+    private javax.swing.JLabel livesData_crewM;
+    private javax.swing.JLabel livesTxt_crewM;
     private javax.swing.JLabel location_data_Production;
     private javax.swing.JLabel location_txt_Production;
     private javax.swing.JLabel logOut_btn;
@@ -2525,6 +2739,8 @@ public class Interface extends javax.swing.JFrame {
     private javax.swing.JPanel main_menu;
     private javax.swing.JLabel menu_btn;
     private javax.swing.JLabel moreImg_btn_Production;
+    private javax.swing.JLabel nameData_crewM;
+    private javax.swing.JLabel nameTxt_crewM;
     private javax.swing.JTextField name_txtField_Payment;
     private javax.swing.JLabel name_txt_Payment;
     private javax.swing.JLabel newUser_link;
@@ -2536,6 +2752,8 @@ public class Interface extends javax.swing.JFrame {
     private javax.swing.JLabel number_txt_Payment;
     private javax.swing.JRadioButton oldest_radioB;
     private javax.swing.JTabbedPane paneles;
+    private javax.swing.JLabel parentsData_crewM;
+    private javax.swing.JLabel parentsTxt_crewM;
     private javax.swing.JLabel pass_txt;
     private javax.swing.JLabel paySave_btn_Payment;
     private javax.swing.JLabel pay_btn_Payment;
@@ -2581,11 +2799,14 @@ public class Interface extends javax.swing.JFrame {
     private javax.swing.JTextField registerUser_txtField;
     private javax.swing.JLabel register_btn;
     private javax.swing.JLabel register_txt;
+    private javax.swing.JLabel relativesData_crewM;
+    private javax.swing.JLabel relativesTxt_crewM;
     private javax.swing.JLabel releaseDate_txt_Prod;
     private javax.swing.JLabel removeItem_btn_Cart;
     private javax.swing.JLabel removeItem_btn_WishList;
     private javax.swing.JLabel returnBtn_Episodes;
     private javax.swing.JLabel returnBtn_UserReviews;
+    private javax.swing.JLabel returnBtn_crewM;
     private javax.swing.JLabel return_btn_AdvSearch;
     private javax.swing.JLabel return_btn_Cart;
     private javax.swing.JLabel return_btn_PrevPurc;
@@ -2632,11 +2853,15 @@ public class Interface extends javax.swing.JFrame {
     private javax.swing.JLabel titulo_txt_Production;
     private javax.swing.JLabel titulo_txt_UserReviews;
     private javax.swing.JLabel titulo_txt_WishList;
+    private javax.swing.JLabel titulo_txt_crewM;
     private javax.swing.JList<String> topMedia_list;
     private javax.swing.JScrollPane topMedia_selector;
     private javax.swing.JLabel topMedia_txt;
     private javax.swing.JPanel top_panel;
     private javax.swing.JLabel trailer_Production;
+    private javax.swing.JLabel triviaTxt_crewM;
+    private javax.swing.JList<String> trivia_list;
+    private javax.swing.JScrollPane trivia_scroll;
     private javax.swing.JComboBox<String> typeFilter_cBox;
     private javax.swing.JLabel typeFilter_txt;
     private javax.swing.JLabel type_txt_Prod;
@@ -2650,6 +2875,9 @@ public class Interface extends javax.swing.JFrame {
     private javax.swing.JScrollPane wishList_selector;
     private javax.swing.JPanel wish_list;
     private javax.swing.JCheckBox wishlist_checkBox;
+    private javax.swing.JLabel workedOnTxt_crewM;
+    private javax.swing.JScrollPane workedOn_scroll;
+    private javax.swing.JTable workedOn_table;
     private javax.swing.JLabel writeReview_txt_Prod;
     private javax.swing.JComboBox<String> writers_list;
     private javax.swing.JLabel writers_txt_Production;

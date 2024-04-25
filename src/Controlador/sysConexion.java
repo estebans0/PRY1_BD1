@@ -16,7 +16,7 @@ public class sysConexion {
     public static Connection obtConexion() {
         try{
             // Esto se tiene que cambiar de acuerdo a la info de la BD de cada quien
-            String myDB = "jdbc:oracle:thin:@//localhost:1521/DB1"; 
+            String myDB = "jdbc:oracle:thin:@//localhost:1521/DB1";
             String user = "PRY";
             String password = "pry";
             DriverManager.registerDriver(new oracle.jdbc.driver.OracleDriver());

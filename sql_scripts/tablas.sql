@@ -136,12 +136,13 @@ CREATE TABLE film_person ( -- 21 For celebrities and people of note in the produ
 );    
 
 CREATE TABLE userr( --22 for users, both admins and regular users
-    id                          NUMBER(4)       CONSTRAINT user_id_nn not null,
-    username                    VARCHAR2(30)    CONSTRAINT user_username_nn NOT NULL,
-    password                    VARCHAR2(20)    CONSTRAINT user_password_nn NOT NULL,
-    email                       VARCHAR2(20)    CONSTRAINT user_email_nn NOT NULL,
-    legal_identification        VARCHAR2(8)     CONSTRAINT user_legalId_nn NOT NULL,
-    type_of_identification      NUMBER(4)       CONSTRAINT type_of_id_nn NOT NULL
+    id                          NUMBER(4)       CONSTRAINT userr_id_nn not null,
+    username                    VARCHAR2(30)    CONSTRAINT userr_username_nn NOT NULL,
+    password                    VARCHAR2(20)    CONSTRAINT userr_password_nn NOT NULL,
+    email                       VARCHAR2(20)    CONSTRAINT userr_email_nn NOT NULL,
+    legal_id                    VARCHAR2(8)     CONSTRAINT userr_legalId_nn NOT NULL,
+    id_type                     NUMBER(4)       CONSTRAINT userr_idType_nn NOT NULL,
+    user_type                   NUMBER(1)       CONSTRAINT userr_userType_nn NOT NULL
 );
 
 Create table adminisrator( --23 for remembering who is an admin in the system

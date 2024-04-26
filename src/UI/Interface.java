@@ -14,6 +14,8 @@ import javax.swing.*;
 import java.awt.*;
 import java.sql.SQLException;
 import java.util.Date;
+import java.util.logging.Level;
+import java.util.logging.Logger;
 import javax.swing.table.JTableHeader;
 
 /**
@@ -31,6 +33,12 @@ public class Interface extends javax.swing.JFrame {
      */
     public Interface() {
         initComponents();
+        try {
+            // Cargar los users existentes
+            control.updateUsers();
+        } catch (SQLException ex) {
+            Logger.getLogger(Interface.class.getName()).log(Level.SEVERE, null, ex);
+        }
         
         // Setear texto subrayado del link de nuevo usuario
         newUser_link.setText("<html><u> Are you a new user? Register here</u></html>");
@@ -4224,21 +4232,23 @@ public class Interface extends javax.swing.JFrame {
     }//GEN-LAST:event_advSearch_btnMouseClicked
 
     private void login_btnMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_login_btnMouseClicked
-        /*try {
-            int idUser = control.verifyUserLogin(enterUser_txtField.getText(), enterPass_txtField.getText());
-            if (idUser != -1) {
-                control.setCurrentUserId(idUser);
+        try {
+            control.printUsers();
+            int loginType = control.verifyUserLogin(enterUser_txtField.getText(), enterPass_txtField.getText());
+            if (loginType == 0) { // regular user
                 paneles.setSelectedIndex(2);
-            } else {
+            } else if (loginType == 1) { // admin
+                paneles.setSelectedIndex(2);
+            } else { // not a registered user
                 loginError_txt.setText("Error de autentificación. Intente de nuevo.");
             }
         } catch (SQLException ex) {
             loginError_txt.setText("Error de autentificación. Intente de nuevo.");
-        }*/
-        if (enterUser_txtField.getText().equals("adm")) {
+        }
+        /*if (enterUser_txtField.getText().equals("adm")) {
             paneles.setSelectedIndex(13);
         } else {paneles.setSelectedIndex(2);
-        }
+        }*/
     }//GEN-LAST:event_login_btnMouseClicked
 
     private void exitSideMenu_btnMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_exitSideMenu_btnMouseClicked

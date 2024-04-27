@@ -4238,7 +4238,7 @@ public class Interface extends javax.swing.JFrame {
             if (loginType == 0) { // regular user
                 paneles.setSelectedIndex(2);
             } else if (loginType == 1) { // admin
-                paneles.setSelectedIndex(2);
+                paneles.setSelectedIndex(13);
             } else { // not a registered user
                 loginError_txt.setText("Error de autentificación. Intente de nuevo.");
             }

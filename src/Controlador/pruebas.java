@@ -13,7 +13,8 @@ public class pruebas {
     public static void main(String[] args) {
         try {
             Controlador control = new Controlador();
-            System.out.println(control.verifyUserLogin("adm0", "0"));
+            control.updateUsers();
+            control.printUsers();
         } catch (SQLException ex) {
             System.out.println(ex);
         }

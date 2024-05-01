@@ -20,16 +20,12 @@ import java.sql.*;
 public class UserManager {
     // Atributos
     private int currentUserId;
-    private Map<Integer, User> users;
+    private ArrayList<User> users;
     
     // Constructor
-    public UserManager() { // Constructor sin ingresar id
+    public UserManager() {
         this.currentUserId = 0;
-        this.users = new HashMap<>();
-    }
-    public UserManager(int currentUserId) { // Constructor con id
-        this.currentUserId = currentUserId;
-        this.users = new HashMap<>();
+        this.users = new ArrayList<>();
     }
     
     // Setters y Getters
@@ -37,7 +33,7 @@ public class UserManager {
         return currentUserId;
     }
 
-    public Map<Integer, User> getUsers() {
+    public ArrayList<User> getUsers() {
         return users;
     }
 
@@ -45,8 +41,26 @@ public class UserManager {
         this.currentUserId = currentUserId;
     }
 
-    public void setUsers(Map<Integer, User> users) {
-        this.users = users;
+    public void setUsers() throws SQLException {
+        java.sql.Connection conn = sysConexion.obtConexion();
+        Statement statement = conn.createStatement();
+        CallableStatement sql = conn.prepareCall("{call getUsersData(?)}");
+        sql.registerOutParameter(1, Types.REF_CURSOR);
+        sql.execute();
+        // Esta ingresando IdType como LegalId y isAdmin como idType 
+        // y no entiendo por que
+        ResultSet rs = (ResultSet) sql.getObject(1);
+        while (rs.next()) {
+            User user = new User();
+            user.setId(rs.getInt("id"));
+            user.setUserName(rs.getString("username"));
+            user.setPassword(rs.getString("password"));
+            user.setEmail(rs.getString("email"));
+            user.setLegalId(rs.getString("legal_id"));
+            user.setIdType(rs.getInt("id_type"));
+            user.setIsAdmin(rs.getInt("user_type"));
+            users.add(user);
+        }
     }
 
     // Método para obtener un usuario por su id
@@ -56,29 +70,28 @@ public class UserManager {
 
     // Método para verificar el inicio de sesión de un usuario
     public int verifyUserLogin(String username, String password) throws SQLException {
-        java.sql.Connection conn = sysConexion.obtConexion();
-        CallableStatement sql = conn.prepareCall("{? = call verifyUserLogin(?,?)}");
-        sql.registerOutParameter(1, OracleTypes.INTEGER);
-        sql.setString(2, username);
-        sql.setString(3, password);
-        sql.execute();
-        int idUser = (int) sql.getObject(1);
-        this.currentUserId = idUser;
-        return idUser;
+        // 1=admin, 0=regularUser, -1=notUser
+        for (User user : users) {
+            if (user.getUserName().equals(username) && user.getPassword().equals(password)) {
+                this.currentUserId = user.getId();
+                return user.getIsAdmin();
+            }
+        }
+        return -1;
     }
 
     // Método para registrar un nuevo usuario
     public void registerUser(String username, String password, String email, String gender) {
         int userId = ++currentUserId;
-        User newUser = new User(userId, username, password, email, gender);
-        users.put(userId, newUser);
+        User newUser = new User();
+        users.add(newUser);
     }
 
     // Método para otorgar el rol de administrador a un usuario por su id
     public void makeAdmin(int id) {
         User user = users.get(id);
         if (user != null) {
-            user.setIs_admin(true);
+            user.setIsAdmin(1);
         }
     }
 
@@ -86,9 +99,10 @@ public class UserManager {
     public User getCurrentUser() {
         return users.get(currentUserId);
     }
-
-    // Método para obtener todos los usuarios
-    public List<User> getAllUsers() {
-        return new ArrayList<>(users.values());
+    
+    public void printUsers(){
+        for (User user : users) {
+            System.out.println(user.toString());
+        }
     }
 }

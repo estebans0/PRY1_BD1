@@ -16,41 +16,29 @@ public class User extends Person{
     protected String userName;
     protected String password;
     protected String email;
-    protected boolean is_admin;
+    protected String legalId;
+    protected int idType;
+    protected int isAdmin;
     protected ArrayList<Production> wishList;
     protected ArrayList<Production> shoppingCartList;
     protected ArrayList<Production> purchaseHistory;
     protected ArrayList<PaymentMethod> paymentMethods;
     
     // Métodos
-    public User(int id) {
-        super(id);
-        this.id = id;
+    public User() {
+        this.id = 0;
         this.userName = "";
         this.password = "";
         this.email = "";
-        this.is_admin = false;
+        this.legalId = "";
+        this.idType = 0;
+        this.isAdmin = 0;
         this.wishList = new  ArrayList<>();
         this.shoppingCartList = new ArrayList<>();
         this.purchaseHistory = new ArrayList<>();
         this.paymentMethods = new  ArrayList<>();
     }
-    
-    
-    public User(int id, String username, String password, String email, String gender) {
-        super();
-        super.genderName = gender;
-        this.id = id;
-        this.userName = username;
-        this.password = password;
-        this.email = email;
-        this.is_admin = false;
-        this.wishList = new  ArrayList<>();
-        this.shoppingCartList = new ArrayList<>();
-        this.purchaseHistory = new ArrayList<>();
-        this.paymentMethods = new  ArrayList<>();
-    }
-    
+
     public int getId() {
         return id;
     }
@@ -63,8 +51,20 @@ public class User extends Person{
         return password;
     }
 
-    public boolean getIs_admin() {
-        return is_admin;
+    public String getEmail() {
+        return email;
+    }
+
+    public String getLegalId() {
+        return legalId;
+    }
+
+    public int getIdType() {
+        return idType;
+    }
+
+    public int getIsAdmin() {
+        return isAdmin;
     }
 
     public ArrayList<Production> getWishList() {
@@ -95,8 +95,20 @@ public class User extends Person{
         this.password = password;
     }
 
-    public void setIs_admin(boolean is_admin) {
-        this.is_admin = is_admin;
+    public void setEmail(String email) {
+        this.email = email;
+    }
+
+    public void setLegalId(String legalId) {
+        this.legalId = legalId;
+    }
+
+    public void setIdType(int idType) {
+        this.idType = idType;
+    }
+
+    public void setIsAdmin(int isAdmin) {
+        this.isAdmin = isAdmin;
     }
 
     public void setWishList(ArrayList<Production> wishList) {
@@ -113,5 +125,10 @@ public class User extends Person{
 
     public void setPaymentMethods(ArrayList<PaymentMethod> paymentMethods) {
         this.paymentMethods = paymentMethods;
+    }
+
+    @Override
+    public String toString() {
+        return "User{" + "id=" + id + ", userName=" + userName + ", password=" + password + ", email=" + email + ", legalId=" + legalId + ", idType=" + idType + ", isAdmin=" + isAdmin + '}';
     }
 }

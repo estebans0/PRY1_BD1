@@ -13,6 +13,7 @@ import javax.swing.border.Border;
 import javax.swing.*;
 import java.awt.*;
 import java.sql.SQLException;
+import java.text.SimpleDateFormat;
 import java.util.Date;
 import java.util.logging.Level;
 import java.util.logging.Logger;
@@ -24,18 +25,21 @@ import javax.swing.table.JTableHeader;
  */
 public class Interface extends javax.swing.JFrame {
     private final Controlador control = new Controlador();
-    
+    // Métodos auxiliares
     private static boolean strIsNumeric(String str){
         return str.matches("-?\\d+(\\.\\d+)?"); // regex para verificar que str sea numerica
     }
+    
     /**
      * Creates new form Interface
      */
     public Interface() {
         initComponents();
         try {
-            // Cargar los users existentes
+            // Cargar datos de BD
             control.updateUsers();
+            control.updatePeople();
+            
         } catch (SQLException ex) {
             Logger.getLogger(Interface.class.getName()).log(Level.SEVERE, null, ex);
         }
@@ -666,8 +670,8 @@ public class Interface extends javax.swing.JFrame {
 
         registerEmail_txt.setFont(new java.awt.Font("Cascadia Code", 0, 16)); // NOI18N
         registerEmail_txt.setHorizontalAlignment(javax.swing.SwingConstants.LEFT);
-        registerEmail_txt.setText("Email");
-        register.add(registerEmail_txt, new org.netbeans.lib.awtextra.AbsoluteConstraints(200, 210, 50, 30));
+        registerEmail_txt.setText("Email *");
+        register.add(registerEmail_txt, new org.netbeans.lib.awtextra.AbsoluteConstraints(200, 270, 50, 30));
 
         registerEmail_txtField.setFont(new java.awt.Font("Cascadia Code", 0, 12)); // NOI18N
         registerEmail_txtField.setHorizontalAlignment(javax.swing.JTextField.CENTER);
@@ -677,12 +681,12 @@ public class Interface extends javax.swing.JFrame {
                 registerEmail_txtFieldActionPerformed(evt);
             }
         });
-        register.add(registerEmail_txtField, new org.netbeans.lib.awtextra.AbsoluteConstraints(360, 210, 170, 40));
+        register.add(registerEmail_txtField, new org.netbeans.lib.awtextra.AbsoluteConstraints(360, 270, 170, 40));
 
         registerPass_txt.setFont(new java.awt.Font("Cascadia Code", 0, 16)); // NOI18N
         registerPass_txt.setHorizontalAlignment(javax.swing.SwingConstants.LEFT);
         registerPass_txt.setText("Password *");
-        register.add(registerPass_txt, new org.netbeans.lib.awtextra.AbsoluteConstraints(200, 270, 110, 30));
+        register.add(registerPass_txt, new org.netbeans.lib.awtextra.AbsoluteConstraints(200, 210, 110, 30));
 
         registerPass_txtField.setFont(new java.awt.Font("Cascadia Code", 0, 12)); // NOI18N
         registerPass_txtField.setHorizontalAlignment(javax.swing.JTextField.CENTER);
@@ -692,21 +696,21 @@ public class Interface extends javax.swing.JFrame {
                 registerPass_txtFieldActionPerformed(evt);
             }
         });
-        register.add(registerPass_txtField, new org.netbeans.lib.awtextra.AbsoluteConstraints(360, 270, 170, 40));
+        register.add(registerPass_txtField, new org.netbeans.lib.awtextra.AbsoluteConstraints(360, 210, 170, 40));
 
         registerIdType_txt.setFont(new java.awt.Font("Cascadia Code", 0, 16)); // NOI18N
         registerIdType_txt.setHorizontalAlignment(javax.swing.SwingConstants.LEFT);
-        registerIdType_txt.setText("ID type");
+        registerIdType_txt.setText("ID type *");
         register.add(registerIdType_txt, new org.netbeans.lib.awtextra.AbsoluteConstraints(200, 330, 70, 30));
 
         registerIdType_cBox.setFont(new java.awt.Font("Cascadia Code", 0, 12)); // NOI18N
-        registerIdType_cBox.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "Select ID type", "Item 2", "Item 3", "Item 4" }));
+        registerIdType_cBox.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "Select an ID type", "Government ID", "Driver's licence", "Passport" }));
         registerIdType_cBox.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(0, 0, 0), 4));
         register.add(registerIdType_cBox, new org.netbeans.lib.awtextra.AbsoluteConstraints(360, 330, 170, 40));
 
         registerId_txt.setFont(new java.awt.Font("Cascadia Code", 0, 16)); // NOI18N
         registerId_txt.setHorizontalAlignment(javax.swing.SwingConstants.LEFT);
-        registerId_txt.setText("ID");
+        registerId_txt.setText("ID *");
         register.add(registerId_txt, new org.netbeans.lib.awtextra.AbsoluteConstraints(200, 390, 70, 30));
 
         registerId_txtField.setFont(new java.awt.Font("Cascadia Code", 0, 12)); // NOI18N
@@ -721,7 +725,7 @@ public class Interface extends javax.swing.JFrame {
 
         registerName_txt.setFont(new java.awt.Font("Cascadia Code", 0, 16)); // NOI18N
         registerName_txt.setHorizontalAlignment(javax.swing.SwingConstants.LEFT);
-        registerName_txt.setText("Name");
+        registerName_txt.setText("Name *");
         register.add(registerName_txt, new org.netbeans.lib.awtextra.AbsoluteConstraints(580, 150, 70, 30));
 
         registerFirstName_txtField.setFont(new java.awt.Font("Cascadia Code", 0, 12)); // NOI18N
@@ -806,18 +810,18 @@ public class Interface extends javax.swing.JFrame {
 
         registerGender_txt.setFont(new java.awt.Font("Cascadia Code", 0, 16)); // NOI18N
         registerGender_txt.setHorizontalAlignment(javax.swing.SwingConstants.LEFT);
-        registerGender_txt.setText("Gender");
+        registerGender_txt.setText("Gender *");
         register.add(registerGender_txt, new org.netbeans.lib.awtextra.AbsoluteConstraints(580, 270, 70, 30));
 
         registerGender_cBox.setFont(new java.awt.Font("Cascadia Code", 0, 12)); // NOI18N
-        registerGender_cBox.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "Select gender", "Item 2", "Item 3", "Item 4" }));
+        registerGender_cBox.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "Select gender", "Male", "Female", "Other (not specified)" }));
         registerGender_cBox.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(0, 0, 0), 4));
         register.add(registerGender_cBox, new org.netbeans.lib.awtextra.AbsoluteConstraints(740, 270, 190, 40));
 
         registerDob_txt.setFont(new java.awt.Font("Cascadia Code", 0, 16)); // NOI18N
         registerDob_txt.setHorizontalAlignment(javax.swing.SwingConstants.LEFT);
-        registerDob_txt.setText("Date of birth");
-        register.add(registerDob_txt, new org.netbeans.lib.awtextra.AbsoluteConstraints(580, 340, -1, 30));
+        registerDob_txt.setText("Date of birth *");
+        register.add(registerDob_txt, new org.netbeans.lib.awtextra.AbsoluteConstraints(580, 340, 110, 30));
 
         registerDob_chooser.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(0, 0, 0), 4));
         register.add(registerDob_chooser, new org.netbeans.lib.awtextra.AbsoluteConstraints(740, 340, 190, 40));
@@ -828,6 +832,11 @@ public class Interface extends javax.swing.JFrame {
         register_btn.setText("Register");
         register_btn.setBorder(new javax.swing.border.LineBorder(new java.awt.Color(0, 0, 0), 4, true));
         register_btn.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
+        register_btn.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseClicked(java.awt.event.MouseEvent evt) {
+                register_btnMouseClicked(evt);
+            }
+        });
         register.add(register_btn, new org.netbeans.lib.awtextra.AbsoluteConstraints(950, 420, 110, 60));
 
         registerInfo_txt.setFont(new java.awt.Font("Cascadia Code", 1, 12)); // NOI18N
@@ -4175,7 +4184,7 @@ public class Interface extends javax.swing.JFrame {
         registerNickname_txtField.setForeground(new Color(204,204,204));
         registerNickname_txtField.setText("nickname");
         registerGender_cBox.setSelectedIndex(0);
-        registerDob_chooser.setDate(new Date());
+        registerDob_chooser.setDate(null);
         // Entrar al panel
         paneles.setSelectedIndex(1);
     }//GEN-LAST:event_newUser_linkMouseClicked
@@ -4183,6 +4192,8 @@ public class Interface extends javax.swing.JFrame {
     private void back_btnMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_back_btnMouseClicked
         enterUser_txtField.setText("enter your username");
         enterPass_txtField.setText("enter your password");
+        enterUser_txtField.setForeground(new Color(204,204,204));
+        enterPass_txtField.setForeground(new Color(204,204,204));
         loginError_txt.setText("");
         paneles.setSelectedIndex(0);
     }//GEN-LAST:event_back_btnMouseClicked
@@ -5021,6 +5032,52 @@ public class Interface extends javax.swing.JFrame {
     private void deleteBtn_admProdMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_deleteBtn_admProdMouseClicked
         // TODO add your handling code here:
     }//GEN-LAST:event_deleteBtn_admProdMouseClicked
+
+    private void register_btnMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_register_btnMouseClicked
+        registerInfo_txt.setForeground(Color.red);
+        registerInfo_txt.setText("");
+        String user = registerUser_txtField.getText();
+        String pass = registerPass_txtField.getText();
+        String emailAd = registerEmail_txtField.getText();
+        int idType = registerIdType_cBox.getSelectedIndex();
+        String legalId = registerId_txtField.getText();
+        String fName = registerFirstName_txtField.getText();
+        String lName = registerLastName_txtField.getText();
+        String mName = registerMiddleName_txtField.getText();
+        String nName = registerNickname_txtField.getText();
+        int gender = registerGender_cBox.getSelectedIndex();
+        String dob = new SimpleDateFormat("dd-MM-yyyy").format(registerDob_chooser.getDate());
+        if (user.equals("")) {
+            registerInfo_txt.setText("Please enter a valid username");
+        } else if (pass.equals("")) {
+            registerInfo_txt.setText("Please enter a valid password");
+        } else if (emailAd.equals("") || !emailAd.contains("@")) {
+            registerInfo_txt.setText("Please enter a valid email address");
+        } else if (idType == 0) {
+            registerInfo_txt.setText("Please enter an id type");
+        } else if (legalId.equals("")) {
+            registerInfo_txt.setText("Please enter an ID");
+        } else if (fName.equals("first name") || fName.equals("")) {
+            registerInfo_txt.setText("Please enter your first name");
+        } else if (lName.equals("last name") || lName.equals("")) {
+            registerInfo_txt.setText("Please enter your last name");
+        } else if (gender == 0) {
+            registerInfo_txt.setText("Please enter your gender");
+        } else if (dob == null) {
+            registerInfo_txt.setText("Please enter your date of birth");
+        } else {
+            if (mName.equals("middle name")) {mName = null;}
+            if (nName.equals("nickname")) {nName = null;}
+            try {
+                control.registerUser(user, pass, emailAd, idType, legalId, fName, lName, mName, nName, gender, dob);
+                registerInfo_txt.setForeground(new Color(0,204,51));
+                registerInfo_txt.setText("Registered succesfully!");
+            } catch (SQLException ex) {
+                System.out.println(ex);
+                registerInfo_txt.setText("Database error: ex");
+            }
+        }
+    }//GEN-LAST:event_register_btnMouseClicked
 
     /**
      * @param args the command line arguments

@@ -41,14 +41,11 @@ public class UserManager {
         this.currentUserId = currentUserId;
     }
 
-    public void setUsers() throws SQLException {
-        java.sql.Connection conn = sysConexion.obtConexion();
-        Statement statement = conn.createStatement();
+    public void updateUsers(java.sql.Connection conn) throws SQLException {
+        //java.sql.Connection conn = sysConexion.obtConexion();
         CallableStatement sql = conn.prepareCall("{call getUsersData(?)}");
         sql.registerOutParameter(1, Types.REF_CURSOR);
         sql.execute();
-        // Esta ingresando IdType como LegalId y isAdmin como idType 
-        // y no entiendo por que
         ResultSet rs = (ResultSet) sql.getObject(1);
         while (rs.next()) {
             User user = new User();
@@ -62,6 +59,17 @@ public class UserManager {
             users.add(user);
         }
     }
+    
+    public void registerUser(java.sql.Connection conn, String user, String pass, String email, int idType, String legalId) throws SQLException {
+        //java.sql.Connection conn = sysConexion.obtConexion();
+        PreparedStatement sql = conn.prepareStatement("{call insertUser(?,?,?,?,?)}");
+        sql.setString(1, user);
+        sql.setString(2, pass);
+        sql.setString(3, email);
+        sql.setInt(4, idType);
+        sql.setString(5, legalId);
+        sql.execute();
+    }
 
     // Método para obtener un usuario por su id
     public User getUser(int id) {
@@ -70,7 +78,7 @@ public class UserManager {
 
     // Método para verificar el inicio de sesión de un usuario
     public int verifyUserLogin(String username, String password) throws SQLException {
-        // 1=admin, 0=regularUser, -1=notUser
+        // 0=regularUser, 1=admin, -1=notUser
         for (User user : users) {
             if (user.getUserName().equals(username) && user.getPassword().equals(password)) {
                 this.currentUserId = user.getId();

@@ -18,9 +18,7 @@ public class FilmPerson extends Person{
     private String nationality;
     private String biography;
 
-    public FilmPerson(int id) {
-        super(id);
-    }
+    public FilmPerson(int id) {}
 
     public ArrayList<Production> getWorkedIn() {
         return workedIn;

@@ -6,52 +6,119 @@ package Modelo;
 
 import java.awt.image.BufferedImage;
 import java.util.ArrayList;
+import java.sql.*;
 
 /**
  *
  * @author wess
  */
 public class Person {
-    protected String name;
-    protected String genderName;
+    // Atributos
+    protected int id;
+    protected Date dob;
+    protected String firstName;
+    protected String lastName;
+    protected String middleName;
+    protected String nickname;
     protected BufferedImage image;
-    protected ArrayList<FamilyMember> FamilyMembers;
-    public Person(int id)
-    {
-    }
-    public Person()
-    {
-    }
+    protected int gender;
+    protected int partnerId;
+    protected ArrayList<FamilyMember> familyMembers;
     
-    public String getName() {
-        return name;
+    // Constructor
+    public Person() {
+        this.id = 0;
+        this.dob = null;
+        this.firstName = "";
+        this.lastName = "";
+        this.middleName = "";
+        this.nickname = "";
+        this.image = null;
+        this.gender = 0;
+        this.partnerId = 0;
+        this.familyMembers = new ArrayList<>();
     }
 
-    public String getGenderName() {
-        return genderName;
+    // Setters y Getters
+    public int getId() {
+        return id;
+    }
+
+    public Date getDob() {
+        return dob;
+    }
+
+    public String getFirstName() {
+        return firstName;
+    }
+
+    public String getLastName() {
+        return lastName;
+    }
+
+    public String getMiddleName() {
+        return middleName;
+    }
+
+    public String getNickname() {
+        return nickname;
     }
 
     public BufferedImage getImage() {
         return image;
     }
 
+    public int getGender() {
+        return gender;
+    }
+
+    public int getPartnerId() {
+        return partnerId;
+    }
+
     public ArrayList<FamilyMember> getFamilyMembers() {
-        return FamilyMembers;
+        return familyMembers;
     }
 
-    public void setName(String name) {
-        this.name = name;
+    public void setId(int id) {
+        this.id = id;
     }
 
-    public void setGenderName(String genderName) {
-        this.genderName = genderName;
+    public void setDob(Date dob) {
+        this.dob = dob;
+    }
+
+    public void setFirstName(String firstName) {
+        this.firstName = firstName;
+    }
+
+    public void setLastName(String lastName) {
+        this.lastName = lastName;
+    }
+
+    public void setMiddleName(String middleName) {
+        this.middleName = middleName;
+    }
+
+    public void setNickname(String Nickname) {
+        this.nickname = Nickname;
     }
 
     public void setImage(BufferedImage image) {
         this.image = image;
     }
 
-    public void setFamilyMembers(ArrayList<FamilyMember> FamilyMembers) {
-        this.FamilyMembers = FamilyMembers;
+    public void setGender(int gender) {
+        this.gender = gender;
     }
+
+    public void setPartnerId(int partnerId) {
+        this.partnerId = partnerId;
+    }
+
+    public void setFamilyMembers(ArrayList<FamilyMember> FamilyMembers) {
+        this.familyMembers = FamilyMembers;
+    }
+    
+    
 }

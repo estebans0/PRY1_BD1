@@ -36,8 +36,10 @@ public class Interface extends javax.swing.JFrame {
     public Interface() {
         initComponents();
         try {
-            // Cargar los users existentes
+            // Cargar datos de BD
             control.updateUsers();
+            control.updatePeople();
+            
         } catch (SQLException ex) {
             Logger.getLogger(Interface.class.getName()).log(Level.SEVERE, null, ex);
         }
@@ -4190,6 +4192,8 @@ public class Interface extends javax.swing.JFrame {
     private void back_btnMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_back_btnMouseClicked
         enterUser_txtField.setText("enter your username");
         enterPass_txtField.setText("enter your password");
+        enterUser_txtField.setForeground(new Color(204,204,204));
+        enterPass_txtField.setForeground(new Color(204,204,204));
         loginError_txt.setText("");
         paneles.setSelectedIndex(0);
     }//GEN-LAST:event_back_btnMouseClicked
@@ -5070,7 +5074,7 @@ public class Interface extends javax.swing.JFrame {
                 registerInfo_txt.setText("Registered succesfully!");
             } catch (SQLException ex) {
                 System.out.println(ex);
-                registerInfo_txt.setText("Database error");
+                registerInfo_txt.setText("Database error: ex");
             }
         }
     }//GEN-LAST:event_register_btnMouseClicked

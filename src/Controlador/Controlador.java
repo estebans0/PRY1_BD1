@@ -4,6 +4,7 @@
  */
 package Controlador;
 
+import Modelo.Person;
 import Modelo.User;
 import java.sql.CallableStatement;
 import java.sql.SQLException;
@@ -16,19 +17,18 @@ import java.sql.*;
  * @author Esteban
  */
 public class Controlador {
-    // Atributos
+    // Atributos --------------------------------------------------------------------------------------------------------------
     private final PersonManager personMng = new PersonManager();
     private final UserManager userMng = new UserManager();
     private final java.sql.Connection conn = sysConexion.obtConexion();
     
-    // Métodos de usuario
-    public void updateUsers() throws SQLException {
-        userMng.updateUsers(conn);
+    // Métodos de usuario -----------------------------------------------------------------------------------------------------
+    public int verifyUserLogin(String username, String password) throws SQLException {
+        return userMng.verifyUserLogin(username, password);
     }
     
-    public void registerPerson(String fName, String lName, String mName, String nName, 
-            int gender, String dob) throws SQLException {
-        personMng.registerPerson(conn, fName, lName, mName, nName, gender, dob);
+    public void updateUsers() throws SQLException {
+        userMng.updateUsers(conn);
     }
     
     public void registerUser(String user, String pass, String email, int idType, 
@@ -36,6 +36,11 @@ public class Controlador {
             int gender, String dob) throws SQLException {
         registerPerson(fName, lName, mName, nName, gender, dob);
         userMng.registerUser(conn, user, pass, email, idType, legalId);
+        updateUsers();
+    }
+    
+    public void printUsers() {
+        userMng.printUsers();
     }
     
     public ArrayList<User> getUsers() {
@@ -46,15 +51,22 @@ public class Controlador {
         return userMng.getCurrentUserId();
     }
     
-    public void setCurrentUserId(int id) {
-        userMng.setCurrentUserId(id);
+    // Métodos de persona -----------------------------------------------------------------------------------------------------
+    public void updatePeople() throws SQLException {
+        personMng.updatePeople(conn);
     }
     
-    public int verifyUserLogin(String username, String password) throws SQLException {
-        return userMng.verifyUserLogin(username, password);
+    public void registerPerson(String fName, String lName, String mName, String nName, 
+            int gender, String dob) throws SQLException {
+        personMng.registerPerson(conn, fName, lName, mName, nName, gender, dob);
+        updatePeople();
     }
     
-    public void printUsers() {
-        userMng.printUsers();
+    public ArrayList<Person> getPeople() {
+        return personMng.getPeople();
+    }
+    
+    public void printPeople() {
+        personMng.printPeople();
     }
 }

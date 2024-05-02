@@ -3,7 +3,10 @@
  * Click nbfs://nbhost/SystemFileSystem/Templates/Classes/Class.java to edit this template
  */
 package Controlador;
+import Modelo.Person;
 import java.sql.SQLException;
+import java.util.ArrayList;
+import java.util.Date;
 
 /**
  *
@@ -13,8 +16,9 @@ public class pruebas {
     public static void main(String[] args) {
         try {
             Controlador control = new Controlador();
-            control.registerUser("adm0", "0", "adm@gmail.com", 1, "0", "adm", "0", null, null, 1, "01-05-2024");
-            //control.printUsers();
+            //control.registerUser("adm0", "0", "adm@gmail.com", 1, "0", "adm", "0", null, null, 1, "01-05-2024");
+            control.updatePeople();
+            control.printPeople();
         } catch (SQLException ex) {
             System.out.println(ex);
         }

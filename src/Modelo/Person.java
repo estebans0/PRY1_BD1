@@ -119,6 +119,9 @@ public class Person {
     public void setFamilyMembers(ArrayList<FamilyMember> FamilyMembers) {
         this.familyMembers = FamilyMembers;
     }
-    
-    
+
+    @Override
+    public String toString() {
+        return "Person{" + "id=" + id + ", dob=" + dob + ", firstName=" + firstName + ", lastName=" + lastName + ", middleName=" + middleName + ", nickname=" + nickname + ", image=" + image + ", gender=" + gender + ", partnerId=" + partnerId + ", familyMembers=" + familyMembers + '}';
+    }
 }

@@ -57,7 +57,7 @@ CREATE TABLE movie ( -- 9       para recordar que producciones son peliculas(???
 );
 
 CREATE TABLE series ( -- 10     para recordar que producciones son series
-    id                          NUMBER(4)       PRIMARY KEY CONSTRAINT series_id_nn NOT NULL--Este debe ser un foreing key hacia production.
+    id                          NUMBER(4)       CONSTRAINT series_id_nn NOT NULL--Este debe ser un foreing key hacia production.
 );
 
 CREATE TABLE episode ( -- 11    episodios de una serie
@@ -89,11 +89,11 @@ CREATE TABLE city ( -- 15 Ciudad, para una subdivision exacta de direccion
     id_province                 NUMBER(4)       CONSTRAINT city_idProvince_nn NOT NULL
 );
 
-CREATE TABLE address ( -- 16 Direccion, tiene la ciudad a donde pertenece
-    id                          NUMBER(4)       CONSTRAINT address_id_nn NOT NULL,
-    detail                      VARCHAR2(180)   CONSTRAINT address_detail_nn NOT NULL,
-    id_city                     NUMBER(4)       CONSTRAINT address_idCity_nn NOT NULL
-);
+--CREATE TABLE address ( -- 16 Direccion, tiene la ciudad a donde pertenece
+--    id                          NUMBER(4)       CONSTRAINT address_id_nn NOT NULL,
+--    detail                      VARCHAR2(180)   CONSTRAINT address_detail_nn NOT NULL,
+--    id_city                     NUMBER(4)       CONSTRAINT address_idCity_nn NOT NULL
+--);
 
 CREATE TABLE person ( -- 17 para todos los seres humanos en el sistema, incluyendo a los usuarios.
     id                          NUMBER(4)      CONSTRAINT person_id_nn NOT NULL,
@@ -107,8 +107,18 @@ CREATE TABLE person ( -- 17 para todos los seres humanos en el sistema, incluyen
     partner                     NUMBER(4)      --CONSTRAINT Person_partner_nn NOT NULL
 );
 
+ALTER TABLE PERSON 
+ADD (id_city NUMBER(4) 
+);
+
+ALTER TABLE PERSON 
+drop column partner;
+
+ALTER TABLE PERSON 
+drop column id_city;
+
 CREATE TABLE gender ( -- 18 genero, es más apropiado.
-    id                          NUMBER(4)       PRIMARY KEY CONSTRAINT gender_id_nn NOT NULL,
+    id                          NUMBER(4)       CONSTRAINT gender_id_nn NOT NULL,
     name                        VARCHAR2(20)    CONSTRAINT gender_name_nn NOT NULL
 );
 
@@ -118,12 +128,22 @@ CREATE TABLE parent_of ( -- 19 para recordar relaciones de padres
     id_child                    NUMBER(4)       CONSTRAINT parent_child_nn NOT NULL
 );
 
+CREATE TABLE partner_of ( -- 19 para recordar relaciones de padres
+    id                          NUMBER(4)       CONSTRAINT partner_id_nn NOT NULL,
+    id_partner1                 NUMBER(4)       CONSTRAINT partner_parent_nn NOT NULL,
+    id_partner2                 NUMBER(4)       CONSTRAINT partner_child_nn NOT NULL
+);
+
+
 CREATE TABLE rol ( --20 Rol que hace una persona en una pelicula
     type                        NUMBER(4)       CONSTRAINT rol_id_nn NOT NULL,
     name                        VARCHAR2(20)    CONSTRAINT rol_name_nn NOT NULL,
     is_cast_member              NUMBER(1)       ,
     character_name              VARCHAR2(20)    CONSTRAINT rol_charname_nn NOT NULL
 );
+
+alter table rol
+drop column is_cast_member;
     
 
 CREATE TABLE film_person ( -- 21 For celebrities and people of note in the productions
@@ -132,8 +152,19 @@ CREATE TABLE film_person ( -- 21 For celebrities and people of note in the produ
     trivia                      VARCHAR2(50)     ,
     biography                   VARCHAR2(150)    ,
     nacionality                 NUMBER(4)        CONSTRAINT Actor_nacionality_nn NOT NULL,
-    adress                      NUMBER(4)
-);    
+    id_city                     NUMBER(4)
+); 
+
+
+alter table film_person
+add (rol number(4));
+
+CREATE TABLE production_crew(
+    id                          NUMBER(4)        CONSTRAINT pcrew_id_nn NOT NULL,
+    id_crew_member              NUMBER(4)       CONSTRAINT pcrew_id_member_nn NOT NULL,
+    id_production               NUMBER(4)       CONSTRAINT pcrew_id_prod_nn NOT NULL,
+    id_rol                      NUMBER(4)       CONSTRAINT pcrew_id_rol_nn NOT NULL                 
+);
 
 CREATE TABLE userr( --22 for users, both admins and regular users
     id                          NUMBER(4)       CONSTRAINT userr_id_nn not null,
@@ -145,7 +176,7 @@ CREATE TABLE userr( --22 for users, both admins and regular users
     user_type                   NUMBER(1)       CONSTRAINT userr_userType_nn NOT NULL
 );
 
-Create table adminisrator( --23 for remembering who is an admin in the system
+Create table administrator( --23 for remembering who is an admin in the system
     id        NUMBER(4)       CONSTRAINT admin_id_nn not null
 );
 
@@ -184,6 +215,17 @@ CREATE TABLE cart(--28  for buying a series of movies
     id_user                      NUMBER(4)       CONSTRAINT CartUserid_nn NOT NULL,
     id_production                NUMBER(4)       CONSTRAINT CartProdictionId_nn NOT NULL
     );
+alter table cart
+drop column id_production;
+
+
+CREATE TABLE production_in_cart(--28  for buying a series of movies
+    id                           NUMBER(4)       CONSTRAINT prodcart_Id_nn NOT NULL,
+    id_cart                      NUMBER(4)       CONSTRAINT prodcart_idcart_nn NOT NULL,
+    id_user                      NUMBER(4)       CONSTRAINT prodcart_Userid_nn NOT NULL,
+    id_production                NUMBER(4)       CONSTRAINT prodcart_ProdictionId_nn NOT NULL
+    );
+
 
 CREATE TABLE purchase(--29 for remembering purchases(?)
     id                           NUMBER(4)       CONSTRAINT purchaseId_nn NOT NULL,
@@ -193,11 +235,15 @@ CREATE TABLE purchase(--29 for remembering purchases(?)
     id_payment_method            NUMBER(4)       CONSTRAINT purchase_paymentMethod_nn NOT NULL
 );
 
-CREATE TABLE purchase_production(--30 for remembering
-     id                          NUMBER(4)       CONSTRAINT purchaseProductionId_nn NOT NULL,
-     id_production               NUMBER(4)       CONSTRAINT purchaseProdIdProdn_nn NOT NULL,
-     id_purchase                 NUMBER(4)       CONSTRAINT pPIdPurchase_nn NOT NULL
-);
+alter table purchase
+add id_cart NUMBER(4);
+
+--CREATE TABLE purchase_production(--30 for remembering
+--     id                          NUMBER(4)       CONSTRAINT purchaseProductionId_nn NOT NULL,
+--     id_production               NUMBER(4)       CONSTRAINT purchaseProdIdProdn_nn NOT NULL,
+--     id_purchase                 NUMBER(4)       CONSTRAINT pPIdPurchase_nn NOT NULL
+--);
+--drop table purchase_production;
 
 CREATE TABLE payment_method(--31 payment method, remembered for quicker purchases
      id                          NUMBER(4)       CONSTRAINT paymentMethodId_nn NOT NULL,

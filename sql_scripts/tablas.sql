@@ -66,6 +66,10 @@ CREATE TABLE episode ( -- 11    episodios de una serie
     season                      NUMBER(2)       CONSTRAINT episode_Season_nn NOT NULL
 );
 
+ALTER TABLE episode 
+ADD (id_serie NUMBER(4) CONSTRAINT episodeSerieId NOT NULL
+);
+
 CREATE TABLE prod_by_country ( -- 12 Relacion entre produccion y pais
     id                          NUMBER(4)       CONSTRAINT prodCountry_id_nn NOT NULL,
     id_production               NUMBER(4)       CONSTRAINT prodCountry_idProduction_nn NOT NULL,
@@ -160,7 +164,7 @@ alter table film_person
 add (rol number(4));
 
 CREATE TABLE production_crew(
-    id                          NUMBER(4)        CONSTRAINT pcrew_id_nn NOT NULL,
+    id                          NUMBER(4)       CONSTRAINT pcrew_id_nn NOT NULL,
     id_crew_member              NUMBER(4)       CONSTRAINT pcrew_id_member_nn NOT NULL,
     id_production               NUMBER(4)       CONSTRAINT pcrew_id_prod_nn NOT NULL,
     id_rol                      NUMBER(4)       CONSTRAINT pcrew_id_rol_nn NOT NULL                 

@@ -65,7 +65,6 @@ CREATE TABLE episode ( -- 11    episodios de una serie
     episode_number              NUMBER(2)       CONSTRAINT episode_episodeNumber_nn NOT NULL,
     season                      NUMBER(2)       CONSTRAINT episode_Season_nn NOT NULL
 );
-
 ALTER TABLE episode 
 ADD (id_serie NUMBER(4) CONSTRAINT episodeSerieId NOT NULL
 );

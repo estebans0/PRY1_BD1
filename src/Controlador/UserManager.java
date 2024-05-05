@@ -13,6 +13,7 @@ import com.sun.jdi.connect.spi.Connection;
 import java.sql.SQLException;
 import oracle.jdbc.OracleTypes;
 import java.sql.*;
+import javax.swing.table.DefaultTableModel;
 /**
  *
  * @author esteb
@@ -37,12 +38,9 @@ public class UserManager {
         return users;
     }
 
-    public void setCurrentUserId(int currentUserId) {
-        this.currentUserId = currentUserId;
-    }
-
     public void updateUsers(java.sql.Connection conn) throws SQLException {
         //java.sql.Connection conn = sysConexion.obtConexion();
+        users.clear();
         CallableStatement sql = conn.prepareCall("{call getUsersData(?)}");
         sql.registerOutParameter(1, Types.REF_CURSOR);
         sql.execute();
@@ -87,20 +85,41 @@ public class UserManager {
         }
         return -1;
     }
-
-    // Método para registrar un nuevo usuario
-    public void registerUser(String username, String password, String email, String gender) {
-        int userId = ++currentUserId;
-        User newUser = new User();
-        users.add(newUser);
+    
+    // Método para obtener una lista con solo los usuarios de un tipo (regular, admin, other)
+    public ArrayList<User> getUsersByType(int type) {
+        ArrayList<User> filteredUsers = new ArrayList<>();
+        for (User user : users) {
+            if (user.getIsAdmin() == type) {
+                filteredUsers.add(user);
+            }
+        }
+        return filteredUsers;
+    }
+    
+    // Método para crear una tabla con los datos de usuarios existentes por tipo
+    public DefaultTableModel showUsersTable(int userType) {
+        Object [] header = {"ID", "Username"};
+        ArrayList<User> usersLst = getUsersByType(userType);
+        DefaultTableModel table = new DefaultTableModel(header, usersLst.size());
+        for (int i = 0; i < table.getRowCount(); i++) {
+            User user = usersLst.get(i);
+            table.setValueAt(user.getId(), i, 0);
+            table.setValueAt(user.getUserName(), i, 1);
+        }
+        return table;
     }
 
-    // Método para otorgar el rol de administrador a un usuario por su id
-    public void makeAdmin(int id) {
-        User user = users.get(id);
-        if (user != null) {
-            user.setIsAdmin(1);
+    // Método para otorgar/eliminar el rol de admin a un usuario por su id
+    public int makeOrRemoveAdmin(java.sql.Connection conn, int id, int type) throws SQLException {
+        if (type == 0 && currentUserId == id) {
+            return -1; // No permite eliminarse a sí mismo como admin
         }
+        PreparedStatement sql = conn.prepareStatement("{call makeOrRemoveAdmin(?, ?)}");
+        sql.setInt(1, id);
+        sql.setInt(2, type);
+        sql.execute();
+        return 1;
     }
 
     // Método para obtener el usuario actualmente logueado

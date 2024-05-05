@@ -34,8 +34,8 @@ public class PersonManager {
 
     // Obtener a todas las personas en la BD
     public void updatePeople(java.sql.Connection conn) throws SQLException {
-        // FALTA HACER ESTE ORACLE DB PROCEDURE
         //java.sql.Connection conn = sysConexion.obtConexion();
+        people.clear();
         CallableStatement sql = conn.prepareCall("{call getPeopleData(?)}");
         sql.registerOutParameter(1, Types.REF_CURSOR);
         sql.execute();

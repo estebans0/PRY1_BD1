@@ -17,8 +17,9 @@ public class pruebas {
         try {
             Controlador control = new Controlador();
             //control.registerUser("adm0", "0", "adm@gmail.com", 1, "0", "adm", "0", null, null, 1, "01-05-2024");
-            control.updatePeople();
-            control.printPeople();
+            control.updateUsers();
+            control.verifyUserLogin("adm0", "0");
+            System.out.println("resultado del agregado/borrado: " + control.makeOrRemoveAdmin(0, 1));
         } catch (SQLException ex) {
             System.out.println(ex);
         }

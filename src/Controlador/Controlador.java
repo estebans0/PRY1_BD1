@@ -11,6 +11,8 @@ import java.sql.SQLException;
 import java.util.ArrayList;
 import oracle.jdbc.OracleTypes;
 import java.sql.*;
+import javax.swing.table.DefaultTableModel;
+import javax.swing.table.TableModel;
 
 /**
  *
@@ -37,6 +39,14 @@ public class Controlador {
         registerPerson(fName, lName, mName, nName, gender, dob);
         userMng.registerUser(conn, user, pass, email, idType, legalId);
         updateUsers();
+    }
+    
+    public DefaultTableModel showUsersTable(int userType) throws SQLException {
+        return userMng.showUsersTable(userType);
+    }
+    
+    public int makeOrRemoveAdmin(int id, int type) throws SQLException {
+        return userMng.makeOrRemoveAdmin(conn, id, type);
     }
     
     public void printUsers() {

@@ -26,56 +26,6 @@ public class production extends javax.swing.JFrame {
     // <editor-fold defaultstate="collapsed" desc="Generated Code">//GEN-BEGIN:initComponents
     private void initComponents() {
 
-        createOtherData = new javax.swing.JPanel();
-        returnBtn_admOther = new javax.swing.JLabel();
-        tituloTxt_admOther = new javax.swing.JLabel();
-        bar1_admOther = new javax.swing.JLabel();
-        genderC_admOther = new javax.swing.JLabel();
-        genderCTxt_admOther = new javax.swing.JTextField();
-        genderCAdd_admOther = new javax.swing.JLabel();
-        genreC_admOther = new javax.swing.JLabel();
-        genreCDesc_admOther = new javax.swing.JTextField();
-        genreCTxt_admOther = new javax.swing.JTextField();
-        genreCAdd_admOther = new javax.swing.JLabel();
-        idC_admOther = new javax.swing.JLabel();
-        idCTxt_admOther = new javax.swing.JTextField();
-        idCAdd_admOther = new javax.swing.JLabel();
-        prodC_admOther = new javax.swing.JLabel();
-        prodCTxt_admOther = new javax.swing.JTextField();
-        prodCAdd_admOther = new javax.swing.JLabel();
-        streamC_admOther = new javax.swing.JLabel();
-        streamCUrl_admOther = new javax.swing.JTextField();
-        streamCTxt_admOther = new javax.swing.JTextField();
-        streamCAdd_admOther = new javax.swing.JLabel();
-        bar2_admOther = new javax.swing.JLabel();
-        genderE_admOther = new javax.swing.JLabel();
-        genderEList_admOther = new javax.swing.JComboBox<>();
-        genderETxt_admOther = new javax.swing.JTextField();
-        genderERename_admOther = new javax.swing.JLabel();
-        genderEDelete_admOther = new javax.swing.JLabel();
-        genreE_admOther = new javax.swing.JLabel();
-        genreEList_admOther = new javax.swing.JComboBox<>();
-        genreEDescr_admOther = new javax.swing.JTextField();
-        genreETxt_admOther = new javax.swing.JTextField();
-        genreERename_admOther = new javax.swing.JLabel();
-        genreEDelete_admOther = new javax.swing.JLabel();
-        idE_admOther = new javax.swing.JLabel();
-        idEList_admOther = new javax.swing.JComboBox<>();
-        idETxt_admOther = new javax.swing.JTextField();
-        idERename_admOther = new javax.swing.JLabel();
-        idEDelete_admOther = new javax.swing.JLabel();
-        prodE_admOther = new javax.swing.JLabel();
-        prodEList_admOther = new javax.swing.JComboBox<>();
-        prodETxt_admOther = new javax.swing.JTextField();
-        prodERename_admOther = new javax.swing.JLabel();
-        prodEDelete_admOther = new javax.swing.JLabel();
-        streamE_admOther = new javax.swing.JLabel();
-        streamEList_admOther = new javax.swing.JComboBox<>();
-        streamEUrl_admOther = new javax.swing.JTextField();
-        streamETxt_admOther = new javax.swing.JTextField();
-        streamERename_admOther = new javax.swing.JLabel();
-        streamEDelete_admOther = new javax.swing.JLabel();
-        endBar_admOther = new javax.swing.JLabel();
         createPerson = new javax.swing.JPanel();
         returnBtn_admPerson = new javax.swing.JLabel();
         titulo_admPerson = new javax.swing.JLabel();
@@ -118,6 +68,55 @@ public class production extends javax.swing.JFrame {
         imageAdd_admPerson = new javax.swing.JLabel();
         saveBtn_admPerson = new javax.swing.JLabel();
         endBar2_admPerson = new javax.swing.JLabel();
+        production = new javax.swing.JPanel();
+        production_scroll = new javax.swing.JScrollPane();
+        production_content = new javax.swing.JPanel();
+        return_btn_Production = new javax.swing.JLabel();
+        titulo_txt_Production = new javax.swing.JLabel();
+        type_txt_Prod = new javax.swing.JLabel();
+        releaseDate_txt_Prod = new javax.swing.JLabel();
+        rating_txt_Production = new javax.swing.JLabel();
+        ratingData_Production = new javax.swing.JLabel();
+        userRating_txt_Production = new javax.swing.JLabel();
+        userRating_data_Production = new javax.swing.JLabel();
+        image_Production = new javax.swing.JLabel();
+        trailer_Production = new javax.swing.JLabel();
+        buy_btn_Production = new javax.swing.JLabel();
+        addCart_checkBox = new javax.swing.JCheckBox();
+        wishlist_checkBox = new javax.swing.JCheckBox();
+        episodes_btn_Prod = new javax.swing.JLabel();
+        genres_Production = new javax.swing.JLabel();
+        synopsis_txt_Production = new javax.swing.JLabel();
+        synopsis_scroll = new javax.swing.JScrollPane();
+        synopsis_txt = new javax.swing.JTextArea();
+        separatingBar_Prod = new javax.swing.JLabel();
+        runtime_txt_Production = new javax.swing.JLabel();
+        runtime_data_Production = new javax.swing.JLabel();
+        platforms_txt_Production = new javax.swing.JLabel();
+        platforms_data_Production = new javax.swing.JLabel();
+        price_txt_Prod = new javax.swing.JLabel();
+        price_data_Prod = new javax.swing.JLabel();
+        location_txt_Production = new javax.swing.JLabel();
+        location_data_Production = new javax.swing.JLabel();
+        director_txt_Production = new javax.swing.JLabel();
+        director_data_Production = new javax.swing.JLabel();
+        writers_txt_Production = new javax.swing.JLabel();
+        writers_list = new javax.swing.JComboBox<>();
+        crew_txt_Production = new javax.swing.JLabel();
+        crew_list = new javax.swing.JComboBox<>();
+        writeReview_txt_Prod = new javax.swing.JLabel();
+        star1_Prod = new javax.swing.JLabel();
+        star2_Prod = new javax.swing.JLabel();
+        star3_Prod = new javax.swing.JLabel();
+        star4_Prod = new javax.swing.JLabel();
+        star5_Prod = new javax.swing.JLabel();
+        userReviews_btn_Prod = new javax.swing.JLabel();
+        reviewTitle_Prod = new javax.swing.JLabel();
+        reviewTitle_txt = new javax.swing.JTextField();
+        review_scroll = new javax.swing.JScrollPane();
+        review_txt = new javax.swing.JTextArea();
+        postReviewBtn_Prod = new javax.swing.JLabel();
+        endBar_Prod = new javax.swing.JLabel();
         createProd = new javax.swing.JPanel();
         returnBtn_admProd = new javax.swing.JLabel();
         titulo_admProd = new javax.swing.JLabel();
@@ -197,485 +196,60 @@ public class production extends javax.swing.JFrame {
         endBar_admProd = new javax.swing.JLabel();
         endBar2_admProd = new javax.swing.JLabel();
         numSeasonsCheck_admProd = new javax.swing.JCheckBox();
-        production = new javax.swing.JPanel();
-        production_scroll = new javax.swing.JScrollPane();
-        production_content = new javax.swing.JPanel();
-        return_btn_Production = new javax.swing.JLabel();
-        titulo_txt_Production = new javax.swing.JLabel();
-        type_txt_Prod = new javax.swing.JLabel();
-        releaseDate_txt_Prod = new javax.swing.JLabel();
-        rating_txt_Production = new javax.swing.JLabel();
-        ratingData_Production = new javax.swing.JLabel();
-        userRating_txt_Production = new javax.swing.JLabel();
-        userRating_data_Production = new javax.swing.JLabel();
-        image_Production = new javax.swing.JLabel();
-        trailer_Production = new javax.swing.JLabel();
-        buy_btn_Production = new javax.swing.JLabel();
-        addCart_checkBox = new javax.swing.JCheckBox();
-        wishlist_checkBox = new javax.swing.JCheckBox();
-        episodes_btn_Prod = new javax.swing.JLabel();
-        genres_Production = new javax.swing.JLabel();
-        synopsis_txt_Production = new javax.swing.JLabel();
-        synopsis_scroll = new javax.swing.JScrollPane();
-        synopsis_txt = new javax.swing.JTextArea();
-        separatingBar_Prod = new javax.swing.JLabel();
-        runtime_txt_Production = new javax.swing.JLabel();
-        runtime_data_Production = new javax.swing.JLabel();
-        platforms_txt_Production = new javax.swing.JLabel();
-        platforms_data_Production = new javax.swing.JLabel();
-        price_txt_Prod = new javax.swing.JLabel();
-        price_data_Prod = new javax.swing.JLabel();
-        location_txt_Production = new javax.swing.JLabel();
-        location_data_Production = new javax.swing.JLabel();
-        director_txt_Production = new javax.swing.JLabel();
-        director_data_Production = new javax.swing.JLabel();
-        writers_txt_Production = new javax.swing.JLabel();
-        writers_list = new javax.swing.JComboBox<>();
-        crew_txt_Production = new javax.swing.JLabel();
-        crew_list = new javax.swing.JComboBox<>();
-        writeReview_txt_Prod = new javax.swing.JLabel();
-        star1_Prod = new javax.swing.JLabel();
-        star2_Prod = new javax.swing.JLabel();
-        star3_Prod = new javax.swing.JLabel();
-        star4_Prod = new javax.swing.JLabel();
-        star5_Prod = new javax.swing.JLabel();
-        userReviews_btn_Prod = new javax.swing.JLabel();
-        reviewTitle_Prod = new javax.swing.JLabel();
-        reviewTitle_txt = new javax.swing.JTextField();
-        review_scroll = new javax.swing.JScrollPane();
-        review_txt = new javax.swing.JTextArea();
-        postReviewBtn_Prod = new javax.swing.JLabel();
-        endBar_Prod = new javax.swing.JLabel();
+        createOtherData = new javax.swing.JPanel();
+        returnBtn_admOther = new javax.swing.JLabel();
+        tituloTxt_admOther = new javax.swing.JLabel();
+        bar1_admOther = new javax.swing.JLabel();
+        genderC_admOther = new javax.swing.JLabel();
+        genderCTxt_admOther = new javax.swing.JTextField();
+        genderCAdd_admOther = new javax.swing.JLabel();
+        genreC_admOther = new javax.swing.JLabel();
+        genreCDesc_admOther = new javax.swing.JTextField();
+        genreCTxt_admOther = new javax.swing.JTextField();
+        genreCAdd_admOther = new javax.swing.JLabel();
+        idC_admOther = new javax.swing.JLabel();
+        idCTxt_admOther = new javax.swing.JTextField();
+        idCAdd_admOther = new javax.swing.JLabel();
+        prodC_admOther = new javax.swing.JLabel();
+        prodCTxt_admOther = new javax.swing.JTextField();
+        prodCAdd_admOther = new javax.swing.JLabel();
+        streamC_admOther = new javax.swing.JLabel();
+        streamCUrl_admOther = new javax.swing.JTextField();
+        streamCTxt_admOther = new javax.swing.JTextField();
+        streamCAdd_admOther = new javax.swing.JLabel();
+        bar2_admOther = new javax.swing.JLabel();
+        genderE_admOther = new javax.swing.JLabel();
+        genderEList_admOther = new javax.swing.JComboBox<>();
+        genderETxt_admOther = new javax.swing.JTextField();
+        genderERename_admOther = new javax.swing.JLabel();
+        genderEDelete_admOther = new javax.swing.JLabel();
+        genreE_admOther = new javax.swing.JLabel();
+        genreEList_admOther = new javax.swing.JComboBox<>();
+        genreEDescr_admOther = new javax.swing.JTextField();
+        genreETxt_admOther = new javax.swing.JTextField();
+        genreERename_admOther = new javax.swing.JLabel();
+        genreEDelete_admOther = new javax.swing.JLabel();
+        idE_admOther = new javax.swing.JLabel();
+        idEList_admOther = new javax.swing.JComboBox<>();
+        idETxt_admOther = new javax.swing.JTextField();
+        idERename_admOther = new javax.swing.JLabel();
+        idEDelete_admOther = new javax.swing.JLabel();
+        prodE_admOther = new javax.swing.JLabel();
+        prodEList_admOther = new javax.swing.JComboBox<>();
+        prodETxt_admOther = new javax.swing.JTextField();
+        prodERename_admOther = new javax.swing.JLabel();
+        prodEDelete_admOther = new javax.swing.JLabel();
+        streamE_admOther = new javax.swing.JLabel();
+        streamEList_admOther = new javax.swing.JComboBox<>();
+        streamEUrl_admOther = new javax.swing.JTextField();
+        streamETxt_admOther = new javax.swing.JTextField();
+        streamERename_admOther = new javax.swing.JLabel();
+        streamEDelete_admOther = new javax.swing.JLabel();
+        endBar_admOther = new javax.swing.JLabel();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
         setPreferredSize(new java.awt.Dimension(1100, 610));
         getContentPane().setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
-
-        createOtherData.setBackground(new java.awt.Color(255, 255, 255));
-        createOtherData.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
-
-        returnBtn_admOther.setBackground(new java.awt.Color(255, 255, 255));
-        returnBtn_admOther.setFont(new java.awt.Font("Cascadia Code", 1, 16)); // NOI18N
-        returnBtn_admOther.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
-        returnBtn_admOther.setText("return");
-        returnBtn_admOther.setBorder(new javax.swing.border.LineBorder(new java.awt.Color(0, 0, 0), 4, true));
-        returnBtn_admOther.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
-        returnBtn_admOther.addMouseListener(new java.awt.event.MouseAdapter() {
-            public void mouseClicked(java.awt.event.MouseEvent evt) {
-                returnBtn_admOtherMouseClicked(evt);
-            }
-        });
-        createOtherData.add(returnBtn_admOther, new org.netbeans.lib.awtextra.AbsoluteConstraints(30, 30, 90, 60));
-
-        tituloTxt_admOther.setFont(new java.awt.Font("Cascadia Code", 1, 48)); // NOI18N
-        tituloTxt_admOther.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
-        tituloTxt_admOther.setText("Other Data");
-        createOtherData.add(tituloTxt_admOther, new org.netbeans.lib.awtextra.AbsoluteConstraints(160, 30, 730, 60));
-
-        bar1_admOther.setFont(new java.awt.Font("Cascadia Code", 0, 12)); // NOI18N
-        bar1_admOther.setHorizontalAlignment(javax.swing.SwingConstants.LEFT);
-        bar1_admOther.setBorder(javax.swing.BorderFactory.createMatteBorder(0, 0, 4, 0, new java.awt.Color(0, 0, 0)));
-        createOtherData.add(bar1_admOther, new org.netbeans.lib.awtextra.AbsoluteConstraints(30, 100, 1040, 10));
-
-        genderC_admOther.setFont(new java.awt.Font("Cascadia Code", 1, 18)); // NOI18N
-        genderC_admOther.setHorizontalAlignment(javax.swing.SwingConstants.LEFT);
-        genderC_admOther.setText("Create gender option");
-        createOtherData.add(genderC_admOther, new org.netbeans.lib.awtextra.AbsoluteConstraints(100, 130, 250, 30));
-
-        genderCTxt_admOther.setFont(new java.awt.Font("Cascadia Code", 0, 12)); // NOI18N
-        genderCTxt_admOther.setText("name");
-        genderCTxt_admOther.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                genderCTxt_admOtherActionPerformed(evt);
-            }
-        });
-        createOtherData.add(genderCTxt_admOther, new org.netbeans.lib.awtextra.AbsoluteConstraints(120, 170, 220, 30));
-
-        genderCAdd_admOther.setBackground(new java.awt.Color(255, 255, 255));
-        genderCAdd_admOther.setFont(new java.awt.Font("Cascadia Code", 1, 10)); // NOI18N
-        genderCAdd_admOther.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
-        genderCAdd_admOther.setText("Add");
-        genderCAdd_admOther.setBorder(new javax.swing.border.LineBorder(new java.awt.Color(0, 0, 0), 4, true));
-        genderCAdd_admOther.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
-        genderCAdd_admOther.addMouseListener(new java.awt.event.MouseAdapter() {
-            public void mouseClicked(java.awt.event.MouseEvent evt) {
-                genderCAdd_admOtherMouseClicked(evt);
-            }
-        });
-        createOtherData.add(genderCAdd_admOther, new org.netbeans.lib.awtextra.AbsoluteConstraints(360, 170, 50, 30));
-
-        genreC_admOther.setFont(new java.awt.Font("Cascadia Code", 1, 18)); // NOI18N
-        genreC_admOther.setHorizontalAlignment(javax.swing.SwingConstants.LEFT);
-        genreC_admOther.setText("Create genre for productions");
-        createOtherData.add(genreC_admOther, new org.netbeans.lib.awtextra.AbsoluteConstraints(100, 220, 320, 30));
-
-        genreCDesc_admOther.setFont(new java.awt.Font("Cascadia Code", 0, 12)); // NOI18N
-        genreCDesc_admOther.setText("brief description");
-        genreCDesc_admOther.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                genreCDesc_admOtherActionPerformed(evt);
-            }
-        });
-        createOtherData.add(genreCDesc_admOther, new org.netbeans.lib.awtextra.AbsoluteConstraints(120, 260, 220, 30));
-
-        genreCTxt_admOther.setFont(new java.awt.Font("Cascadia Code", 0, 12)); // NOI18N
-        genreCTxt_admOther.setText("name");
-        genreCTxt_admOther.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                genreCTxt_admOtherActionPerformed(evt);
-            }
-        });
-        createOtherData.add(genreCTxt_admOther, new org.netbeans.lib.awtextra.AbsoluteConstraints(120, 300, 220, 30));
-
-        genreCAdd_admOther.setBackground(new java.awt.Color(255, 255, 255));
-        genreCAdd_admOther.setFont(new java.awt.Font("Cascadia Code", 1, 10)); // NOI18N
-        genreCAdd_admOther.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
-        genreCAdd_admOther.setText("Add");
-        genreCAdd_admOther.setBorder(new javax.swing.border.LineBorder(new java.awt.Color(0, 0, 0), 4, true));
-        genreCAdd_admOther.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
-        genreCAdd_admOther.addMouseListener(new java.awt.event.MouseAdapter() {
-            public void mouseClicked(java.awt.event.MouseEvent evt) {
-                genreCAdd_admOtherMouseClicked(evt);
-            }
-        });
-        createOtherData.add(genreCAdd_admOther, new org.netbeans.lib.awtextra.AbsoluteConstraints(360, 300, 50, 30));
-
-        idC_admOther.setFont(new java.awt.Font("Cascadia Code", 1, 18)); // NOI18N
-        idC_admOther.setHorizontalAlignment(javax.swing.SwingConstants.LEFT);
-        idC_admOther.setText("Create ID option");
-        createOtherData.add(idC_admOther, new org.netbeans.lib.awtextra.AbsoluteConstraints(100, 350, 230, 30));
-
-        idCTxt_admOther.setFont(new java.awt.Font("Cascadia Code", 0, 12)); // NOI18N
-        idCTxt_admOther.setText("name");
-        idCTxt_admOther.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                idCTxt_admOtherActionPerformed(evt);
-            }
-        });
-        createOtherData.add(idCTxt_admOther, new org.netbeans.lib.awtextra.AbsoluteConstraints(120, 390, 220, 30));
-
-        idCAdd_admOther.setBackground(new java.awt.Color(255, 255, 255));
-        idCAdd_admOther.setFont(new java.awt.Font("Cascadia Code", 1, 10)); // NOI18N
-        idCAdd_admOther.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
-        idCAdd_admOther.setText("Add");
-        idCAdd_admOther.setBorder(new javax.swing.border.LineBorder(new java.awt.Color(0, 0, 0), 4, true));
-        idCAdd_admOther.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
-        idCAdd_admOther.addMouseListener(new java.awt.event.MouseAdapter() {
-            public void mouseClicked(java.awt.event.MouseEvent evt) {
-                idCAdd_admOtherMouseClicked(evt);
-            }
-        });
-        createOtherData.add(idCAdd_admOther, new org.netbeans.lib.awtextra.AbsoluteConstraints(360, 390, 50, 30));
-
-        prodC_admOther.setFont(new java.awt.Font("Cascadia Code", 1, 18)); // NOI18N
-        prodC_admOther.setHorizontalAlignment(javax.swing.SwingConstants.LEFT);
-        prodC_admOther.setText("Create production company");
-        createOtherData.add(prodC_admOther, new org.netbeans.lib.awtextra.AbsoluteConstraints(100, 440, 280, 30));
-
-        prodCTxt_admOther.setFont(new java.awt.Font("Cascadia Code", 0, 12)); // NOI18N
-        prodCTxt_admOther.setText("name");
-        prodCTxt_admOther.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                prodCTxt_admOtherActionPerformed(evt);
-            }
-        });
-        createOtherData.add(prodCTxt_admOther, new org.netbeans.lib.awtextra.AbsoluteConstraints(120, 480, 220, 30));
-
-        prodCAdd_admOther.setBackground(new java.awt.Color(255, 255, 255));
-        prodCAdd_admOther.setFont(new java.awt.Font("Cascadia Code", 1, 10)); // NOI18N
-        prodCAdd_admOther.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
-        prodCAdd_admOther.setText("Add");
-        prodCAdd_admOther.setBorder(new javax.swing.border.LineBorder(new java.awt.Color(0, 0, 0), 4, true));
-        prodCAdd_admOther.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
-        prodCAdd_admOther.addMouseListener(new java.awt.event.MouseAdapter() {
-            public void mouseClicked(java.awt.event.MouseEvent evt) {
-                prodCAdd_admOtherMouseClicked(evt);
-            }
-        });
-        createOtherData.add(prodCAdd_admOther, new org.netbeans.lib.awtextra.AbsoluteConstraints(360, 480, 50, 30));
-
-        streamC_admOther.setFont(new java.awt.Font("Cascadia Code", 1, 18)); // NOI18N
-        streamC_admOther.setHorizontalAlignment(javax.swing.SwingConstants.LEFT);
-        streamC_admOther.setText("Create streaming platform");
-        createOtherData.add(streamC_admOther, new org.netbeans.lib.awtextra.AbsoluteConstraints(100, 530, 280, 30));
-
-        streamCUrl_admOther.setFont(new java.awt.Font("Cascadia Code", 0, 12)); // NOI18N
-        streamCUrl_admOther.setText("url");
-        streamCUrl_admOther.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                streamCUrl_admOtherActionPerformed(evt);
-            }
-        });
-        createOtherData.add(streamCUrl_admOther, new org.netbeans.lib.awtextra.AbsoluteConstraints(120, 570, 220, 30));
-
-        streamCTxt_admOther.setFont(new java.awt.Font("Cascadia Code", 0, 12)); // NOI18N
-        streamCTxt_admOther.setText("name");
-        streamCTxt_admOther.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                streamCTxt_admOtherActionPerformed(evt);
-            }
-        });
-        createOtherData.add(streamCTxt_admOther, new org.netbeans.lib.awtextra.AbsoluteConstraints(120, 610, 220, 30));
-
-        streamCAdd_admOther.setBackground(new java.awt.Color(255, 255, 255));
-        streamCAdd_admOther.setFont(new java.awt.Font("Cascadia Code", 1, 10)); // NOI18N
-        streamCAdd_admOther.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
-        streamCAdd_admOther.setText("Add");
-        streamCAdd_admOther.setBorder(new javax.swing.border.LineBorder(new java.awt.Color(0, 0, 0), 4, true));
-        streamCAdd_admOther.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
-        streamCAdd_admOther.addMouseListener(new java.awt.event.MouseAdapter() {
-            public void mouseClicked(java.awt.event.MouseEvent evt) {
-                streamCAdd_admOtherMouseClicked(evt);
-            }
-        });
-        createOtherData.add(streamCAdd_admOther, new org.netbeans.lib.awtextra.AbsoluteConstraints(360, 610, 50, 30));
-
-        bar2_admOther.setFont(new java.awt.Font("Cascadia Code", 0, 12)); // NOI18N
-        bar2_admOther.setHorizontalAlignment(javax.swing.SwingConstants.LEFT);
-        bar2_admOther.setBorder(javax.swing.BorderFactory.createMatteBorder(0, 4, 0, 0, new java.awt.Color(0, 0, 0)));
-        createOtherData.add(bar2_admOther, new org.netbeans.lib.awtextra.AbsoluteConstraints(530, 110, 10, 580));
-
-        genderE_admOther.setFont(new java.awt.Font("Cascadia Code", 1, 18)); // NOI18N
-        genderE_admOther.setHorizontalAlignment(javax.swing.SwingConstants.LEFT);
-        genderE_admOther.setText("Edit gender");
-        createOtherData.add(genderE_admOther, new org.netbeans.lib.awtextra.AbsoluteConstraints(570, 130, 160, 30));
-
-        genderEList_admOther.setFont(new java.awt.Font("Cascadia Code", 0, 12)); // NOI18N
-        genderEList_admOther.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "Gender" }));
-        createOtherData.add(genderEList_admOther, new org.netbeans.lib.awtextra.AbsoluteConstraints(840, 140, 160, -1));
-
-        genderETxt_admOther.setFont(new java.awt.Font("Cascadia Code", 0, 12)); // NOI18N
-        genderETxt_admOther.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                genderETxt_admOtherActionPerformed(evt);
-            }
-        });
-        createOtherData.add(genderETxt_admOther, new org.netbeans.lib.awtextra.AbsoluteConstraints(590, 170, 230, 30));
-
-        genderERename_admOther.setBackground(new java.awt.Color(255, 255, 255));
-        genderERename_admOther.setFont(new java.awt.Font("Cascadia Code", 1, 10)); // NOI18N
-        genderERename_admOther.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
-        genderERename_admOther.setText("rename");
-        genderERename_admOther.setBorder(new javax.swing.border.LineBorder(new java.awt.Color(0, 0, 0), 4, true));
-        genderERename_admOther.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
-        genderERename_admOther.addMouseListener(new java.awt.event.MouseAdapter() {
-            public void mouseClicked(java.awt.event.MouseEvent evt) {
-                genderERename_admOtherMouseClicked(evt);
-            }
-        });
-        createOtherData.add(genderERename_admOther, new org.netbeans.lib.awtextra.AbsoluteConstraints(870, 170, 60, 30));
-
-        genderEDelete_admOther.setBackground(new java.awt.Color(255, 255, 255));
-        genderEDelete_admOther.setFont(new java.awt.Font("Cascadia Code", 1, 10)); // NOI18N
-        genderEDelete_admOther.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
-        genderEDelete_admOther.setText("delete");
-        genderEDelete_admOther.setBorder(new javax.swing.border.LineBorder(new java.awt.Color(0, 0, 0), 4, true));
-        genderEDelete_admOther.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
-        genderEDelete_admOther.addMouseListener(new java.awt.event.MouseAdapter() {
-            public void mouseClicked(java.awt.event.MouseEvent evt) {
-                genderEDelete_admOtherMouseClicked(evt);
-            }
-        });
-        createOtherData.add(genderEDelete_admOther, new org.netbeans.lib.awtextra.AbsoluteConstraints(940, 170, 60, 30));
-
-        genreE_admOther.setFont(new java.awt.Font("Cascadia Code", 1, 18)); // NOI18N
-        genreE_admOther.setHorizontalAlignment(javax.swing.SwingConstants.LEFT);
-        genreE_admOther.setText("Edit genre");
-        createOtherData.add(genreE_admOther, new org.netbeans.lib.awtextra.AbsoluteConstraints(570, 220, 210, 30));
-
-        genreEList_admOther.setFont(new java.awt.Font("Cascadia Code", 0, 12)); // NOI18N
-        genreEList_admOther.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "Genre" }));
-        createOtherData.add(genreEList_admOther, new org.netbeans.lib.awtextra.AbsoluteConstraints(840, 230, 160, 20));
-
-        genreEDescr_admOther.setFont(new java.awt.Font("Cascadia Code", 0, 12)); // NOI18N
-        genreEDescr_admOther.setText("description");
-        genreEDescr_admOther.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                genreEDescr_admOtherActionPerformed(evt);
-            }
-        });
-        createOtherData.add(genreEDescr_admOther, new org.netbeans.lib.awtextra.AbsoluteConstraints(590, 260, 230, 30));
-
-        genreETxt_admOther.setFont(new java.awt.Font("Cascadia Code", 0, 12)); // NOI18N
-        genreETxt_admOther.setText("name");
-        genreETxt_admOther.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                genreETxt_admOtherActionPerformed(evt);
-            }
-        });
-        createOtherData.add(genreETxt_admOther, new org.netbeans.lib.awtextra.AbsoluteConstraints(590, 300, 230, 30));
-
-        genreERename_admOther.setBackground(new java.awt.Color(255, 255, 255));
-        genreERename_admOther.setFont(new java.awt.Font("Cascadia Code", 1, 10)); // NOI18N
-        genreERename_admOther.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
-        genreERename_admOther.setText("rename");
-        genreERename_admOther.setBorder(new javax.swing.border.LineBorder(new java.awt.Color(0, 0, 0), 4, true));
-        genreERename_admOther.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
-        genreERename_admOther.addMouseListener(new java.awt.event.MouseAdapter() {
-            public void mouseClicked(java.awt.event.MouseEvent evt) {
-                genreERename_admOtherMouseClicked(evt);
-            }
-        });
-        createOtherData.add(genreERename_admOther, new org.netbeans.lib.awtextra.AbsoluteConstraints(870, 300, 60, 30));
-
-        genreEDelete_admOther.setBackground(new java.awt.Color(255, 255, 255));
-        genreEDelete_admOther.setFont(new java.awt.Font("Cascadia Code", 1, 10)); // NOI18N
-        genreEDelete_admOther.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
-        genreEDelete_admOther.setText("delete");
-        genreEDelete_admOther.setBorder(new javax.swing.border.LineBorder(new java.awt.Color(0, 0, 0), 4, true));
-        genreEDelete_admOther.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
-        genreEDelete_admOther.addMouseListener(new java.awt.event.MouseAdapter() {
-            public void mouseClicked(java.awt.event.MouseEvent evt) {
-                genreEDelete_admOtherMouseClicked(evt);
-            }
-        });
-        createOtherData.add(genreEDelete_admOther, new org.netbeans.lib.awtextra.AbsoluteConstraints(940, 300, 60, 30));
-
-        idE_admOther.setFont(new java.awt.Font("Cascadia Code", 1, 18)); // NOI18N
-        idE_admOther.setHorizontalAlignment(javax.swing.SwingConstants.LEFT);
-        idE_admOther.setText("Edit ID option");
-        createOtherData.add(idE_admOther, new org.netbeans.lib.awtextra.AbsoluteConstraints(570, 350, 170, 30));
-
-        idEList_admOther.setFont(new java.awt.Font("Cascadia Code", 0, 12)); // NOI18N
-        idEList_admOther.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "ID" }));
-        createOtherData.add(idEList_admOther, new org.netbeans.lib.awtextra.AbsoluteConstraints(840, 360, 160, 20));
-
-        idETxt_admOther.setFont(new java.awt.Font("Cascadia Code", 0, 12)); // NOI18N
-        idETxt_admOther.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                idETxt_admOtherActionPerformed(evt);
-            }
-        });
-        createOtherData.add(idETxt_admOther, new org.netbeans.lib.awtextra.AbsoluteConstraints(590, 390, 230, 30));
-
-        idERename_admOther.setBackground(new java.awt.Color(255, 255, 255));
-        idERename_admOther.setFont(new java.awt.Font("Cascadia Code", 1, 10)); // NOI18N
-        idERename_admOther.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
-        idERename_admOther.setText("rename");
-        idERename_admOther.setBorder(new javax.swing.border.LineBorder(new java.awt.Color(0, 0, 0), 4, true));
-        idERename_admOther.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
-        idERename_admOther.addMouseListener(new java.awt.event.MouseAdapter() {
-            public void mouseClicked(java.awt.event.MouseEvent evt) {
-                idERename_admOtherMouseClicked(evt);
-            }
-        });
-        createOtherData.add(idERename_admOther, new org.netbeans.lib.awtextra.AbsoluteConstraints(870, 390, 60, 30));
-
-        idEDelete_admOther.setBackground(new java.awt.Color(255, 255, 255));
-        idEDelete_admOther.setFont(new java.awt.Font("Cascadia Code", 1, 10)); // NOI18N
-        idEDelete_admOther.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
-        idEDelete_admOther.setText("delete");
-        idEDelete_admOther.setBorder(new javax.swing.border.LineBorder(new java.awt.Color(0, 0, 0), 4, true));
-        idEDelete_admOther.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
-        idEDelete_admOther.addMouseListener(new java.awt.event.MouseAdapter() {
-            public void mouseClicked(java.awt.event.MouseEvent evt) {
-                idEDelete_admOtherMouseClicked(evt);
-            }
-        });
-        createOtherData.add(idEDelete_admOther, new org.netbeans.lib.awtextra.AbsoluteConstraints(940, 390, 60, 30));
-
-        prodE_admOther.setFont(new java.awt.Font("Cascadia Code", 1, 18)); // NOI18N
-        prodE_admOther.setHorizontalAlignment(javax.swing.SwingConstants.LEFT);
-        prodE_admOther.setText("Edit production company");
-        createOtherData.add(prodE_admOther, new org.netbeans.lib.awtextra.AbsoluteConstraints(570, 440, 260, 30));
-
-        prodEList_admOther.setFont(new java.awt.Font("Cascadia Code", 0, 12)); // NOI18N
-        prodEList_admOther.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "Producer" }));
-        createOtherData.add(prodEList_admOther, new org.netbeans.lib.awtextra.AbsoluteConstraints(840, 450, 160, 20));
-
-        prodETxt_admOther.setFont(new java.awt.Font("Cascadia Code", 0, 12)); // NOI18N
-        prodETxt_admOther.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                prodETxt_admOtherActionPerformed(evt);
-            }
-        });
-        createOtherData.add(prodETxt_admOther, new org.netbeans.lib.awtextra.AbsoluteConstraints(590, 480, 230, 30));
-
-        prodERename_admOther.setBackground(new java.awt.Color(255, 255, 255));
-        prodERename_admOther.setFont(new java.awt.Font("Cascadia Code", 1, 10)); // NOI18N
-        prodERename_admOther.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
-        prodERename_admOther.setText("rename");
-        prodERename_admOther.setBorder(new javax.swing.border.LineBorder(new java.awt.Color(0, 0, 0), 4, true));
-        prodERename_admOther.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
-        prodERename_admOther.addMouseListener(new java.awt.event.MouseAdapter() {
-            public void mouseClicked(java.awt.event.MouseEvent evt) {
-                prodERename_admOtherMouseClicked(evt);
-            }
-        });
-        createOtherData.add(prodERename_admOther, new org.netbeans.lib.awtextra.AbsoluteConstraints(870, 480, 60, 30));
-
-        prodEDelete_admOther.setBackground(new java.awt.Color(255, 255, 255));
-        prodEDelete_admOther.setFont(new java.awt.Font("Cascadia Code", 1, 10)); // NOI18N
-        prodEDelete_admOther.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
-        prodEDelete_admOther.setText("delete");
-        prodEDelete_admOther.setBorder(new javax.swing.border.LineBorder(new java.awt.Color(0, 0, 0), 4, true));
-        prodEDelete_admOther.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
-        prodEDelete_admOther.addMouseListener(new java.awt.event.MouseAdapter() {
-            public void mouseClicked(java.awt.event.MouseEvent evt) {
-                prodEDelete_admOtherMouseClicked(evt);
-            }
-        });
-        createOtherData.add(prodEDelete_admOther, new org.netbeans.lib.awtextra.AbsoluteConstraints(940, 480, 60, 30));
-
-        streamE_admOther.setFont(new java.awt.Font("Cascadia Code", 1, 18)); // NOI18N
-        streamE_admOther.setHorizontalAlignment(javax.swing.SwingConstants.LEFT);
-        streamE_admOther.setText("Edit streaming platform");
-        createOtherData.add(streamE_admOther, new org.netbeans.lib.awtextra.AbsoluteConstraints(570, 530, 260, 30));
-
-        streamEList_admOther.setFont(new java.awt.Font("Cascadia Code", 0, 12)); // NOI18N
-        streamEList_admOther.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "Platform" }));
-        createOtherData.add(streamEList_admOther, new org.netbeans.lib.awtextra.AbsoluteConstraints(840, 540, 160, 20));
-
-        streamEUrl_admOther.setFont(new java.awt.Font("Cascadia Code", 0, 12)); // NOI18N
-        streamEUrl_admOther.setText("url");
-        streamEUrl_admOther.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                streamEUrl_admOtherActionPerformed(evt);
-            }
-        });
-        createOtherData.add(streamEUrl_admOther, new org.netbeans.lib.awtextra.AbsoluteConstraints(590, 570, 230, 30));
-
-        streamETxt_admOther.setFont(new java.awt.Font("Cascadia Code", 0, 12)); // NOI18N
-        streamETxt_admOther.setText("name");
-        streamETxt_admOther.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                streamETxt_admOtherActionPerformed(evt);
-            }
-        });
-        createOtherData.add(streamETxt_admOther, new org.netbeans.lib.awtextra.AbsoluteConstraints(590, 610, 230, 30));
-
-        streamERename_admOther.setBackground(new java.awt.Color(255, 255, 255));
-        streamERename_admOther.setFont(new java.awt.Font("Cascadia Code", 1, 10)); // NOI18N
-        streamERename_admOther.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
-        streamERename_admOther.setText("rename");
-        streamERename_admOther.setBorder(new javax.swing.border.LineBorder(new java.awt.Color(0, 0, 0), 4, true));
-        streamERename_admOther.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
-        streamERename_admOther.addMouseListener(new java.awt.event.MouseAdapter() {
-            public void mouseClicked(java.awt.event.MouseEvent evt) {
-                streamERename_admOtherMouseClicked(evt);
-            }
-        });
-        createOtherData.add(streamERename_admOther, new org.netbeans.lib.awtextra.AbsoluteConstraints(870, 610, 60, 30));
-
-        streamEDelete_admOther.setBackground(new java.awt.Color(255, 255, 255));
-        streamEDelete_admOther.setFont(new java.awt.Font("Cascadia Code", 1, 10)); // NOI18N
-        streamEDelete_admOther.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
-        streamEDelete_admOther.setText("delete");
-        streamEDelete_admOther.setBorder(new javax.swing.border.LineBorder(new java.awt.Color(0, 0, 0), 4, true));
-        streamEDelete_admOther.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
-        streamEDelete_admOther.addMouseListener(new java.awt.event.MouseAdapter() {
-            public void mouseClicked(java.awt.event.MouseEvent evt) {
-                streamEDelete_admOtherMouseClicked(evt);
-            }
-        });
-        createOtherData.add(streamEDelete_admOther, new org.netbeans.lib.awtextra.AbsoluteConstraints(940, 610, 60, 30));
-
-        endBar_admOther.setFont(new java.awt.Font("Cascadia Code", 0, 12)); // NOI18N
-        endBar_admOther.setHorizontalAlignment(javax.swing.SwingConstants.LEFT);
-        endBar_admOther.setBorder(javax.swing.BorderFactory.createMatteBorder(0, 0, 3, 0, new java.awt.Color(255, 255, 255)));
-        createOtherData.add(endBar_admOther, new org.netbeans.lib.awtextra.AbsoluteConstraints(20, 670, 1050, 10));
-
-        getContentPane().add(createOtherData, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, 1100, 690));
 
         createPerson.setBackground(new java.awt.Color(255, 255, 255));
         createPerson.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
@@ -910,6 +484,301 @@ public class production extends javax.swing.JFrame {
         createPerson.add(endBar2_admPerson, new org.netbeans.lib.awtextra.AbsoluteConstraints(1090, 0, 10, 1010));
 
         getContentPane().add(createPerson, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, 1100, 800));
+
+        production.setBackground(new java.awt.Color(255, 255, 255));
+        production.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(0, 0, 0), 5));
+        production.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
+
+        production_scroll.setHorizontalScrollBarPolicy(javax.swing.ScrollPaneConstants.HORIZONTAL_SCROLLBAR_NEVER);
+        production_scroll.setVerticalScrollBarPolicy(javax.swing.ScrollPaneConstants.VERTICAL_SCROLLBAR_ALWAYS);
+        production_scroll.setViewportBorder(javax.swing.BorderFactory.createMatteBorder(4, 4, 4, 4, new java.awt.Color(0, 0, 0)));
+
+        production_content.setBackground(new java.awt.Color(255, 255, 255));
+        production_content.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
+
+        return_btn_Production.setBackground(new java.awt.Color(255, 255, 255));
+        return_btn_Production.setFont(new java.awt.Font("Cascadia Code", 1, 16)); // NOI18N
+        return_btn_Production.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
+        return_btn_Production.setText("return");
+        return_btn_Production.setBorder(new javax.swing.border.LineBorder(new java.awt.Color(0, 0, 0), 4, true));
+        return_btn_Production.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
+        return_btn_Production.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseClicked(java.awt.event.MouseEvent evt) {
+                return_btn_ProductionMouseClicked(evt);
+            }
+        });
+        production_content.add(return_btn_Production, new org.netbeans.lib.awtextra.AbsoluteConstraints(20, 20, 90, 60));
+
+        titulo_txt_Production.setFont(new java.awt.Font("Cascadia Code", 1, 48)); // NOI18N
+        titulo_txt_Production.setHorizontalAlignment(javax.swing.SwingConstants.LEFT);
+        titulo_txt_Production.setText("[Production Title]");
+        production_content.add(titulo_txt_Production, new org.netbeans.lib.awtextra.AbsoluteConstraints(130, 20, 550, 60));
+
+        type_txt_Prod.setFont(new java.awt.Font("Cascadia Code", 1, 12)); // NOI18N
+        type_txt_Prod.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
+        type_txt_Prod.setText("ProdType");
+        production_content.add(type_txt_Prod, new org.netbeans.lib.awtextra.AbsoluteConstraints(670, 50, 80, 20));
+
+        releaseDate_txt_Prod.setFont(new java.awt.Font("Cascadia Code", 1, 12)); // NOI18N
+        releaseDate_txt_Prod.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
+        releaseDate_txt_Prod.setText("releaseDate");
+        production_content.add(releaseDate_txt_Prod, new org.netbeans.lib.awtextra.AbsoluteConstraints(770, 50, 90, 20));
+
+        rating_txt_Production.setFont(new java.awt.Font("Cascadia Code", 1, 12)); // NOI18N
+        rating_txt_Production.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
+        rating_txt_Production.setText("Rating");
+        production_content.add(rating_txt_Production, new org.netbeans.lib.awtextra.AbsoluteConstraints(880, 10, 60, 30));
+
+        ratingData_Production.setFont(new java.awt.Font("Cascadia Code", 0, 12)); // NOI18N
+        ratingData_Production.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
+        ratingData_Production.setText("Val");
+        production_content.add(ratingData_Production, new org.netbeans.lib.awtextra.AbsoluteConstraints(890, 40, 40, 30));
+
+        userRating_txt_Production.setFont(new java.awt.Font("Cascadia Code", 1, 12)); // NOI18N
+        userRating_txt_Production.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
+        userRating_txt_Production.setText("Your Rating");
+        production_content.add(userRating_txt_Production, new org.netbeans.lib.awtextra.AbsoluteConstraints(950, 10, 100, 30));
+
+        userRating_data_Production.setFont(new java.awt.Font("Cascadia Code", 0, 12)); // NOI18N
+        userRating_data_Production.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
+        userRating_data_Production.setText("Val");
+        production_content.add(userRating_data_Production, new org.netbeans.lib.awtextra.AbsoluteConstraints(970, 40, 50, 30));
+
+        image_Production.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
+        image_Production.setText("MAIN IMAGE");
+        image_Production.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(0, 0, 0), 4));
+        production_content.add(image_Production, new org.netbeans.lib.awtextra.AbsoluteConstraints(50, 110, 250, 210));
+
+        trailer_Production.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
+        trailer_Production.setText("TRAILER");
+        trailer_Production.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(0, 0, 0), 4));
+        production_content.add(trailer_Production, new org.netbeans.lib.awtextra.AbsoluteConstraints(310, 110, 380, 210));
+
+        buy_btn_Production.setBackground(new java.awt.Color(255, 255, 255));
+        buy_btn_Production.setFont(new java.awt.Font("Cascadia Code", 1, 14)); // NOI18N
+        buy_btn_Production.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
+        buy_btn_Production.setText("Buy");
+        buy_btn_Production.setBorder(new javax.swing.border.LineBorder(new java.awt.Color(0, 0, 0), 4, true));
+        buy_btn_Production.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
+        buy_btn_Production.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseClicked(java.awt.event.MouseEvent evt) {
+                buy_btn_ProductionMouseClicked(evt);
+            }
+        });
+        production_content.add(buy_btn_Production, new org.netbeans.lib.awtextra.AbsoluteConstraints(870, 110, 160, 50));
+
+        addCart_checkBox.setFont(new java.awt.Font("Cascadia Code", 1, 12)); // NOI18N
+        addCart_checkBox.setText("Add to Cart");
+        addCart_checkBox.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
+        production_content.add(addCart_checkBox, new org.netbeans.lib.awtextra.AbsoluteConstraints(870, 180, 140, -1));
+
+        wishlist_checkBox.setFont(new java.awt.Font("Cascadia Code", 1, 12)); // NOI18N
+        wishlist_checkBox.setText("Add to Wishlist");
+        wishlist_checkBox.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
+        production_content.add(wishlist_checkBox, new org.netbeans.lib.awtextra.AbsoluteConstraints(870, 210, 140, -1));
+
+        episodes_btn_Prod.setFont(new java.awt.Font("Cascadia Code", 1, 20)); // NOI18N
+        episodes_btn_Prod.setHorizontalAlignment(javax.swing.SwingConstants.LEFT);
+        episodes_btn_Prod.setText(" Episodes >");
+        episodes_btn_Prod.setBorder(javax.swing.BorderFactory.createMatteBorder(0, 4, 0, 0, new java.awt.Color(0, 51, 255)));
+        episodes_btn_Prod.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
+        episodes_btn_Prod.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseClicked(java.awt.event.MouseEvent evt) {
+                episodes_btn_ProdMouseClicked(evt);
+            }
+        });
+        production_content.add(episodes_btn_Prod, new org.netbeans.lib.awtextra.AbsoluteConstraints(700, 290, 150, 30));
+
+        genres_Production.setFont(new java.awt.Font("Cascadia Code", 1, 12)); // NOI18N
+        genres_Production.setHorizontalAlignment(javax.swing.SwingConstants.LEFT);
+        genres_Production.setText("genres");
+        genres_Production.setBorder(javax.swing.BorderFactory.createMatteBorder(0, 0, 3, 0, new java.awt.Color(0, 0, 0)));
+        production_content.add(genres_Production, new org.netbeans.lib.awtextra.AbsoluteConstraints(50, 330, 980, 30));
+
+        synopsis_txt_Production.setFont(new java.awt.Font("Cascadia Code", 1, 12)); // NOI18N
+        synopsis_txt_Production.setHorizontalAlignment(javax.swing.SwingConstants.LEFT);
+        synopsis_txt_Production.setText("Synopsis:");
+        production_content.add(synopsis_txt_Production, new org.netbeans.lib.awtextra.AbsoluteConstraints(50, 370, 100, 30));
+
+        synopsis_scroll.setHorizontalScrollBarPolicy(javax.swing.ScrollPaneConstants.HORIZONTAL_SCROLLBAR_NEVER);
+        synopsis_scroll.setVerticalScrollBarPolicy(javax.swing.ScrollPaneConstants.VERTICAL_SCROLLBAR_NEVER);
+
+        synopsis_txt.setEditable(false);
+        synopsis_txt.setBackground(new java.awt.Color(255, 255, 255));
+        synopsis_txt.setColumns(20);
+        synopsis_txt.setFont(new java.awt.Font("Cascadia Code", 0, 12)); // NOI18N
+        synopsis_txt.setRows(5);
+        synopsis_txt.setText("aqui va la sinopsis de la produccion");
+        synopsis_txt.setBorder(null);
+        synopsis_txt.setCursor(new java.awt.Cursor(java.awt.Cursor.DEFAULT_CURSOR));
+        synopsis_txt.setFocusable(false);
+        synopsis_txt.setSelectionColor(new java.awt.Color(255, 255, 255));
+        synopsis_scroll.setViewportView(synopsis_txt);
+
+        production_content.add(synopsis_scroll, new org.netbeans.lib.awtextra.AbsoluteConstraints(50, 400, 550, 100));
+
+        separatingBar_Prod.setFont(new java.awt.Font("Cascadia Code", 0, 12)); // NOI18N
+        separatingBar_Prod.setHorizontalAlignment(javax.swing.SwingConstants.LEFT);
+        separatingBar_Prod.setBorder(javax.swing.BorderFactory.createMatteBorder(0, 0, 3, 0, new java.awt.Color(0, 0, 0)));
+        production_content.add(separatingBar_Prod, new org.netbeans.lib.awtextra.AbsoluteConstraints(50, 510, 980, 10));
+
+        runtime_txt_Production.setFont(new java.awt.Font("Cascadia Code", 1, 12)); // NOI18N
+        runtime_txt_Production.setHorizontalAlignment(javax.swing.SwingConstants.LEFT);
+        runtime_txt_Production.setText("Run time:");
+        production_content.add(runtime_txt_Production, new org.netbeans.lib.awtextra.AbsoluteConstraints(60, 530, 100, 30));
+
+        runtime_data_Production.setFont(new java.awt.Font("Cascadia Code", 0, 12)); // NOI18N
+        runtime_data_Production.setHorizontalAlignment(javax.swing.SwingConstants.LEFT);
+        runtime_data_Production.setText("runtime data");
+        production_content.add(runtime_data_Production, new org.netbeans.lib.awtextra.AbsoluteConstraints(170, 530, 130, 30));
+
+        platforms_txt_Production.setFont(new java.awt.Font("Cascadia Code", 1, 12)); // NOI18N
+        platforms_txt_Production.setHorizontalAlignment(javax.swing.SwingConstants.LEFT);
+        platforms_txt_Production.setText("Platforms:");
+        production_content.add(platforms_txt_Production, new org.netbeans.lib.awtextra.AbsoluteConstraints(60, 570, 100, 30));
+
+        platforms_data_Production.setFont(new java.awt.Font("Cascadia Code", 0, 12)); // NOI18N
+        platforms_data_Production.setHorizontalAlignment(javax.swing.SwingConstants.LEFT);
+        platforms_data_Production.setText("platforms data");
+        production_content.add(platforms_data_Production, new org.netbeans.lib.awtextra.AbsoluteConstraints(170, 570, 130, 30));
+
+        price_txt_Prod.setFont(new java.awt.Font("Cascadia Code", 1, 12)); // NOI18N
+        price_txt_Prod.setHorizontalAlignment(javax.swing.SwingConstants.LEFT);
+        price_txt_Prod.setText("Price:");
+        production_content.add(price_txt_Prod, new org.netbeans.lib.awtextra.AbsoluteConstraints(60, 610, 100, 30));
+
+        price_data_Prod.setFont(new java.awt.Font("Cascadia Code", 0, 12)); // NOI18N
+        price_data_Prod.setHorizontalAlignment(javax.swing.SwingConstants.LEFT);
+        price_data_Prod.setText("price data");
+        production_content.add(price_data_Prod, new org.netbeans.lib.awtextra.AbsoluteConstraints(170, 610, 130, 30));
+
+        location_txt_Production.setFont(new java.awt.Font("Cascadia Code", 1, 12)); // NOI18N
+        location_txt_Production.setHorizontalAlignment(javax.swing.SwingConstants.LEFT);
+        location_txt_Production.setText("Produced in:");
+        production_content.add(location_txt_Production, new org.netbeans.lib.awtextra.AbsoluteConstraints(60, 650, 100, 30));
+
+        location_data_Production.setFont(new java.awt.Font("Cascadia Code", 0, 12)); // NOI18N
+        location_data_Production.setHorizontalAlignment(javax.swing.SwingConstants.LEFT);
+        location_data_Production.setText("location data");
+        production_content.add(location_data_Production, new org.netbeans.lib.awtextra.AbsoluteConstraints(170, 650, 130, 30));
+
+        director_txt_Production.setFont(new java.awt.Font("Cascadia Code", 1, 12)); // NOI18N
+        director_txt_Production.setHorizontalAlignment(javax.swing.SwingConstants.LEFT);
+        director_txt_Production.setText("Director:");
+        production_content.add(director_txt_Production, new org.netbeans.lib.awtextra.AbsoluteConstraints(60, 690, 100, 30));
+
+        director_data_Production.setFont(new java.awt.Font("Cascadia Code", 0, 12)); // NOI18N
+        director_data_Production.setHorizontalAlignment(javax.swing.SwingConstants.LEFT);
+        director_data_Production.setText("director data");
+        production_content.add(director_data_Production, new org.netbeans.lib.awtextra.AbsoluteConstraints(170, 690, 130, 30));
+
+        writers_txt_Production.setFont(new java.awt.Font("Cascadia Code", 1, 12)); // NOI18N
+        writers_txt_Production.setHorizontalAlignment(javax.swing.SwingConstants.LEFT);
+        writers_txt_Production.setText("Writers:");
+        production_content.add(writers_txt_Production, new org.netbeans.lib.awtextra.AbsoluteConstraints(60, 730, 100, 30));
+
+        writers_list.setFont(new java.awt.Font("Cascadia Code", 0, 12)); // NOI18N
+        writers_list.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "Item 1", "Item 2", "Item 3", "Item 4" }));
+        production_content.add(writers_list, new org.netbeans.lib.awtextra.AbsoluteConstraints(170, 730, 200, 30));
+
+        crew_txt_Production.setFont(new java.awt.Font("Cascadia Code", 1, 12)); // NOI18N
+        crew_txt_Production.setHorizontalAlignment(javax.swing.SwingConstants.LEFT);
+        crew_txt_Production.setText("Crew members:");
+        production_content.add(crew_txt_Production, new org.netbeans.lib.awtextra.AbsoluteConstraints(60, 780, 100, 30));
+
+        crew_list.setFont(new java.awt.Font("Cascadia Code", 0, 12)); // NOI18N
+        crew_list.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "Item 1", "Item 2", "Item 3", "Item 4" }));
+        production_content.add(crew_list, new org.netbeans.lib.awtextra.AbsoluteConstraints(170, 780, 200, 30));
+
+        writeReview_txt_Prod.setFont(new java.awt.Font("Cascadia Code", 1, 28)); // NOI18N
+        writeReview_txt_Prod.setHorizontalAlignment(javax.swing.SwingConstants.LEFT);
+        writeReview_txt_Prod.setText("Write your review");
+        production_content.add(writeReview_txt_Prod, new org.netbeans.lib.awtextra.AbsoluteConstraints(50, 870, 310, 30));
+
+        star1_Prod.setFont(new java.awt.Font("Cascadia Code", 0, 10)); // NOI18N
+        star1_Prod.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
+        star1_Prod.setText("star1");
+        star1_Prod.setBorder(new javax.swing.border.LineBorder(new java.awt.Color(0, 0, 0), 4, true));
+        star1_Prod.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
+        production_content.add(star1_Prod, new org.netbeans.lib.awtextra.AbsoluteConstraints(500, 910, 40, 40));
+
+        star2_Prod.setFont(new java.awt.Font("Cascadia Code", 0, 10)); // NOI18N
+        star2_Prod.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
+        star2_Prod.setText("star2");
+        star2_Prod.setBorder(new javax.swing.border.LineBorder(new java.awt.Color(0, 0, 0), 4, true));
+        star2_Prod.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
+        production_content.add(star2_Prod, new org.netbeans.lib.awtextra.AbsoluteConstraints(550, 910, 40, 40));
+
+        star3_Prod.setFont(new java.awt.Font("Cascadia Code", 0, 10)); // NOI18N
+        star3_Prod.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
+        star3_Prod.setText("star3");
+        star3_Prod.setBorder(new javax.swing.border.LineBorder(new java.awt.Color(0, 0, 0), 4, true));
+        star3_Prod.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
+        production_content.add(star3_Prod, new org.netbeans.lib.awtextra.AbsoluteConstraints(600, 910, 40, 40));
+
+        star4_Prod.setFont(new java.awt.Font("Cascadia Code", 0, 10)); // NOI18N
+        star4_Prod.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
+        star4_Prod.setText("star4");
+        star4_Prod.setBorder(new javax.swing.border.LineBorder(new java.awt.Color(0, 0, 0), 4, true));
+        star4_Prod.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
+        production_content.add(star4_Prod, new org.netbeans.lib.awtextra.AbsoluteConstraints(650, 910, 40, 40));
+
+        star5_Prod.setFont(new java.awt.Font("Cascadia Code", 0, 10)); // NOI18N
+        star5_Prod.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
+        star5_Prod.setText("star5");
+        star5_Prod.setBorder(new javax.swing.border.LineBorder(new java.awt.Color(0, 0, 0), 4, true));
+        star5_Prod.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
+        production_content.add(star5_Prod, new org.netbeans.lib.awtextra.AbsoluteConstraints(700, 910, 40, 40));
+
+        userReviews_btn_Prod.setFont(new java.awt.Font("Cascadia Code", 1, 20)); // NOI18N
+        userReviews_btn_Prod.setHorizontalAlignment(javax.swing.SwingConstants.LEFT);
+        userReviews_btn_Prod.setText(" User reviews >");
+        userReviews_btn_Prod.setBorder(javax.swing.BorderFactory.createMatteBorder(0, 4, 0, 0, new java.awt.Color(0, 51, 255)));
+        userReviews_btn_Prod.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
+        userReviews_btn_Prod.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseClicked(java.awt.event.MouseEvent evt) {
+                userReviews_btn_ProdMouseClicked(evt);
+            }
+        });
+        production_content.add(userReviews_btn_Prod, new org.netbeans.lib.awtextra.AbsoluteConstraints(760, 910, 200, 30));
+
+        reviewTitle_Prod.setFont(new java.awt.Font("Cascadia Code", 1, 12)); // NOI18N
+        reviewTitle_Prod.setHorizontalAlignment(javax.swing.SwingConstants.LEFT);
+        reviewTitle_Prod.setText("Title:");
+        production_content.add(reviewTitle_Prod, new org.netbeans.lib.awtextra.AbsoluteConstraints(50, 920, 50, 30));
+
+        reviewTitle_txt.setFont(new java.awt.Font("Cascadia Code", 0, 12)); // NOI18N
+        reviewTitle_txt.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                reviewTitle_txtActionPerformed(evt);
+            }
+        });
+        production_content.add(reviewTitle_txt, new org.netbeans.lib.awtextra.AbsoluteConstraints(100, 920, 360, 30));
+
+        review_txt.setColumns(20);
+        review_txt.setFont(new java.awt.Font("Cascadia Code", 0, 12)); // NOI18N
+        review_txt.setRows(5);
+        review_scroll.setViewportView(review_txt);
+
+        production_content.add(review_scroll, new org.netbeans.lib.awtextra.AbsoluteConstraints(50, 960, 690, 90));
+
+        postReviewBtn_Prod.setFont(new java.awt.Font("Cascadia Code", 0, 10)); // NOI18N
+        postReviewBtn_Prod.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
+        postReviewBtn_Prod.setText("Post");
+        postReviewBtn_Prod.setBorder(new javax.swing.border.LineBorder(new java.awt.Color(0, 0, 0), 4, true));
+        postReviewBtn_Prod.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
+        production_content.add(postReviewBtn_Prod, new org.netbeans.lib.awtextra.AbsoluteConstraints(750, 1010, 60, 40));
+
+        endBar_Prod.setFont(new java.awt.Font("Cascadia Code", 0, 12)); // NOI18N
+        endBar_Prod.setHorizontalAlignment(javax.swing.SwingConstants.LEFT);
+        endBar_Prod.setBorder(javax.swing.BorderFactory.createMatteBorder(0, 0, 3, 0, new java.awt.Color(255, 255, 255)));
+        production_content.add(endBar_Prod, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 1070, 1060, 10));
+
+        production_scroll.setViewportView(production_content);
+
+        production.add(production_scroll, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, 1100, 540));
+
+        getContentPane().add(production, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, -1, -1));
 
         createProd.setBackground(new java.awt.Color(255, 255, 255));
         createProd.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
@@ -1517,300 +1386,431 @@ public class production extends javax.swing.JFrame {
 
         getContentPane().add(createProd, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, 1100, 1040));
 
-        production.setBackground(new java.awt.Color(255, 255, 255));
-        production.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(0, 0, 0), 5));
-        production.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
+        createOtherData.setBackground(new java.awt.Color(255, 255, 255));
+        createOtherData.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
 
-        production_scroll.setHorizontalScrollBarPolicy(javax.swing.ScrollPaneConstants.HORIZONTAL_SCROLLBAR_NEVER);
-        production_scroll.setVerticalScrollBarPolicy(javax.swing.ScrollPaneConstants.VERTICAL_SCROLLBAR_ALWAYS);
-        production_scroll.setViewportBorder(javax.swing.BorderFactory.createMatteBorder(4, 4, 4, 4, new java.awt.Color(0, 0, 0)));
-
-        production_content.setBackground(new java.awt.Color(255, 255, 255));
-        production_content.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
-
-        return_btn_Production.setBackground(new java.awt.Color(255, 255, 255));
-        return_btn_Production.setFont(new java.awt.Font("Cascadia Code", 1, 16)); // NOI18N
-        return_btn_Production.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
-        return_btn_Production.setText("return");
-        return_btn_Production.setBorder(new javax.swing.border.LineBorder(new java.awt.Color(0, 0, 0), 4, true));
-        return_btn_Production.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
-        return_btn_Production.addMouseListener(new java.awt.event.MouseAdapter() {
+        returnBtn_admOther.setBackground(new java.awt.Color(255, 255, 255));
+        returnBtn_admOther.setFont(new java.awt.Font("Cascadia Code", 1, 16)); // NOI18N
+        returnBtn_admOther.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
+        returnBtn_admOther.setText("return");
+        returnBtn_admOther.setBorder(new javax.swing.border.LineBorder(new java.awt.Color(0, 0, 0), 4, true));
+        returnBtn_admOther.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
+        returnBtn_admOther.addMouseListener(new java.awt.event.MouseAdapter() {
             public void mouseClicked(java.awt.event.MouseEvent evt) {
-                return_btn_ProductionMouseClicked(evt);
+                returnBtn_admOtherMouseClicked(evt);
             }
         });
-        production_content.add(return_btn_Production, new org.netbeans.lib.awtextra.AbsoluteConstraints(20, 20, 90, 60));
+        createOtherData.add(returnBtn_admOther, new org.netbeans.lib.awtextra.AbsoluteConstraints(30, 30, 90, 60));
 
-        titulo_txt_Production.setFont(new java.awt.Font("Cascadia Code", 1, 48)); // NOI18N
-        titulo_txt_Production.setHorizontalAlignment(javax.swing.SwingConstants.LEFT);
-        titulo_txt_Production.setText("[Production Title]");
-        production_content.add(titulo_txt_Production, new org.netbeans.lib.awtextra.AbsoluteConstraints(130, 20, 550, 60));
+        tituloTxt_admOther.setFont(new java.awt.Font("Cascadia Code", 1, 48)); // NOI18N
+        tituloTxt_admOther.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
+        tituloTxt_admOther.setText("Other Data");
+        createOtherData.add(tituloTxt_admOther, new org.netbeans.lib.awtextra.AbsoluteConstraints(160, 30, 730, 60));
 
-        type_txt_Prod.setFont(new java.awt.Font("Cascadia Code", 1, 12)); // NOI18N
-        type_txt_Prod.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
-        type_txt_Prod.setText("ProdType");
-        production_content.add(type_txt_Prod, new org.netbeans.lib.awtextra.AbsoluteConstraints(670, 50, 80, 20));
+        bar1_admOther.setFont(new java.awt.Font("Cascadia Code", 0, 12)); // NOI18N
+        bar1_admOther.setHorizontalAlignment(javax.swing.SwingConstants.LEFT);
+        bar1_admOther.setBorder(javax.swing.BorderFactory.createMatteBorder(0, 0, 4, 0, new java.awt.Color(0, 0, 0)));
+        createOtherData.add(bar1_admOther, new org.netbeans.lib.awtextra.AbsoluteConstraints(30, 100, 1040, 10));
 
-        releaseDate_txt_Prod.setFont(new java.awt.Font("Cascadia Code", 1, 12)); // NOI18N
-        releaseDate_txt_Prod.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
-        releaseDate_txt_Prod.setText("releaseDate");
-        production_content.add(releaseDate_txt_Prod, new org.netbeans.lib.awtextra.AbsoluteConstraints(770, 50, 90, 20));
+        genderC_admOther.setFont(new java.awt.Font("Cascadia Code", 1, 18)); // NOI18N
+        genderC_admOther.setHorizontalAlignment(javax.swing.SwingConstants.LEFT);
+        genderC_admOther.setText("Create gender option");
+        createOtherData.add(genderC_admOther, new org.netbeans.lib.awtextra.AbsoluteConstraints(100, 130, 250, 30));
 
-        rating_txt_Production.setFont(new java.awt.Font("Cascadia Code", 1, 12)); // NOI18N
-        rating_txt_Production.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
-        rating_txt_Production.setText("Rating");
-        production_content.add(rating_txt_Production, new org.netbeans.lib.awtextra.AbsoluteConstraints(880, 10, 60, 30));
-
-        ratingData_Production.setFont(new java.awt.Font("Cascadia Code", 0, 12)); // NOI18N
-        ratingData_Production.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
-        ratingData_Production.setText("Val");
-        production_content.add(ratingData_Production, new org.netbeans.lib.awtextra.AbsoluteConstraints(890, 40, 40, 30));
-
-        userRating_txt_Production.setFont(new java.awt.Font("Cascadia Code", 1, 12)); // NOI18N
-        userRating_txt_Production.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
-        userRating_txt_Production.setText("Your Rating");
-        production_content.add(userRating_txt_Production, new org.netbeans.lib.awtextra.AbsoluteConstraints(950, 10, 100, 30));
-
-        userRating_data_Production.setFont(new java.awt.Font("Cascadia Code", 0, 12)); // NOI18N
-        userRating_data_Production.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
-        userRating_data_Production.setText("Val");
-        production_content.add(userRating_data_Production, new org.netbeans.lib.awtextra.AbsoluteConstraints(970, 40, 50, 30));
-
-        image_Production.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
-        image_Production.setText("MAIN IMAGE");
-        image_Production.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(0, 0, 0), 4));
-        production_content.add(image_Production, new org.netbeans.lib.awtextra.AbsoluteConstraints(50, 110, 250, 210));
-
-        trailer_Production.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
-        trailer_Production.setText("TRAILER");
-        trailer_Production.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(0, 0, 0), 4));
-        production_content.add(trailer_Production, new org.netbeans.lib.awtextra.AbsoluteConstraints(310, 110, 380, 210));
-
-        buy_btn_Production.setBackground(new java.awt.Color(255, 255, 255));
-        buy_btn_Production.setFont(new java.awt.Font("Cascadia Code", 1, 14)); // NOI18N
-        buy_btn_Production.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
-        buy_btn_Production.setText("Buy");
-        buy_btn_Production.setBorder(new javax.swing.border.LineBorder(new java.awt.Color(0, 0, 0), 4, true));
-        buy_btn_Production.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
-        buy_btn_Production.addMouseListener(new java.awt.event.MouseAdapter() {
-            public void mouseClicked(java.awt.event.MouseEvent evt) {
-                buy_btn_ProductionMouseClicked(evt);
-            }
-        });
-        production_content.add(buy_btn_Production, new org.netbeans.lib.awtextra.AbsoluteConstraints(870, 110, 160, 50));
-
-        addCart_checkBox.setFont(new java.awt.Font("Cascadia Code", 1, 12)); // NOI18N
-        addCart_checkBox.setText("Add to Cart");
-        addCart_checkBox.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
-        production_content.add(addCart_checkBox, new org.netbeans.lib.awtextra.AbsoluteConstraints(870, 180, 140, -1));
-
-        wishlist_checkBox.setFont(new java.awt.Font("Cascadia Code", 1, 12)); // NOI18N
-        wishlist_checkBox.setText("Add to Wishlist");
-        wishlist_checkBox.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
-        production_content.add(wishlist_checkBox, new org.netbeans.lib.awtextra.AbsoluteConstraints(870, 210, 140, -1));
-
-        episodes_btn_Prod.setFont(new java.awt.Font("Cascadia Code", 1, 20)); // NOI18N
-        episodes_btn_Prod.setHorizontalAlignment(javax.swing.SwingConstants.LEFT);
-        episodes_btn_Prod.setText(" Episodes >");
-        episodes_btn_Prod.setBorder(javax.swing.BorderFactory.createMatteBorder(0, 4, 0, 0, new java.awt.Color(0, 51, 255)));
-        episodes_btn_Prod.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
-        episodes_btn_Prod.addMouseListener(new java.awt.event.MouseAdapter() {
-            public void mouseClicked(java.awt.event.MouseEvent evt) {
-                episodes_btn_ProdMouseClicked(evt);
-            }
-        });
-        production_content.add(episodes_btn_Prod, new org.netbeans.lib.awtextra.AbsoluteConstraints(700, 290, 150, 30));
-
-        genres_Production.setFont(new java.awt.Font("Cascadia Code", 1, 12)); // NOI18N
-        genres_Production.setHorizontalAlignment(javax.swing.SwingConstants.LEFT);
-        genres_Production.setText("genres");
-        genres_Production.setBorder(javax.swing.BorderFactory.createMatteBorder(0, 0, 3, 0, new java.awt.Color(0, 0, 0)));
-        production_content.add(genres_Production, new org.netbeans.lib.awtextra.AbsoluteConstraints(50, 330, 980, 30));
-
-        synopsis_txt_Production.setFont(new java.awt.Font("Cascadia Code", 1, 12)); // NOI18N
-        synopsis_txt_Production.setHorizontalAlignment(javax.swing.SwingConstants.LEFT);
-        synopsis_txt_Production.setText("Synopsis:");
-        production_content.add(synopsis_txt_Production, new org.netbeans.lib.awtextra.AbsoluteConstraints(50, 370, 100, 30));
-
-        synopsis_scroll.setHorizontalScrollBarPolicy(javax.swing.ScrollPaneConstants.HORIZONTAL_SCROLLBAR_NEVER);
-        synopsis_scroll.setVerticalScrollBarPolicy(javax.swing.ScrollPaneConstants.VERTICAL_SCROLLBAR_NEVER);
-
-        synopsis_txt.setEditable(false);
-        synopsis_txt.setBackground(new java.awt.Color(255, 255, 255));
-        synopsis_txt.setColumns(20);
-        synopsis_txt.setFont(new java.awt.Font("Cascadia Code", 0, 12)); // NOI18N
-        synopsis_txt.setRows(5);
-        synopsis_txt.setText("aqui va la sinopsis de la produccion");
-        synopsis_txt.setBorder(null);
-        synopsis_txt.setCursor(new java.awt.Cursor(java.awt.Cursor.DEFAULT_CURSOR));
-        synopsis_txt.setFocusable(false);
-        synopsis_txt.setSelectionColor(new java.awt.Color(255, 255, 255));
-        synopsis_scroll.setViewportView(synopsis_txt);
-
-        production_content.add(synopsis_scroll, new org.netbeans.lib.awtextra.AbsoluteConstraints(50, 400, 550, 100));
-
-        separatingBar_Prod.setFont(new java.awt.Font("Cascadia Code", 0, 12)); // NOI18N
-        separatingBar_Prod.setHorizontalAlignment(javax.swing.SwingConstants.LEFT);
-        separatingBar_Prod.setBorder(javax.swing.BorderFactory.createMatteBorder(0, 0, 3, 0, new java.awt.Color(0, 0, 0)));
-        production_content.add(separatingBar_Prod, new org.netbeans.lib.awtextra.AbsoluteConstraints(50, 510, 980, 10));
-
-        runtime_txt_Production.setFont(new java.awt.Font("Cascadia Code", 1, 12)); // NOI18N
-        runtime_txt_Production.setHorizontalAlignment(javax.swing.SwingConstants.LEFT);
-        runtime_txt_Production.setText("Run time:");
-        production_content.add(runtime_txt_Production, new org.netbeans.lib.awtextra.AbsoluteConstraints(60, 530, 100, 30));
-
-        runtime_data_Production.setFont(new java.awt.Font("Cascadia Code", 0, 12)); // NOI18N
-        runtime_data_Production.setHorizontalAlignment(javax.swing.SwingConstants.LEFT);
-        runtime_data_Production.setText("runtime data");
-        production_content.add(runtime_data_Production, new org.netbeans.lib.awtextra.AbsoluteConstraints(170, 530, 130, 30));
-
-        platforms_txt_Production.setFont(new java.awt.Font("Cascadia Code", 1, 12)); // NOI18N
-        platforms_txt_Production.setHorizontalAlignment(javax.swing.SwingConstants.LEFT);
-        platforms_txt_Production.setText("Platforms:");
-        production_content.add(platforms_txt_Production, new org.netbeans.lib.awtextra.AbsoluteConstraints(60, 570, 100, 30));
-
-        platforms_data_Production.setFont(new java.awt.Font("Cascadia Code", 0, 12)); // NOI18N
-        platforms_data_Production.setHorizontalAlignment(javax.swing.SwingConstants.LEFT);
-        platforms_data_Production.setText("platforms data");
-        production_content.add(platforms_data_Production, new org.netbeans.lib.awtextra.AbsoluteConstraints(170, 570, 130, 30));
-
-        price_txt_Prod.setFont(new java.awt.Font("Cascadia Code", 1, 12)); // NOI18N
-        price_txt_Prod.setHorizontalAlignment(javax.swing.SwingConstants.LEFT);
-        price_txt_Prod.setText("Price:");
-        production_content.add(price_txt_Prod, new org.netbeans.lib.awtextra.AbsoluteConstraints(60, 610, 100, 30));
-
-        price_data_Prod.setFont(new java.awt.Font("Cascadia Code", 0, 12)); // NOI18N
-        price_data_Prod.setHorizontalAlignment(javax.swing.SwingConstants.LEFT);
-        price_data_Prod.setText("price data");
-        production_content.add(price_data_Prod, new org.netbeans.lib.awtextra.AbsoluteConstraints(170, 610, 130, 30));
-
-        location_txt_Production.setFont(new java.awt.Font("Cascadia Code", 1, 12)); // NOI18N
-        location_txt_Production.setHorizontalAlignment(javax.swing.SwingConstants.LEFT);
-        location_txt_Production.setText("Produced in:");
-        production_content.add(location_txt_Production, new org.netbeans.lib.awtextra.AbsoluteConstraints(60, 650, 100, 30));
-
-        location_data_Production.setFont(new java.awt.Font("Cascadia Code", 0, 12)); // NOI18N
-        location_data_Production.setHorizontalAlignment(javax.swing.SwingConstants.LEFT);
-        location_data_Production.setText("location data");
-        production_content.add(location_data_Production, new org.netbeans.lib.awtextra.AbsoluteConstraints(170, 650, 130, 30));
-
-        director_txt_Production.setFont(new java.awt.Font("Cascadia Code", 1, 12)); // NOI18N
-        director_txt_Production.setHorizontalAlignment(javax.swing.SwingConstants.LEFT);
-        director_txt_Production.setText("Director:");
-        production_content.add(director_txt_Production, new org.netbeans.lib.awtextra.AbsoluteConstraints(60, 690, 100, 30));
-
-        director_data_Production.setFont(new java.awt.Font("Cascadia Code", 0, 12)); // NOI18N
-        director_data_Production.setHorizontalAlignment(javax.swing.SwingConstants.LEFT);
-        director_data_Production.setText("director data");
-        production_content.add(director_data_Production, new org.netbeans.lib.awtextra.AbsoluteConstraints(170, 690, 130, 30));
-
-        writers_txt_Production.setFont(new java.awt.Font("Cascadia Code", 1, 12)); // NOI18N
-        writers_txt_Production.setHorizontalAlignment(javax.swing.SwingConstants.LEFT);
-        writers_txt_Production.setText("Writers:");
-        production_content.add(writers_txt_Production, new org.netbeans.lib.awtextra.AbsoluteConstraints(60, 730, 100, 30));
-
-        writers_list.setFont(new java.awt.Font("Cascadia Code", 0, 12)); // NOI18N
-        writers_list.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "Item 1", "Item 2", "Item 3", "Item 4" }));
-        production_content.add(writers_list, new org.netbeans.lib.awtextra.AbsoluteConstraints(170, 730, 200, 30));
-
-        crew_txt_Production.setFont(new java.awt.Font("Cascadia Code", 1, 12)); // NOI18N
-        crew_txt_Production.setHorizontalAlignment(javax.swing.SwingConstants.LEFT);
-        crew_txt_Production.setText("Crew members:");
-        production_content.add(crew_txt_Production, new org.netbeans.lib.awtextra.AbsoluteConstraints(60, 780, 100, 30));
-
-        crew_list.setFont(new java.awt.Font("Cascadia Code", 0, 12)); // NOI18N
-        crew_list.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "Item 1", "Item 2", "Item 3", "Item 4" }));
-        production_content.add(crew_list, new org.netbeans.lib.awtextra.AbsoluteConstraints(170, 780, 200, 30));
-
-        writeReview_txt_Prod.setFont(new java.awt.Font("Cascadia Code", 1, 28)); // NOI18N
-        writeReview_txt_Prod.setHorizontalAlignment(javax.swing.SwingConstants.LEFT);
-        writeReview_txt_Prod.setText("Write your review");
-        production_content.add(writeReview_txt_Prod, new org.netbeans.lib.awtextra.AbsoluteConstraints(50, 870, 310, 30));
-
-        star1_Prod.setFont(new java.awt.Font("Cascadia Code", 0, 10)); // NOI18N
-        star1_Prod.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
-        star1_Prod.setText("star1");
-        star1_Prod.setBorder(new javax.swing.border.LineBorder(new java.awt.Color(0, 0, 0), 4, true));
-        star1_Prod.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
-        production_content.add(star1_Prod, new org.netbeans.lib.awtextra.AbsoluteConstraints(500, 910, 40, 40));
-
-        star2_Prod.setFont(new java.awt.Font("Cascadia Code", 0, 10)); // NOI18N
-        star2_Prod.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
-        star2_Prod.setText("star2");
-        star2_Prod.setBorder(new javax.swing.border.LineBorder(new java.awt.Color(0, 0, 0), 4, true));
-        star2_Prod.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
-        production_content.add(star2_Prod, new org.netbeans.lib.awtextra.AbsoluteConstraints(550, 910, 40, 40));
-
-        star3_Prod.setFont(new java.awt.Font("Cascadia Code", 0, 10)); // NOI18N
-        star3_Prod.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
-        star3_Prod.setText("star3");
-        star3_Prod.setBorder(new javax.swing.border.LineBorder(new java.awt.Color(0, 0, 0), 4, true));
-        star3_Prod.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
-        production_content.add(star3_Prod, new org.netbeans.lib.awtextra.AbsoluteConstraints(600, 910, 40, 40));
-
-        star4_Prod.setFont(new java.awt.Font("Cascadia Code", 0, 10)); // NOI18N
-        star4_Prod.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
-        star4_Prod.setText("star4");
-        star4_Prod.setBorder(new javax.swing.border.LineBorder(new java.awt.Color(0, 0, 0), 4, true));
-        star4_Prod.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
-        production_content.add(star4_Prod, new org.netbeans.lib.awtextra.AbsoluteConstraints(650, 910, 40, 40));
-
-        star5_Prod.setFont(new java.awt.Font("Cascadia Code", 0, 10)); // NOI18N
-        star5_Prod.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
-        star5_Prod.setText("star5");
-        star5_Prod.setBorder(new javax.swing.border.LineBorder(new java.awt.Color(0, 0, 0), 4, true));
-        star5_Prod.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
-        production_content.add(star5_Prod, new org.netbeans.lib.awtextra.AbsoluteConstraints(700, 910, 40, 40));
-
-        userReviews_btn_Prod.setFont(new java.awt.Font("Cascadia Code", 1, 20)); // NOI18N
-        userReviews_btn_Prod.setHorizontalAlignment(javax.swing.SwingConstants.LEFT);
-        userReviews_btn_Prod.setText(" User reviews >");
-        userReviews_btn_Prod.setBorder(javax.swing.BorderFactory.createMatteBorder(0, 4, 0, 0, new java.awt.Color(0, 51, 255)));
-        userReviews_btn_Prod.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
-        userReviews_btn_Prod.addMouseListener(new java.awt.event.MouseAdapter() {
-            public void mouseClicked(java.awt.event.MouseEvent evt) {
-                userReviews_btn_ProdMouseClicked(evt);
-            }
-        });
-        production_content.add(userReviews_btn_Prod, new org.netbeans.lib.awtextra.AbsoluteConstraints(760, 910, 200, 30));
-
-        reviewTitle_Prod.setFont(new java.awt.Font("Cascadia Code", 1, 12)); // NOI18N
-        reviewTitle_Prod.setHorizontalAlignment(javax.swing.SwingConstants.LEFT);
-        reviewTitle_Prod.setText("Title:");
-        production_content.add(reviewTitle_Prod, new org.netbeans.lib.awtextra.AbsoluteConstraints(50, 920, 50, 30));
-
-        reviewTitle_txt.setFont(new java.awt.Font("Cascadia Code", 0, 12)); // NOI18N
-        reviewTitle_txt.addActionListener(new java.awt.event.ActionListener() {
+        genderCTxt_admOther.setFont(new java.awt.Font("Cascadia Code", 0, 12)); // NOI18N
+        genderCTxt_admOther.setText("name");
+        genderCTxt_admOther.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                reviewTitle_txtActionPerformed(evt);
+                genderCTxt_admOtherActionPerformed(evt);
             }
         });
-        production_content.add(reviewTitle_txt, new org.netbeans.lib.awtextra.AbsoluteConstraints(100, 920, 360, 30));
+        createOtherData.add(genderCTxt_admOther, new org.netbeans.lib.awtextra.AbsoluteConstraints(120, 170, 220, 30));
 
-        review_txt.setColumns(20);
-        review_txt.setFont(new java.awt.Font("Cascadia Code", 0, 12)); // NOI18N
-        review_txt.setRows(5);
-        review_scroll.setViewportView(review_txt);
+        genderCAdd_admOther.setBackground(new java.awt.Color(255, 255, 255));
+        genderCAdd_admOther.setFont(new java.awt.Font("Cascadia Code", 1, 10)); // NOI18N
+        genderCAdd_admOther.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
+        genderCAdd_admOther.setText("Add");
+        genderCAdd_admOther.setBorder(new javax.swing.border.LineBorder(new java.awt.Color(0, 0, 0), 4, true));
+        genderCAdd_admOther.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
+        genderCAdd_admOther.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseClicked(java.awt.event.MouseEvent evt) {
+                genderCAdd_admOtherMouseClicked(evt);
+            }
+        });
+        createOtherData.add(genderCAdd_admOther, new org.netbeans.lib.awtextra.AbsoluteConstraints(360, 170, 50, 30));
 
-        production_content.add(review_scroll, new org.netbeans.lib.awtextra.AbsoluteConstraints(50, 960, 690, 90));
+        genreC_admOther.setFont(new java.awt.Font("Cascadia Code", 1, 18)); // NOI18N
+        genreC_admOther.setHorizontalAlignment(javax.swing.SwingConstants.LEFT);
+        genreC_admOther.setText("Create genre for productions");
+        createOtherData.add(genreC_admOther, new org.netbeans.lib.awtextra.AbsoluteConstraints(100, 220, 320, 30));
 
-        postReviewBtn_Prod.setFont(new java.awt.Font("Cascadia Code", 0, 10)); // NOI18N
-        postReviewBtn_Prod.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
-        postReviewBtn_Prod.setText("Post");
-        postReviewBtn_Prod.setBorder(new javax.swing.border.LineBorder(new java.awt.Color(0, 0, 0), 4, true));
-        postReviewBtn_Prod.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
-        production_content.add(postReviewBtn_Prod, new org.netbeans.lib.awtextra.AbsoluteConstraints(750, 1010, 60, 40));
+        genreCDesc_admOther.setFont(new java.awt.Font("Cascadia Code", 0, 12)); // NOI18N
+        genreCDesc_admOther.setText("brief description");
+        genreCDesc_admOther.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                genreCDesc_admOtherActionPerformed(evt);
+            }
+        });
+        createOtherData.add(genreCDesc_admOther, new org.netbeans.lib.awtextra.AbsoluteConstraints(120, 260, 220, 30));
 
-        endBar_Prod.setFont(new java.awt.Font("Cascadia Code", 0, 12)); // NOI18N
-        endBar_Prod.setHorizontalAlignment(javax.swing.SwingConstants.LEFT);
-        endBar_Prod.setBorder(javax.swing.BorderFactory.createMatteBorder(0, 0, 3, 0, new java.awt.Color(255, 255, 255)));
-        production_content.add(endBar_Prod, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 1070, 1060, 10));
+        genreCTxt_admOther.setFont(new java.awt.Font("Cascadia Code", 0, 12)); // NOI18N
+        genreCTxt_admOther.setText("name");
+        genreCTxt_admOther.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                genreCTxt_admOtherActionPerformed(evt);
+            }
+        });
+        createOtherData.add(genreCTxt_admOther, new org.netbeans.lib.awtextra.AbsoluteConstraints(120, 300, 220, 30));
 
-        production_scroll.setViewportView(production_content);
+        genreCAdd_admOther.setBackground(new java.awt.Color(255, 255, 255));
+        genreCAdd_admOther.setFont(new java.awt.Font("Cascadia Code", 1, 10)); // NOI18N
+        genreCAdd_admOther.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
+        genreCAdd_admOther.setText("Add");
+        genreCAdd_admOther.setBorder(new javax.swing.border.LineBorder(new java.awt.Color(0, 0, 0), 4, true));
+        genreCAdd_admOther.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
+        genreCAdd_admOther.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseClicked(java.awt.event.MouseEvent evt) {
+                genreCAdd_admOtherMouseClicked(evt);
+            }
+        });
+        createOtherData.add(genreCAdd_admOther, new org.netbeans.lib.awtextra.AbsoluteConstraints(360, 300, 50, 30));
 
-        production.add(production_scroll, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, 1100, 540));
+        idC_admOther.setFont(new java.awt.Font("Cascadia Code", 1, 18)); // NOI18N
+        idC_admOther.setHorizontalAlignment(javax.swing.SwingConstants.LEFT);
+        idC_admOther.setText("Create ID option");
+        createOtherData.add(idC_admOther, new org.netbeans.lib.awtextra.AbsoluteConstraints(100, 350, 230, 30));
 
-        getContentPane().add(production, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, -1, -1));
+        idCTxt_admOther.setFont(new java.awt.Font("Cascadia Code", 0, 12)); // NOI18N
+        idCTxt_admOther.setText("name");
+        idCTxt_admOther.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                idCTxt_admOtherActionPerformed(evt);
+            }
+        });
+        createOtherData.add(idCTxt_admOther, new org.netbeans.lib.awtextra.AbsoluteConstraints(120, 390, 220, 30));
+
+        idCAdd_admOther.setBackground(new java.awt.Color(255, 255, 255));
+        idCAdd_admOther.setFont(new java.awt.Font("Cascadia Code", 1, 10)); // NOI18N
+        idCAdd_admOther.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
+        idCAdd_admOther.setText("Add");
+        idCAdd_admOther.setBorder(new javax.swing.border.LineBorder(new java.awt.Color(0, 0, 0), 4, true));
+        idCAdd_admOther.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
+        idCAdd_admOther.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseClicked(java.awt.event.MouseEvent evt) {
+                idCAdd_admOtherMouseClicked(evt);
+            }
+        });
+        createOtherData.add(idCAdd_admOther, new org.netbeans.lib.awtextra.AbsoluteConstraints(360, 390, 50, 30));
+
+        prodC_admOther.setFont(new java.awt.Font("Cascadia Code", 1, 18)); // NOI18N
+        prodC_admOther.setHorizontalAlignment(javax.swing.SwingConstants.LEFT);
+        prodC_admOther.setText("Create production company");
+        createOtherData.add(prodC_admOther, new org.netbeans.lib.awtextra.AbsoluteConstraints(100, 440, 280, 30));
+
+        prodCTxt_admOther.setFont(new java.awt.Font("Cascadia Code", 0, 12)); // NOI18N
+        prodCTxt_admOther.setText("name");
+        prodCTxt_admOther.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                prodCTxt_admOtherActionPerformed(evt);
+            }
+        });
+        createOtherData.add(prodCTxt_admOther, new org.netbeans.lib.awtextra.AbsoluteConstraints(120, 480, 220, 30));
+
+        prodCAdd_admOther.setBackground(new java.awt.Color(255, 255, 255));
+        prodCAdd_admOther.setFont(new java.awt.Font("Cascadia Code", 1, 10)); // NOI18N
+        prodCAdd_admOther.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
+        prodCAdd_admOther.setText("Add");
+        prodCAdd_admOther.setBorder(new javax.swing.border.LineBorder(new java.awt.Color(0, 0, 0), 4, true));
+        prodCAdd_admOther.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
+        prodCAdd_admOther.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseClicked(java.awt.event.MouseEvent evt) {
+                prodCAdd_admOtherMouseClicked(evt);
+            }
+        });
+        createOtherData.add(prodCAdd_admOther, new org.netbeans.lib.awtextra.AbsoluteConstraints(360, 480, 50, 30));
+
+        streamC_admOther.setFont(new java.awt.Font("Cascadia Code", 1, 18)); // NOI18N
+        streamC_admOther.setHorizontalAlignment(javax.swing.SwingConstants.LEFT);
+        streamC_admOther.setText("Create streaming platform");
+        createOtherData.add(streamC_admOther, new org.netbeans.lib.awtextra.AbsoluteConstraints(100, 530, 280, 30));
+
+        streamCUrl_admOther.setFont(new java.awt.Font("Cascadia Code", 0, 12)); // NOI18N
+        streamCUrl_admOther.setText("url");
+        streamCUrl_admOther.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                streamCUrl_admOtherActionPerformed(evt);
+            }
+        });
+        createOtherData.add(streamCUrl_admOther, new org.netbeans.lib.awtextra.AbsoluteConstraints(120, 570, 220, 30));
+
+        streamCTxt_admOther.setFont(new java.awt.Font("Cascadia Code", 0, 12)); // NOI18N
+        streamCTxt_admOther.setText("name");
+        streamCTxt_admOther.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                streamCTxt_admOtherActionPerformed(evt);
+            }
+        });
+        createOtherData.add(streamCTxt_admOther, new org.netbeans.lib.awtextra.AbsoluteConstraints(120, 610, 220, 30));
+
+        streamCAdd_admOther.setBackground(new java.awt.Color(255, 255, 255));
+        streamCAdd_admOther.setFont(new java.awt.Font("Cascadia Code", 1, 10)); // NOI18N
+        streamCAdd_admOther.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
+        streamCAdd_admOther.setText("Add");
+        streamCAdd_admOther.setBorder(new javax.swing.border.LineBorder(new java.awt.Color(0, 0, 0), 4, true));
+        streamCAdd_admOther.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
+        streamCAdd_admOther.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseClicked(java.awt.event.MouseEvent evt) {
+                streamCAdd_admOtherMouseClicked(evt);
+            }
+        });
+        createOtherData.add(streamCAdd_admOther, new org.netbeans.lib.awtextra.AbsoluteConstraints(360, 610, 50, 30));
+
+        bar2_admOther.setFont(new java.awt.Font("Cascadia Code", 0, 12)); // NOI18N
+        bar2_admOther.setHorizontalAlignment(javax.swing.SwingConstants.LEFT);
+        bar2_admOther.setBorder(javax.swing.BorderFactory.createMatteBorder(0, 4, 0, 0, new java.awt.Color(0, 0, 0)));
+        createOtherData.add(bar2_admOther, new org.netbeans.lib.awtextra.AbsoluteConstraints(530, 110, 10, 580));
+
+        genderE_admOther.setFont(new java.awt.Font("Cascadia Code", 1, 18)); // NOI18N
+        genderE_admOther.setHorizontalAlignment(javax.swing.SwingConstants.LEFT);
+        genderE_admOther.setText("Edit gender");
+        createOtherData.add(genderE_admOther, new org.netbeans.lib.awtextra.AbsoluteConstraints(570, 130, 160, 30));
+
+        genderEList_admOther.setFont(new java.awt.Font("Cascadia Code", 0, 12)); // NOI18N
+        genderEList_admOther.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "Gender" }));
+        createOtherData.add(genderEList_admOther, new org.netbeans.lib.awtextra.AbsoluteConstraints(840, 140, 160, -1));
+
+        genderETxt_admOther.setFont(new java.awt.Font("Cascadia Code", 0, 12)); // NOI18N
+        genderETxt_admOther.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                genderETxt_admOtherActionPerformed(evt);
+            }
+        });
+        createOtherData.add(genderETxt_admOther, new org.netbeans.lib.awtextra.AbsoluteConstraints(590, 170, 230, 30));
+
+        genderERename_admOther.setBackground(new java.awt.Color(255, 255, 255));
+        genderERename_admOther.setFont(new java.awt.Font("Cascadia Code", 1, 10)); // NOI18N
+        genderERename_admOther.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
+        genderERename_admOther.setText("rename");
+        genderERename_admOther.setBorder(new javax.swing.border.LineBorder(new java.awt.Color(0, 0, 0), 4, true));
+        genderERename_admOther.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
+        genderERename_admOther.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseClicked(java.awt.event.MouseEvent evt) {
+                genderERename_admOtherMouseClicked(evt);
+            }
+        });
+        createOtherData.add(genderERename_admOther, new org.netbeans.lib.awtextra.AbsoluteConstraints(870, 170, 60, 30));
+
+        genderEDelete_admOther.setBackground(new java.awt.Color(255, 255, 255));
+        genderEDelete_admOther.setFont(new java.awt.Font("Cascadia Code", 1, 10)); // NOI18N
+        genderEDelete_admOther.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
+        genderEDelete_admOther.setText("delete");
+        genderEDelete_admOther.setBorder(new javax.swing.border.LineBorder(new java.awt.Color(0, 0, 0), 4, true));
+        genderEDelete_admOther.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
+        genderEDelete_admOther.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseClicked(java.awt.event.MouseEvent evt) {
+                genderEDelete_admOtherMouseClicked(evt);
+            }
+        });
+        createOtherData.add(genderEDelete_admOther, new org.netbeans.lib.awtextra.AbsoluteConstraints(940, 170, 60, 30));
+
+        genreE_admOther.setFont(new java.awt.Font("Cascadia Code", 1, 18)); // NOI18N
+        genreE_admOther.setHorizontalAlignment(javax.swing.SwingConstants.LEFT);
+        genreE_admOther.setText("Edit genre");
+        createOtherData.add(genreE_admOther, new org.netbeans.lib.awtextra.AbsoluteConstraints(570, 220, 210, 30));
+
+        genreEList_admOther.setFont(new java.awt.Font("Cascadia Code", 0, 12)); // NOI18N
+        genreEList_admOther.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "Genre" }));
+        createOtherData.add(genreEList_admOther, new org.netbeans.lib.awtextra.AbsoluteConstraints(840, 230, 160, 20));
+
+        genreEDescr_admOther.setFont(new java.awt.Font("Cascadia Code", 0, 12)); // NOI18N
+        genreEDescr_admOther.setText("description");
+        genreEDescr_admOther.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                genreEDescr_admOtherActionPerformed(evt);
+            }
+        });
+        createOtherData.add(genreEDescr_admOther, new org.netbeans.lib.awtextra.AbsoluteConstraints(590, 260, 230, 30));
+
+        genreETxt_admOther.setFont(new java.awt.Font("Cascadia Code", 0, 12)); // NOI18N
+        genreETxt_admOther.setText("name");
+        genreETxt_admOther.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                genreETxt_admOtherActionPerformed(evt);
+            }
+        });
+        createOtherData.add(genreETxt_admOther, new org.netbeans.lib.awtextra.AbsoluteConstraints(590, 300, 230, 30));
+
+        genreERename_admOther.setBackground(new java.awt.Color(255, 255, 255));
+        genreERename_admOther.setFont(new java.awt.Font("Cascadia Code", 1, 10)); // NOI18N
+        genreERename_admOther.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
+        genreERename_admOther.setText("rename");
+        genreERename_admOther.setBorder(new javax.swing.border.LineBorder(new java.awt.Color(0, 0, 0), 4, true));
+        genreERename_admOther.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
+        genreERename_admOther.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseClicked(java.awt.event.MouseEvent evt) {
+                genreERename_admOtherMouseClicked(evt);
+            }
+        });
+        createOtherData.add(genreERename_admOther, new org.netbeans.lib.awtextra.AbsoluteConstraints(870, 300, 60, 30));
+
+        genreEDelete_admOther.setBackground(new java.awt.Color(255, 255, 255));
+        genreEDelete_admOther.setFont(new java.awt.Font("Cascadia Code", 1, 10)); // NOI18N
+        genreEDelete_admOther.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
+        genreEDelete_admOther.setText("delete");
+        genreEDelete_admOther.setBorder(new javax.swing.border.LineBorder(new java.awt.Color(0, 0, 0), 4, true));
+        genreEDelete_admOther.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
+        genreEDelete_admOther.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseClicked(java.awt.event.MouseEvent evt) {
+                genreEDelete_admOtherMouseClicked(evt);
+            }
+        });
+        createOtherData.add(genreEDelete_admOther, new org.netbeans.lib.awtextra.AbsoluteConstraints(940, 300, 60, 30));
+
+        idE_admOther.setFont(new java.awt.Font("Cascadia Code", 1, 18)); // NOI18N
+        idE_admOther.setHorizontalAlignment(javax.swing.SwingConstants.LEFT);
+        idE_admOther.setText("Edit ID option");
+        createOtherData.add(idE_admOther, new org.netbeans.lib.awtextra.AbsoluteConstraints(570, 350, 170, 30));
+
+        idEList_admOther.setFont(new java.awt.Font("Cascadia Code", 0, 12)); // NOI18N
+        idEList_admOther.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "ID" }));
+        createOtherData.add(idEList_admOther, new org.netbeans.lib.awtextra.AbsoluteConstraints(840, 360, 160, 20));
+
+        idETxt_admOther.setFont(new java.awt.Font("Cascadia Code", 0, 12)); // NOI18N
+        idETxt_admOther.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                idETxt_admOtherActionPerformed(evt);
+            }
+        });
+        createOtherData.add(idETxt_admOther, new org.netbeans.lib.awtextra.AbsoluteConstraints(590, 390, 230, 30));
+
+        idERename_admOther.setBackground(new java.awt.Color(255, 255, 255));
+        idERename_admOther.setFont(new java.awt.Font("Cascadia Code", 1, 10)); // NOI18N
+        idERename_admOther.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
+        idERename_admOther.setText("rename");
+        idERename_admOther.setBorder(new javax.swing.border.LineBorder(new java.awt.Color(0, 0, 0), 4, true));
+        idERename_admOther.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
+        idERename_admOther.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseClicked(java.awt.event.MouseEvent evt) {
+                idERename_admOtherMouseClicked(evt);
+            }
+        });
+        createOtherData.add(idERename_admOther, new org.netbeans.lib.awtextra.AbsoluteConstraints(870, 390, 60, 30));
+
+        idEDelete_admOther.setBackground(new java.awt.Color(255, 255, 255));
+        idEDelete_admOther.setFont(new java.awt.Font("Cascadia Code", 1, 10)); // NOI18N
+        idEDelete_admOther.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
+        idEDelete_admOther.setText("delete");
+        idEDelete_admOther.setBorder(new javax.swing.border.LineBorder(new java.awt.Color(0, 0, 0), 4, true));
+        idEDelete_admOther.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
+        idEDelete_admOther.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseClicked(java.awt.event.MouseEvent evt) {
+                idEDelete_admOtherMouseClicked(evt);
+            }
+        });
+        createOtherData.add(idEDelete_admOther, new org.netbeans.lib.awtextra.AbsoluteConstraints(940, 390, 60, 30));
+
+        prodE_admOther.setFont(new java.awt.Font("Cascadia Code", 1, 18)); // NOI18N
+        prodE_admOther.setHorizontalAlignment(javax.swing.SwingConstants.LEFT);
+        prodE_admOther.setText("Edit production company");
+        createOtherData.add(prodE_admOther, new org.netbeans.lib.awtextra.AbsoluteConstraints(570, 440, 260, 30));
+
+        prodEList_admOther.setFont(new java.awt.Font("Cascadia Code", 0, 12)); // NOI18N
+        prodEList_admOther.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "Producer" }));
+        createOtherData.add(prodEList_admOther, new org.netbeans.lib.awtextra.AbsoluteConstraints(840, 450, 160, 20));
+
+        prodETxt_admOther.setFont(new java.awt.Font("Cascadia Code", 0, 12)); // NOI18N
+        prodETxt_admOther.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                prodETxt_admOtherActionPerformed(evt);
+            }
+        });
+        createOtherData.add(prodETxt_admOther, new org.netbeans.lib.awtextra.AbsoluteConstraints(590, 480, 230, 30));
+
+        prodERename_admOther.setBackground(new java.awt.Color(255, 255, 255));
+        prodERename_admOther.setFont(new java.awt.Font("Cascadia Code", 1, 10)); // NOI18N
+        prodERename_admOther.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
+        prodERename_admOther.setText("rename");
+        prodERename_admOther.setBorder(new javax.swing.border.LineBorder(new java.awt.Color(0, 0, 0), 4, true));
+        prodERename_admOther.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
+        prodERename_admOther.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseClicked(java.awt.event.MouseEvent evt) {
+                prodERename_admOtherMouseClicked(evt);
+            }
+        });
+        createOtherData.add(prodERename_admOther, new org.netbeans.lib.awtextra.AbsoluteConstraints(870, 480, 60, 30));
+
+        prodEDelete_admOther.setBackground(new java.awt.Color(255, 255, 255));
+        prodEDelete_admOther.setFont(new java.awt.Font("Cascadia Code", 1, 10)); // NOI18N
+        prodEDelete_admOther.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
+        prodEDelete_admOther.setText("delete");
+        prodEDelete_admOther.setBorder(new javax.swing.border.LineBorder(new java.awt.Color(0, 0, 0), 4, true));
+        prodEDelete_admOther.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
+        prodEDelete_admOther.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseClicked(java.awt.event.MouseEvent evt) {
+                prodEDelete_admOtherMouseClicked(evt);
+            }
+        });
+        createOtherData.add(prodEDelete_admOther, new org.netbeans.lib.awtextra.AbsoluteConstraints(940, 480, 60, 30));
+
+        streamE_admOther.setFont(new java.awt.Font("Cascadia Code", 1, 18)); // NOI18N
+        streamE_admOther.setHorizontalAlignment(javax.swing.SwingConstants.LEFT);
+        streamE_admOther.setText("Edit streaming platform");
+        createOtherData.add(streamE_admOther, new org.netbeans.lib.awtextra.AbsoluteConstraints(570, 530, 260, 30));
+
+        streamEList_admOther.setFont(new java.awt.Font("Cascadia Code", 0, 12)); // NOI18N
+        streamEList_admOther.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "Platform" }));
+        createOtherData.add(streamEList_admOther, new org.netbeans.lib.awtextra.AbsoluteConstraints(840, 540, 160, 20));
+
+        streamEUrl_admOther.setFont(new java.awt.Font("Cascadia Code", 0, 12)); // NOI18N
+        streamEUrl_admOther.setText("url");
+        streamEUrl_admOther.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                streamEUrl_admOtherActionPerformed(evt);
+            }
+        });
+        createOtherData.add(streamEUrl_admOther, new org.netbeans.lib.awtextra.AbsoluteConstraints(590, 570, 230, 30));
+
+        streamETxt_admOther.setFont(new java.awt.Font("Cascadia Code", 0, 12)); // NOI18N
+        streamETxt_admOther.setText("name");
+        streamETxt_admOther.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                streamETxt_admOtherActionPerformed(evt);
+            }
+        });
+        createOtherData.add(streamETxt_admOther, new org.netbeans.lib.awtextra.AbsoluteConstraints(590, 610, 230, 30));
+
+        streamERename_admOther.setBackground(new java.awt.Color(255, 255, 255));
+        streamERename_admOther.setFont(new java.awt.Font("Cascadia Code", 1, 10)); // NOI18N
+        streamERename_admOther.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
+        streamERename_admOther.setText("rename");
+        streamERename_admOther.setBorder(new javax.swing.border.LineBorder(new java.awt.Color(0, 0, 0), 4, true));
+        streamERename_admOther.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
+        streamERename_admOther.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseClicked(java.awt.event.MouseEvent evt) {
+                streamERename_admOtherMouseClicked(evt);
+            }
+        });
+        createOtherData.add(streamERename_admOther, new org.netbeans.lib.awtextra.AbsoluteConstraints(870, 610, 60, 30));
+
+        streamEDelete_admOther.setBackground(new java.awt.Color(255, 255, 255));
+        streamEDelete_admOther.setFont(new java.awt.Font("Cascadia Code", 1, 10)); // NOI18N
+        streamEDelete_admOther.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
+        streamEDelete_admOther.setText("delete");
+        streamEDelete_admOther.setBorder(new javax.swing.border.LineBorder(new java.awt.Color(0, 0, 0), 4, true));
+        streamEDelete_admOther.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
+        streamEDelete_admOther.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseClicked(java.awt.event.MouseEvent evt) {
+                streamEDelete_admOtherMouseClicked(evt);
+            }
+        });
+        createOtherData.add(streamEDelete_admOther, new org.netbeans.lib.awtextra.AbsoluteConstraints(940, 610, 60, 30));
+
+        endBar_admOther.setFont(new java.awt.Font("Cascadia Code", 0, 12)); // NOI18N
+        endBar_admOther.setHorizontalAlignment(javax.swing.SwingConstants.LEFT);
+        endBar_admOther.setBorder(javax.swing.BorderFactory.createMatteBorder(0, 0, 3, 0, new java.awt.Color(255, 255, 255)));
+        createOtherData.add(endBar_admOther, new org.netbeans.lib.awtextra.AbsoluteConstraints(20, 670, 1050, 10));
+
+        getContentPane().add(createOtherData, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, 1100, 690));
 
         pack();
     }// </editor-fold>//GEN-END:initComponents

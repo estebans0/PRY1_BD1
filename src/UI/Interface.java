@@ -18,6 +18,7 @@ import java.util.Date;
 import java.util.logging.Level;
 import java.util.logging.Logger;
 import javax.swing.table.JTableHeader;
+import javax.swing.table.TableColumnModel;
 
 /**
  *
@@ -25,9 +26,19 @@ import javax.swing.table.JTableHeader;
  */
 public class Interface extends javax.swing.JFrame {
     private final Controlador control = new Controlador();
+    private int accionAdm = 0; // 0=agregar  1=eliminar
     // Métodos auxiliares
     private static boolean strIsNumeric(String str){
         return str.matches("-?\\d+(\\.\\d+)?"); // regex para verificar que str sea numerica
+    }
+    private Object getTableSelection(JTable table){
+        // Retorna el ID seleccionado en la tabla
+        Object user = null;
+        if (!table.getSelectionModel().isSelectionEmpty()){
+            int row = table.getSelectedRow();
+            user = table.getModel().getValueAt(row, 0);
+        }
+        return user;
     }
     
     /**
@@ -283,10 +294,17 @@ public class Interface extends javax.swing.JFrame {
         trivia_list = new javax.swing.JList<>();
         admMenu = new javax.swing.JPanel();
         titulo_txt_adm = new javax.swing.JLabel();
+        makeAdmBtn_adm = new javax.swing.JLabel();
+        removeAdmBtn_adm = new javax.swing.JLabel();
         logOutBtn_adm = new javax.swing.JLabel();
         createBtn_adm = new javax.swing.JLabel();
         editBtn_adm = new javax.swing.JLabel();
         statsBtn_adm = new javax.swing.JLabel();
+        confirmBtn_adm = new javax.swing.JLabel();
+        exitChooser_adm = new javax.swing.JLabel();
+        chooser_adm = new javax.swing.JScrollPane();
+        chooserTable_adm = new javax.swing.JTable();
+        infoMsg_adm = new javax.swing.JLabel();
         admDataChooser = new javax.swing.JPanel();
         titulo_txt_admData = new javax.swing.JLabel();
         returnBtn_admData = new javax.swing.JLabel();
@@ -2356,8 +2374,34 @@ public class Interface extends javax.swing.JFrame {
         titulo_txt_adm.setText("Welcome Administrator");
         admMenu.add(titulo_txt_adm, new org.netbeans.lib.awtextra.AbsoluteConstraints(60, 40, 620, 60));
 
+        makeAdmBtn_adm.setBackground(new java.awt.Color(255, 255, 255));
+        makeAdmBtn_adm.setFont(new java.awt.Font("Cascadia Code", 1, 12)); // NOI18N
+        makeAdmBtn_adm.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
+        makeAdmBtn_adm.setText("Make admin");
+        makeAdmBtn_adm.setBorder(new javax.swing.border.LineBorder(new java.awt.Color(0, 0, 0), 4, true));
+        makeAdmBtn_adm.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
+        makeAdmBtn_adm.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseClicked(java.awt.event.MouseEvent evt) {
+                makeAdmBtn_admMouseClicked(evt);
+            }
+        });
+        admMenu.add(makeAdmBtn_adm, new org.netbeans.lib.awtextra.AbsoluteConstraints(680, 50, 110, 50));
+
+        removeAdmBtn_adm.setBackground(new java.awt.Color(255, 255, 255));
+        removeAdmBtn_adm.setFont(new java.awt.Font("Cascadia Code", 1, 12)); // NOI18N
+        removeAdmBtn_adm.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
+        removeAdmBtn_adm.setText("Remove admin");
+        removeAdmBtn_adm.setBorder(new javax.swing.border.LineBorder(new java.awt.Color(0, 0, 0), 4, true));
+        removeAdmBtn_adm.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
+        removeAdmBtn_adm.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseClicked(java.awt.event.MouseEvent evt) {
+                removeAdmBtn_admMouseClicked(evt);
+            }
+        });
+        admMenu.add(removeAdmBtn_adm, new org.netbeans.lib.awtextra.AbsoluteConstraints(800, 50, 110, 50));
+
         logOutBtn_adm.setBackground(new java.awt.Color(255, 255, 255));
-        logOutBtn_adm.setFont(new java.awt.Font("Cascadia Code", 1, 12)); // NOI18N
+        logOutBtn_adm.setFont(new java.awt.Font("Cascadia Code", 1, 14)); // NOI18N
         logOutBtn_adm.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
         logOutBtn_adm.setText("Log Out");
         logOutBtn_adm.setBorder(new javax.swing.border.LineBorder(new java.awt.Color(0, 0, 0), 4, true));
@@ -2367,7 +2411,7 @@ public class Interface extends javax.swing.JFrame {
                 logOutBtn_admMouseClicked(evt);
             }
         });
-        admMenu.add(logOutBtn_adm, new org.netbeans.lib.awtextra.AbsoluteConstraints(940, 50, 100, 50));
+        admMenu.add(logOutBtn_adm, new org.netbeans.lib.awtextra.AbsoluteConstraints(920, 50, 120, 50));
 
         createBtn_adm.setBackground(new java.awt.Color(255, 255, 255));
         createBtn_adm.setFont(new java.awt.Font("Cascadia Code", 1, 16)); // NOI18N
@@ -2407,6 +2451,78 @@ public class Interface extends javax.swing.JFrame {
             }
         });
         admMenu.add(statsBtn_adm, new org.netbeans.lib.awtextra.AbsoluteConstraints(120, 370, 240, 60));
+
+        confirmBtn_adm.setBackground(new java.awt.Color(255, 255, 255));
+        confirmBtn_adm.setFont(new java.awt.Font("Cascadia Code", 1, 12)); // NOI18N
+        confirmBtn_adm.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
+        confirmBtn_adm.setText("Confirm");
+        confirmBtn_adm.setBorder(new javax.swing.border.LineBorder(new java.awt.Color(0, 0, 0), 4, true));
+        confirmBtn_adm.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
+        confirmBtn_adm.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseClicked(java.awt.event.MouseEvent evt) {
+                confirmBtn_admMouseClicked(evt);
+            }
+        });
+        admMenu.add(confirmBtn_adm, new org.netbeans.lib.awtextra.AbsoluteConstraints(920, 160, 90, 40));
+
+        exitChooser_adm.setFont(new java.awt.Font("Cascadia Code", 1, 14)); // NOI18N
+        exitChooser_adm.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
+        exitChooser_adm.setText("x");
+        exitChooser_adm.setBorder(new javax.swing.border.LineBorder(new java.awt.Color(0, 0, 0), 3, true));
+        exitChooser_adm.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
+        exitChooser_adm.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseClicked(java.awt.event.MouseEvent evt) {
+                exitChooser_admMouseClicked(evt);
+            }
+        });
+        admMenu.add(exitChooser_adm, new org.netbeans.lib.awtextra.AbsoluteConstraints(480, 180, 20, 20));
+
+        chooser_adm.setBackground(new java.awt.Color(255, 255, 255));
+        chooser_adm.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(0, 0, 0), 4));
+        chooser_adm.setFont(new java.awt.Font("Cascadia Code", 0, 12)); // NOI18N
+        chooser_adm.setOpaque(false);
+
+        chooserTable_adm.setFont(new java.awt.Font("Cascadia Code", 0, 12)); // NOI18N
+        chooserTable_adm.setModel(new javax.swing.table.DefaultTableModel(
+            new Object [][] {
+                {null, null},
+                {null, null},
+                {null, null},
+                {null, null}
+            },
+            new String [] {
+                "ID", "Username"
+            }
+        ) {
+            Class[] types = new Class [] {
+                java.lang.String.class, java.lang.String.class
+            };
+            boolean[] canEdit = new boolean [] {
+                false, false
+            };
+
+            public Class getColumnClass(int columnIndex) {
+                return types [columnIndex];
+            }
+
+            public boolean isCellEditable(int rowIndex, int columnIndex) {
+                return canEdit [columnIndex];
+            }
+        });
+        chooserTable_adm.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
+        chooserTable_adm.setGridColor(new java.awt.Color(255, 255, 255));
+        chooserTable_adm.setOpaque(false);
+        chooserTable_adm.setSelectionBackground(new java.awt.Color(229, 229, 229));
+        chooserTable_adm.getTableHeader().setResizingAllowed(false);
+        chooserTable_adm.getTableHeader().setReorderingAllowed(false);
+        chooser_adm.setViewportView(chooserTable_adm);
+
+        admMenu.add(chooser_adm, new org.netbeans.lib.awtextra.AbsoluteConstraints(480, 200, 530, 230));
+
+        infoMsg_adm.setFont(new java.awt.Font("Cascadia Code", 1, 12)); // NOI18N
+        infoMsg_adm.setForeground(new java.awt.Color(0, 204, 51));
+        infoMsg_adm.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
+        admMenu.add(infoMsg_adm, new org.netbeans.lib.awtextra.AbsoluteConstraints(480, 440, 530, 40));
 
         paneles.addTab("tab2", admMenu);
 
@@ -4244,11 +4360,14 @@ public class Interface extends javax.swing.JFrame {
 
     private void login_btnMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_login_btnMouseClicked
         try {
-            control.printUsers();
             int loginType = control.verifyUserLogin(enterUser_txtField.getText(), enterPass_txtField.getText());
             if (loginType == 0) { // regular user
                 paneles.setSelectedIndex(2);
             } else if (loginType == 1) { // admin
+                chooser_adm.setVisible(false);
+                exitChooser_adm.setVisible(false);
+                confirmBtn_adm.setVisible(false);
+                infoMsg_adm.setVisible(false);
                 paneles.setSelectedIndex(13);
             } else { // not a registered user
                 loginError_txt.setText("Error de autentificación. Intente de nuevo.");
@@ -4716,6 +4835,10 @@ public class Interface extends javax.swing.JFrame {
     }//GEN-LAST:event_editBtn_admMouseClicked
 
     private void returnBtn_admDataMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_returnBtn_admDataMouseClicked
+        chooser_adm.setVisible(false);
+        exitChooser_adm.setVisible(false);
+        confirmBtn_adm.setVisible(false);
+        infoMsg_adm.setVisible(false);
         paneles.setSelectedIndex(13);
     }//GEN-LAST:event_returnBtn_admDataMouseClicked
 
@@ -5079,6 +5202,69 @@ public class Interface extends javax.swing.JFrame {
         }
     }//GEN-LAST:event_register_btnMouseClicked
 
+    private void makeAdmBtn_admMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_makeAdmBtn_admMouseClicked
+        // Cargar tabla
+        chooser_adm.setVisible(true);
+        exitChooser_adm.setVisible(true);
+        confirmBtn_adm.setVisible(true);
+        infoMsg_adm.setText("");
+        infoMsg_adm.setVisible(true);
+        accionAdm = 1;
+        try {
+            chooserTable_adm.setModel(control.showUsersTable(0)); // Muestra los usuarios regulares
+            TableColumnModel tblModelCol = chooserTable_adm.getColumnModel();
+            tblModelCol.removeColumn(tblModelCol.getColumn(0));
+        } catch (SQLException ex) {
+            System.out.println(ex);
+        }
+    }//GEN-LAST:event_makeAdmBtn_admMouseClicked
+
+    private void exitChooser_admMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_exitChooser_admMouseClicked
+        chooser_adm.setVisible(false);
+        exitChooser_adm.setVisible(false);
+        confirmBtn_adm.setVisible(false);
+        infoMsg_adm.setVisible(false);
+    }//GEN-LAST:event_exitChooser_admMouseClicked
+
+    private void removeAdmBtn_admMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_removeAdmBtn_admMouseClicked
+        // Cargar tabla
+        chooser_adm.setVisible(true);
+        exitChooser_adm.setVisible(true);
+        confirmBtn_adm.setVisible(true);
+        infoMsg_adm.setText("");
+        infoMsg_adm.setVisible(true);
+        accionAdm = 0;
+        try {
+            chooserTable_adm.setModel(control.showUsersTable(1)); // Muestra los admins
+            TableColumnModel tblModelCol = chooserTable_adm.getColumnModel();
+            tblModelCol.removeColumn(tblModelCol.getColumn(0));
+        } catch (SQLException ex) {
+            System.out.println(ex);
+        }
+    }//GEN-LAST:event_removeAdmBtn_admMouseClicked
+
+    private void confirmBtn_admMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_confirmBtn_admMouseClicked
+        Object id = getTableSelection(chooserTable_adm);
+        try {
+            infoMsg_adm.setForeground(new Color(0,204,51));
+            if (accionAdm == 1) { // Agrega nuevo admin
+                control.makeOrRemoveAdmin((int) id, 1);
+                infoMsg_adm.setText("Successfully granted admin status to user");
+            } else { // Elimina admin existente
+                int status = control.makeOrRemoveAdmin((int) id, 0);
+                System.out.println("Current id: " + status + " id tabla: " + (int) id);
+                if (status == 1) {infoMsg_adm.setText("Succesfully removed this user's admin status");
+                } else {
+                    infoMsg_adm.setForeground(Color.red);
+                    infoMsg_adm.setText("Error: Cannot remove your own admin status");
+                }
+            }
+            control.updateUsers();
+        } catch (SQLException ex) {
+            System.out.println(ex);
+        }
+    }//GEN-LAST:event_confirmBtn_admMouseClicked
+
     /**
      * @param args the command line arguments
      */
@@ -5164,7 +5350,9 @@ public class Interface extends javax.swing.JFrame {
     private javax.swing.JList<String> chooserList_admProd;
     private javax.swing.JScrollPane chooserScroll_admProd;
     private javax.swing.JComboBox<String> chooserSelector_admProd;
+    private javax.swing.JTable chooserTable_adm;
     private javax.swing.JLabel chooserTxt_admProd;
+    private javax.swing.JScrollPane chooser_adm;
     private javax.swing.JLabel cityCAdd_admGeo;
     private javax.swing.JComboBox<String> cityCCList_admGeo;
     private javax.swing.JTextField cityCTxt_admGeo;
@@ -5178,6 +5366,7 @@ public class Interface extends javax.swing.JFrame {
     private javax.swing.JLabel cityE_admGeo;
     private javax.swing.JComboBox<String> cityList_admPerson;
     private javax.swing.JLabel city_admPerson;
+    private javax.swing.JLabel confirmBtn_adm;
     private javax.swing.JComboBox<String> countriesAList_admProd;
     private javax.swing.JLabel countriesA_admProd;
     private javax.swing.JLabel countriesAdd_admProd;
@@ -5242,6 +5431,7 @@ public class Interface extends javax.swing.JFrame {
     private javax.swing.JScrollPane episodes_selector1;
     private javax.swing.JTable episodes_table;
     private javax.swing.JTable episodes_table1;
+    private javax.swing.JLabel exitChooser_adm;
     private javax.swing.JLabel exitSideMenu_btn;
     private javax.swing.JLabel expDate_txt_Payment;
     private com.toedter.calendar.JMonthChooser expMonth_Payments;
@@ -5311,6 +5501,7 @@ public class Interface extends javax.swing.JFrame {
     private javax.swing.JLabel infoMsg1_admPerson;
     private javax.swing.JLabel infoMsg1_admProd;
     private javax.swing.JLabel infoMsg2_admProd;
+    private javax.swing.JLabel infoMsg_adm;
     private javax.swing.JLabel info_txt_Payment;
     private javax.swing.JLabel lastMedia_txt;
     private javax.swing.JTextField lastNameTxt_admPerson;
@@ -5331,6 +5522,7 @@ public class Interface extends javax.swing.JFrame {
     private javax.swing.JLabel logo_lbl;
     private javax.swing.JRadioButton lowRated_radioB;
     private javax.swing.JPanel main_menu;
+    private javax.swing.JLabel makeAdmBtn_adm;
     private javax.swing.JLabel menu_btn;
     private javax.swing.JTextField midNameTxt_admPerson;
     private javax.swing.JLabel midName_admPerson;
@@ -5425,6 +5617,7 @@ public class Interface extends javax.swing.JFrame {
     private com.toedter.calendar.JYearChooser releaseDate_admProd;
     private javax.swing.JLabel releaseDate_txt_Prod;
     private javax.swing.JLabel release_admProd;
+    private javax.swing.JLabel removeAdmBtn_adm;
     private javax.swing.JLabel removeItem_btn_Cart;
     private javax.swing.JLabel removeItem_btn_WishList;
     private javax.swing.JLabel returnBtn_Episodes;

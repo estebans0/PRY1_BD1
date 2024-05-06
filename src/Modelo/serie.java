@@ -4,14 +4,34 @@
  */
 package Modelo;
 
+import java.util.ArrayList;
+import com.sun.jdi.connect.spi.Connection;
+import java.sql.SQLException;
+import oracle.jdbc.OracleTypes;
+import java.sql.*;
 /**
  *
  * @author wess
  */
-public class serie extends Production{
+public class Serie extends Production{
+    private ArrayList<Episode> episodios;
     
-    public serie(int id) {
-        super(id);
+    private void getEpisodes(java.sql.Connection conn) throws SQLException{
+        CallableStatement sql = conn.prepareCall("{call getUsersData(?,?)}");
+        sql.setInt(1, id);
+        sql.registerOutParameter(2, Types.REF_CURSOR);
+        sql.execute();
+        ResultSet rs = (ResultSet) sql.getObject(1);
+        while (rs.next()) {
+            int episode id = rs.getInt("");
+            Episode episode = new Episode(id, conn);
+        }
+    }
+    
+    public Serie(int id, java.sql.Connection conn) throws SQLException {
+        super(id, conn);
+        episodios = new ArrayList<>();
+        getEpisodes(conn);
     }
     
 }

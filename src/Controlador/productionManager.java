@@ -56,15 +56,6 @@ public void ActualizeProductions(java.sql.Connection conn) throws SQLException{
        
     GetMovies(conn);
     GetSeries(conn);
-    //Se llenan los generos.
-     //Genero en su metodo constructor se rellena
-        
-    //Dentro del constructor de production, getiar las reviews y las otras listas.
-    //Dentro de Serie, get episodios.
     }
-    //Metodos para llenar listas de produccion.
-    
-    //Un metodo para actualizar como en usuarios.
-    
     //Tres metodos para querries.
 }

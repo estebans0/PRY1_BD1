@@ -8,9 +8,9 @@ package Modelo;
  *
  * @author wess
  */
-public class movie extends Production{
+public class Movie extends Production{
     
-    public movie(int id) {
+    public Movie(int id) {
         super(id);
     }
     

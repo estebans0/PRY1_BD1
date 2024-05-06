@@ -4610,6 +4610,15 @@ public class Interface extends javax.swing.JFrame {
     }//GEN-LAST:event_returnBtn_admDataMouseClicked
 
     private void peopleBtn_admDataMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_peopleBtn_admDataMouseClicked
+        nameTxt_admPerson.setText("");
+        midNameTxt_admPerson.setText("");
+        lastNameTxt_admPerson.setText("");
+        nicknameTxt_admPerson.setText("");
+        bioTxt_admPerson.setText("");
+        heightTxt_admPerson.setText("");
+        triviaTxt_admPerson.setText("");
+        registerDob_admPerson.setDate(null);
+
         // Cargar EDIT PEOPLE
         if (titulo_txt_admData.getText().equals("Choose the type of data to edit")) { // EDIT
             goTo_admData.setVisible(true);
@@ -4802,10 +4811,10 @@ public class Interface extends javax.swing.JFrame {
         String nName = nicknameTxt_admPerson.getText();
         int gender = genderList_admPerson.getSelectedIndex();
         String country = (String)countryList_admPerson.getSelectedItem();
-        String dob = new SimpleDateFormat("dd-MM-yyyy").format(registerDob_admPerson.getDate());
         String trivia = triviaTxt_admPerson.getText();
         String biography = bioTxt_admPerson.getText();
         String height = heightTxt_admPerson.getText();
+        String dob = new SimpleDateFormat("dd-MM-yyyy").format(registerDob_admPerson.getDate());
         // Restricciones
         if (fName.equals("")) {
             infoMsg_admPerson.setText("Please enter a first name");
@@ -4815,17 +4824,17 @@ public class Interface extends javax.swing.JFrame {
             infoMsg_admPerson.setText("Please select a country of residence");
         } else if (genderList_admPerson.getSelectedIndex() == 0) {
             infoMsg_admPerson.setText("Please select a gender");
+        }  else if (!strIsNumeric(height)) {
+            infoMsg_admPerson.setText("Please enter a valid height");
         } else if (dob == null) {
             infoMsg_admPerson.setText("Please select a date of birth");
-        }else if (!strIsNumeric(height)) {
-            infoMsg_admPerson.setText("Please enter a valid height");
         } else { // Inserción
             if (mName.equals("")) {mName = null;}
             if (nName.equals("")) {nName = null;}
             if (trivia.equals("")) {mName = null;}
             if (biography.equals("")) {nName = null;}
             try {
-                control.registerPerson(fName, lName, mName, nName, gender, dob);
+                control.registerFilmPerson(fName, lName, mName, nName, gender, dob, country, trivia, biography, Integer.parseInt(height));
                 infoMsg_admPerson.setForeground(new Color(0,204,51));
                 infoMsg_admPerson.setText("Registered succesfully!");
             } catch (SQLException ex) {

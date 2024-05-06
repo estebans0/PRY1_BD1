@@ -70,16 +70,14 @@ public class PersonManager {
         sql.execute();
     }
     
-    public void registerFilmPerson(java.sql.Connection conn, int height, String trivia, String biography, int nationality, 
-            int gender, String dob) throws SQLException {
+    public void registerFilmPerson(java.sql.Connection conn, int height, String trivia, 
+            String biography, int nationality) throws SQLException {
         //java.sql.Connection conn = sysConexion.obtConexion();
-        PreparedStatement sql = conn.prepareStatement("{call insertFilmPerson(?,?,?,?,?,?)}");
+        PreparedStatement sql = conn.prepareStatement("{call insertFilmPerson(?,?,?,?)}");
         sql.setInt(1, height);
         sql.setString(2, trivia);
         sql.setString(3, biography);
         sql.setInt(4, nationality);
-        sql.setInt(5, gender);
-        sql.setString(6, dob);
         sql.execute();
     }
     

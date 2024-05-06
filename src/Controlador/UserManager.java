@@ -148,7 +148,7 @@ public class UserManager {
     
     // Métodos para user de tipo ADMIN ------------------------------------------------------------------------------------
     // ******************************* Country data management *******************************
-    private int getCountryId(String name){
+    public int getCountryId(String name){
         for (Country country : countries) {
             if (country.getName().equals(name)) {
                 return country.getId();

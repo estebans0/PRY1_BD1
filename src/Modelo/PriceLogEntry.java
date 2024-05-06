@@ -4,33 +4,31 @@
  */
 package Modelo;
 import java.time.LocalDate;
+import java.util.Date;
 /**
  *
  * @author wess
  */
 
-public class priceLogEntry {
-    private LocalDate date;
+public class PriceLogEntry {
+    private Date date;
     private long price;
     
-    public priceLogEntry(int id)
+    public PriceLogEntry(Date date, long price) {
+        this.date = date;
+        this.price = price;
+    }
+    
+    public PriceLogEntry(int id)
     {
 
     }
     
-    public LocalDate getDate() {
+    public Date getDate() {
         return date;
     }
 
     public long getPrice() {
         return price;
-    }
-
-    public void setDate(LocalDate date) {
-        this.date = date;
-    }
-
-    public void setPrice(long price) {
-        this.price = price;
     }
 }

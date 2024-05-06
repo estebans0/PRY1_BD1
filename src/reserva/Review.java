@@ -10,17 +10,13 @@ import java.util.ArrayList;
  *
  * @author wess
  */
-public class review {
+public class Review {
     private int userId;
     private String title;
     private String text;
     private ArrayList<Comment> comentList;
-    
-    public review(int id)
-    {
-        
-    }
-    
+    private String author; 
+          
     /**
      * @return the userId
      */

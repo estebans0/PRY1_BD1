@@ -1,0 +1,22 @@
+INSERT INTO PRODUCTION_CREW(ID, id_crew_member, id_production, id_rol) 
+VALUES(S_PRODUCTION_CREW.NEXTVAL, 38, 61,99);
+
+INSERT INTO PRODUCTION_CREW(ID, id_crew_member, id_production, id_rol) 
+VALUES(S_PRODUCTION_CREW.NEXTVAL, 39, 61,147);
+
+INSERT INTO PRODUCTION_CREW(ID, id_crew_member, id_production, id_rol) 
+VALUES(S_PRODUCTION_CREW.NEXTVAL, 40, 61,102);
+
+INSERT INTO PRODUCTION_CREW(ID, id_crew_member, id_production, id_rol) 
+VALUES(S_PRODUCTION_CREW.NEXTVAL, 41, 61,102);
+
+INSERT INTO PRODUCTION_CREW(ID, id_crew_member, id_production, id_rol) 
+VALUES(S_PRODUCTION_CREW.NEXTVAL, 42, 61,102);
+
+
+INSERT INTO PRODUCTION_CREW(ID, id_crew_member, id_production, id_rol) 
+VALUES(S_PRODUCTION_CREW.NEXTVAL, 43, 61,102);
+
+
+INSERT INTO PRODUCTION_CREW(ID, id_crew_member, id_production, id_rol) 
+VALUES(S_PRODUCTION_CREW.NEXTVAL, 44, 61,147);

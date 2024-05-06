@@ -5,7 +5,7 @@ CREATE TABLE production ( -- 1 Production for all series and movies
     run_time                    NUMBER(4)       CONSTRAINT production_runTime_nn NOT NULL,
     is_public                   NUMBER(1)       CONSTRAINT production_isPublic_nn NOT NULL,
     synopsis                    varchar2(140)   CONSTRAINT production_idSynopsis_nn NOT NULL,
-    trailer                     varchar(50),
+    trailer                     varchar2(500),
     created_by                  NUMBER(4)       CONSTRAINT production_createdBy_nn NOT NULL
 );
 
@@ -152,12 +152,16 @@ drop column is_cast_member;
 CREATE TABLE film_person ( -- 21 For celebrities and people of note in the productions
     id                          NUMBER(4)        CONSTRAINT filmpId_id_nn NOT NULL,
     heigth_cm                   NUMBER(3)        CONSTRAINT filmp_heigth_nn NOT NULL,
-    trivia                      VARCHAR2(50)     ,
-    biography                   VARCHAR2(150)    ,
+    trivia                      VARCHAR2(1000)     ,
+    biography                   VARCHAR2(1000)    ,
     nacionality                 NUMBER(4)        CONSTRAINT Actor_nacionality_nn NOT NULL,
     id_city                     NUMBER(4)
-); 
+);
+ALTER TABLE film_person
+MODIFY (trivia VARCHAR2(1000));
 
+ALTER TABLE film_person
+MODIFY (biography VARCHAR2(1000));
 
 alter table film_person
 add (rol number(4));

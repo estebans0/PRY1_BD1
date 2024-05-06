@@ -1,0 +1,2 @@
+INSERT INTO PARTNER_OF(ID, id_partner1, id_partner2) 
+VALUES(S_PARTNER_OF.NEXTVAL, 40, 33);

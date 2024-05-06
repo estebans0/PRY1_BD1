@@ -453,7 +453,7 @@ cache 2
 order
 nocycle;
 
-CREATE SEQUENCE s_prod_company
+CREATE SEQUENCE s_idProdCompany
 start with 1
 increment by 1
 minvalue 1
@@ -462,7 +462,7 @@ cache 2
 order
 nocycle;
 
-CREATE SEQUENCE s_platform
+CREATE SEQUENCE s_idPlatform
 start with 1
 increment by 1
 minvalue 1
@@ -516,7 +516,7 @@ cache 2
 order
 nocycle;
 
-CREATE SEQUENCE s_country
+CREATE SEQUENCE s_idCountry
 start with 1
 increment by 1
 minvalue 1
@@ -524,7 +524,7 @@ maxvalue 9999
 cache 2
 order
 nocycle;
-
+/* Comentadas porque no se usan
 CREATE SEQUENCE s_province
 start with 1
 increment by 1
@@ -542,8 +542,8 @@ maxvalue 9999
 cache 2
 order
 nocycle;
-
-CREATE SEQUENCE s_person
+*/
+CREATE SEQUENCE s_idPerson
 start with 1
 increment by 1
 minvalue 1
@@ -552,7 +552,7 @@ cache 2
 order
 nocycle;
 
-CREATE SEQUENCE s_gender
+CREATE SEQUENCE s_idGender
 start with 1
 increment by 1
 minvalue 1
@@ -606,7 +606,7 @@ cache 2
 order
 nocycle;
 
-CREATE SEQUENCE s_userr
+CREATE SEQUENCE s_idUser
 start with 1
 increment by 1
 minvalue 1

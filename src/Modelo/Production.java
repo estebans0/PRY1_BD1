@@ -94,11 +94,13 @@ public class Production {
             Date date = rs.getDate("log_date");
             Long price = rs.getLong("price");
             PriceLogEntry precio = new PriceLogEntry(date, price);
-            priceLog.addLast(precio);
+            
+            // ************************* LOS COMENTARIOS SON UN ERROR *****************************
+            //priceLog.addLast(precio);
         }
         //Obtener el precio actual.
-        PriceLogEntry precio = priceLog.getFirst();
-        this.currentPrice = precio.getPrice();
+        //PriceLogEntry precio = priceLog.getFirst();
+        //this.currentPrice = precio.getPrice();
     }
     
     private void getCountries(java.sql.Connection conn)throws SQLException{

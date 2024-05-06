@@ -9,11 +9,13 @@ import java.util.HashMap;
 import java.util.List;
 import java.util.Map;
 import Modelo.Person;
+import Modelo.User;
 import com.sun.jdi.connect.spi.Connection;
 import java.awt.image.BufferedImage;
 import java.sql.SQLException;
 import oracle.jdbc.OracleTypes;
 import java.sql.*;
+import javax.swing.table.DefaultTableModel;
 /**
  *
  * @author Esteban
@@ -67,6 +69,32 @@ public class PersonManager {
         sql.setInt(5, gender);
         sql.setString(6, dob);
         sql.execute();
+    }
+    
+    public void registerFilmPerson(java.sql.Connection conn, int height, String trivia, String biography, int nationality, 
+            int gender, String dob) throws SQLException {
+        //java.sql.Connection conn = sysConexion.obtConexion();
+        PreparedStatement sql = conn.prepareStatement("{call insertFilmPerson(?,?,?,?,?,?)}");
+        sql.setInt(1, height);
+        sql.setString(2, trivia);
+        sql.setString(3, biography);
+        sql.setInt(4, nationality);
+        sql.setInt(5, gender);
+        sql.setString(6, dob);
+        sql.execute();
+    }
+    
+    // Método para crear una tabla con los datos de personas existentes
+    public DefaultTableModel showPeopleTable() {
+        Object [] header = {"ID", "FirstName", "Last name"};
+        DefaultTableModel table = new DefaultTableModel(header, people.size());
+        for (int i = 0; i < table.getRowCount(); i++) {
+            Person person = people.get(i);
+            table.setValueAt(person.getId(), i, 0);
+            table.setValueAt(person.getFirstName(), i, 1);
+            table.setValueAt(person.getLastName(), i, 2);
+        }
+        return table;
     }
 
     // Método para obtener una persona por su id

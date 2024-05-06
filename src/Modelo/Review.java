@@ -14,7 +14,7 @@ public class Review {
     protected int raiting;
     protected String title;
     protected String author; 
-
+    
     public Review(int raiting, String title, String author) {
         this.raiting = raiting;
         this.title = title;

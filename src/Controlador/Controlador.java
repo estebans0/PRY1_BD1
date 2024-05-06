@@ -11,6 +11,7 @@ import java.sql.SQLException;
 import java.util.ArrayList;
 import oracle.jdbc.OracleTypes;
 import java.sql.*;
+import javax.swing.DefaultComboBoxModel;
 import javax.swing.table.DefaultTableModel;
 import javax.swing.table.TableModel;
 
@@ -22,6 +23,7 @@ public class Controlador {
     // Atributos --------------------------------------------------------------------------------------------------------------
     private final PersonManager personMng = new PersonManager();
     private final UserManager userMng = new UserManager();
+    private final ProductionManager prodMng = new ProductionManager();
     private final java.sql.Connection conn = sysConexion.obtConexion();
     
     // Métodos de usuario -----------------------------------------------------------------------------------------------------
@@ -61,9 +63,134 @@ public class Controlador {
         return userMng.getCurrentUserId();
     }
     
-    // Métodos de persona -----------------------------------------------------------------------------------------------------
+    // Métodos de ADMIN  ---------------------------------------------------------------------------------------------------------
+    // ******************************* Country data management *******************************
+    public void updateCountries() throws SQLException {
+        userMng.updateCountries(conn);
+    }
+    
+    public DefaultComboBoxModel makeCountriesList() {
+        return userMng.makeCountriesList();
+    }
+    
+    public boolean countryAlreadyExists(String countryName) {
+        return userMng.countryAlreadyExists(countryName);
+    }
+    
+    public void insertCountry(String countryName) throws SQLException {
+        userMng.insertCountry(conn, countryName);
+        updateCountries();
+    }
+    
+    public void editCountryName(String currName, String newName) throws SQLException {
+        userMng.editCountryName(conn, currName, newName);
+        updateCountries();
+    }
+    
+    // ******************************* Gender data management *******************************
+    public void updateGenders() throws SQLException {
+        userMng.updateGenders(conn);
+    }
+    
+    public DefaultComboBoxModel makeGendersList() {
+        return userMng.makeGendersList();
+    }
+    
+    public boolean genderAlreadyExists(String name) {
+        return userMng.genderAlreadyExists(name);
+    }
+    
+    public void insertGender(String name) throws SQLException {
+        userMng.insertGender(conn, name);
+        updateGenders();
+    }
+    
+    public void editGenderName(String currName, String newName) throws SQLException {
+        userMng.editGenderName(conn, currName, newName);
+        updateGenders();
+    }
+    
+    // ******************************* Genre data management *******************************
+    public void updateGenres() throws SQLException {
+        userMng.updateGenres(conn);
+    }
+    
+    public DefaultComboBoxModel makeGenresList() {
+        return userMng.makeGenresList();
+    }
+    
+    public boolean genreAlreadyExists(String name) {
+        return userMng.genreAlreadyExists(name);
+    }
+    
+    public void insertGenre(String name, String description) throws SQLException {
+        userMng.insertGenre(conn, name, description);
+        updateGenres();
+    }
+    
+    public void editGenre(String currName, String newName, String description) throws SQLException {
+        userMng.editGenre(conn, currName, newName, description);
+        updateGenres();
+    }
+    
+    // ******************************* ProdCompany data management *******************************
+    public void updateProdCompany() throws SQLException {
+        userMng.updateProdCompany(conn);
+    }
+    
+    public DefaultComboBoxModel makeProdCompanyList() {
+        return userMng.makeProdCompanyList();
+    }
+    
+    public boolean prodCompanyAlreadyExists(String name) {
+        return userMng.prodCompanyAlreadyExists(name);
+    }
+    
+    public void insertProdCompany(String name) throws SQLException {
+        userMng.insertProdCompany(conn, name);
+        updateProdCompany();
+    }
+    
+    public void editProdCompany(String currName, String newName) throws SQLException {
+        userMng.editProdCompany(conn, currName, newName);
+        updateProdCompany();
+    }
+    
+    
+    // ******************************* Platform data management *******************************
+    public void updatePlatforms() throws SQLException {
+        userMng.updatePlatforms(conn);
+    }
+    
+    public DefaultComboBoxModel makePlatformsList() {
+        return userMng.makePlatformsList();
+    }
+    
+    public boolean platformAlreadyExists(String name) {
+        return userMng.platformAlreadyExists(name);
+    }
+    
+    public void insertPlatform(String name, String url) throws SQLException {
+        userMng.insertPlatform(conn, name, url);
+        updatePlatforms();
+    }
+    
+    public void editPlatform(String currName, String newName, String url) throws SQLException {
+        userMng.editPlatform(conn, currName, newName, url);
+        updatePlatforms();
+    }
+    
+    // Métodos de Persona -----------------------------------------------------------------------------------------------------
     public void updatePeople() throws SQLException {
         personMng.updatePeople(conn);
+    }
+    
+    public void registerFilmPerson(String user, String pass, String email, int idType, 
+            String legalId, String fName, String lName, String mName, String nName, 
+            int gender, String dob) throws SQLException {
+        registerPerson(fName, lName, mName, nName, gender, dob);
+        userMng.registerUser(conn, user, pass, email, idType, legalId);
+        updateUsers();
     }
     
     public void registerPerson(String fName, String lName, String mName, String nName, 
@@ -79,4 +206,11 @@ public class Controlador {
     public void printPeople() {
         personMng.printPeople();
     }
+    
+    public DefaultTableModel showPeopleTable() throws SQLException {
+        return personMng.showPeopleTable();
+    }
+    
+    // Métodos de Producción ---------------------------------------------------------------------------------------------------
+    
 }

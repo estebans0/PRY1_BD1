@@ -9,19 +9,32 @@ package Modelo;
  * @author wess
  */
 public class Platform {
+    // Atributos
+    private int id;
     private String name;
     private String url;
     
+    public Platform() {
+        this.id = 0;
+        this.name = null;
+        this.url = null;
+    }
     public Platform(String name, String url) {
+        this.id = 0;
         this.name = name;
         this.url = url;
     }
+    
     
     /**
      * @return the name
      */
     public String getName() {
         return name;
+    }
+
+    public int getId() {
+        return id;
     }
 
     /**
@@ -44,4 +57,10 @@ public class Platform {
     public void setUrl(String url) {
         this.url = url;
     }
+
+    public void setId(int id) {
+        this.id = id;
+    }
+    
+    
 }

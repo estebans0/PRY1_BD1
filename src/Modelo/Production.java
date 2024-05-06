@@ -22,7 +22,7 @@ public class Production {
    protected String synopsis;
    protected String trailer;
    protected long currentPrice;
-   
+   protected int amountOfReviews;
    protected long currentRaiting;
    
    //protected ArrayList<Integer> genreIds;
@@ -69,6 +69,14 @@ public class Production {
             Review review = new Review(raiting, Title, username);
             reviewList.add(review);
         }
+        this.amountOfReviews = reviewList.size();
+        int promedio = 0;
+        for(int i = 0; i<amountOfReviews; i++){
+            Review review = reviewList.get(i);
+            promedio += review.getRaiting();
+        }
+        promedio = promedio/amountOfReviews;
+        this.currentRaiting = promedio;
     }
     /**
      *
@@ -129,6 +137,10 @@ public class Production {
         }
     }
     
+    public int getAmountOfReviews(){
+        return this.amountOfReviews;
+    }
+    
     private void getPlatforms(java.sql.Connection conn) throws SQLException{
         this.Platforms = new ArrayList<>();
         CallableStatement sql = conn.prepareCall("{call getPlatforms(?,?)}");
@@ -176,21 +188,20 @@ public class Production {
             this.trailer = rs.getString("trailer");
             this.synopsis = rs.getString("synopsis");
         }
-        try{
+        this.priceLog = new ArrayList<>();
+        this.productionCompanies = new ArrayList<>();
+        this.ProductionCrew = new ArrayList<>();
+        this.Platforms = new ArrayList<>();
+        this.countriesProducedIn = new ArrayList<>();
+        this.reviewList = new ArrayList<>();
         getProductionCompanies(conn);
-        }
-        catch(Exception e){}
-        
-        try{
         getCountries(conn);
-        }
-        catch(Exception e){}
-        
-        try{
         getImages(conn);
-        }
-        catch(Exception e){
-        }
+        getFilmP(conn);
+        getPlatforms(conn);
+        getSales(conn);
+        setProductionReviews(conn);
+        
         //Plataformas, imagenes, pricelog y precio actual, paises producidos en y finalmente los filmperson.
     }
     

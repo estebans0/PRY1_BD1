@@ -241,11 +241,15 @@ STORAGE (INITIAL 10K NEXT 10K PCTINCREASE 0);
 
 
 -- Foreign keys 
-
 ALTER TABLE production
 ADD(
 CONSTRAINT fk_id_createdby FOREIGN KEY (created_by) REFERENCES administrator(id)
 );
+
+ALTER TABLE production
+MODIFY (synopsis VARCHAR2(1000));
+ALTER TABLE production
+MODIFY (trailer VARCHAR2(500));
 
 ALTER TABLE genre_by_prod
 ADD(
@@ -315,12 +319,11 @@ ADD(
 CONSTRAINT FK_ID_PROVINCE_CITY FOREIGN KEY (id_province) REFERENCES province(id)
 );
 
-
-
+/* Esto no lo usamos
 ALTER TABLE film_person
 ADD(
 CONSTRAINT FK_ID_CITY_FPERSON FOREIGN KEY (id_city) REFERENCES city(id)
-);
+); */
 
 ALTER TABLE person
 ADD(
@@ -339,6 +342,10 @@ CONSTRAINT fk_id_person_fp FOREIGN KEY (id) REFERENCES person(id)
 );
 
 ALTER TABLE film_person
+MODIFY (trivia VARCHAR2(1000));
+
+ALTER TABLE film_person
+MODIFY (biography VARCHAR2(1000));
 drop column id_city;
 
 ALTER TABLE production_crew

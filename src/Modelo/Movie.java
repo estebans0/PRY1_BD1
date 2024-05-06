@@ -4,14 +4,17 @@
  */
 package Modelo;
 
+import java.sql.SQLException;
+import java.sql.SQLException;
+import java.sql.*;
 /**
  *
  * @author wess
  */
-public class movie extends Production{
+public class Movie extends Production{
     
-    public movie(int id) {
-        super(id);
+    public Movie(int id,java.sql.Connection conn) throws SQLException{
+        super(id,conn);
     }
     
 }

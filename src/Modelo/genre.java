@@ -4,30 +4,41 @@
  */
 package Modelo;
 
+import java.util.ArrayList;
+
 /**
  *
  * @author wess
  */
-public class genre {
+public class Genre {
+    private int id;
     private String name;
-    private int price;
-    public genre(int id)
-    {
-    }
+    private String Characteristics;
     
+    private ArrayList<Production> production;
+    
+    /**
+     * @return the name
+     */
     public String getName() {
         return name;
     }
 
-    public int getPrice() {
-        return price;
+    /**
+     * @return the Characteristics
+     */
+    public String getCharacteristics() {
+        return Characteristics;
     }
 
-    public void setName(String name) {
-        this.name = name;
+    /**
+     * @return the production
+     */
+    public ArrayList<Production> getProduction() {
+        return production;
     }
 
-    public void setPrice(int price) {
-        this.price = price;
+    public void addProduction(){
+        
     }
 }

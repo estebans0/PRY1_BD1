@@ -205,7 +205,7 @@ public class UserManager {
     }
     
     // ******************************* Gender data management *******************************
-    private int getGenderId(String name){
+    public int getGenderId(String name){
         for (Gender gender : genders) {
             if (gender.getName().equals(name)) {
                 return gender.getId();

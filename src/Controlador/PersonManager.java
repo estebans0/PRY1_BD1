@@ -53,7 +53,6 @@ public class PersonManager {
             // La imagen puede estar mal por el cast a buffer image (VERIFICAR)
             person.setImage((BufferedImage) rs.getBlob("image"));
             person.setGender(rs.getInt("gender"));
-            person.setPartnerId(rs.getInt("partner"));
             people.add(person);
         }
     }

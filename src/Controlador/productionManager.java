@@ -7,7 +7,7 @@ package Controlador;
 import Modelo.Movie;
 import Modelo.Production;
 import Modelo.genre;
-import Modelo.Serie;
+//import Modelo.Serie;
 
 import java.util.ArrayList;
 import java.sql.SQLException;
@@ -44,8 +44,8 @@ private void GetSeries(java.sql.Connection conn) throws SQLException{
         
         while (rs.next()) {
             int id = rs.getInt("id");
-            Serie serie = new Serie(id,conn);
-            productions.add(serie);
+            //Serie serie = new Serie(id,conn);
+            //productions.add(serie);
         }
     }
 

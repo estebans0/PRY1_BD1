@@ -4,8 +4,6 @@
  */
 package Modelo;
 
-import java.sql.SQLException;
-
 /**
  *
  * @author wess
@@ -14,8 +12,8 @@ public class Episode extends Production{
     private int seasonNumber;
     private int number;
     
-    public Episode(int id, java.sql.Connection conn) throws SQLException {
-        super(id, conn);
+    public Episode(int id) {
+        super(id);
     }
     
     public int getSeasonNumber() {        

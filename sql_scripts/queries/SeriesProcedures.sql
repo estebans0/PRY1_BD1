@@ -2,10 +2,10 @@ CREATE OR REPLACE PROCEDURE getSerieEpisodes (Serie IN NUMBER, pCursor OUT SYS_R
 AS
 BEGIN
     OPEN pCursor FOR
-        SELECT episode.id_episode, episode.episode_number, episode.season
+        SELECT episode.id_episode id_episode, episode.episode_number episode_number, episode.season season
         FROM episode
         where episode.id_serie = Serie
-        ORDER BY season ASC, episode_number ASC
+        ORDER BY season ASC, episode_number ASC;
         --GROUP BY season;
 END getSerieEpisodes;
 /

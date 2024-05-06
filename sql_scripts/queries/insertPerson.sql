@@ -8,7 +8,7 @@ CREATE OR REPLACE PROCEDURE insertPerson (
 )
 AS
 BEGIN
-    INSERT INTO person (id, birthdate, first_name, middle_name, last_name, nickname, image, gender, partner)
+    INSERT INTO person (id, birthdate, first_name, middle_name, last_name, nickname, image, gender)
     VALUES (s_idPerson.nextval, TO_DATE(pDob, 'DD-MM-YYYY'), pFirstName, NULL, pLastName, NULL, NULL, pGender, NULL);
     COMMIT;
     

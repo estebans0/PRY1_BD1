@@ -9,6 +9,8 @@ CREATE TABLE production ( -- 1 Production for all series and movies
     created_by                  NUMBER(4)       CONSTRAINT production_createdBy_nn NOT NULL
 );
 
+
+
 CREATE TABLE genre ( -- 2 Genre of the productions
     id                          NUMBER(4)       CONSTRAINT genre_id_nn NOT NULL,
     name                        VARCHAR2(30)    CONSTRAINT genre_name_nn NOT NULL,
@@ -34,7 +36,7 @@ CREATE TABLE prod_company ( -- 5 productora de la produccion
     id_country                  NUMBER(4)
 );
 
-CREATE TABLE prod_by_company ( -- 6 relacion NN entre producion y compañia productora
+CREATE TABLE prod_by_company ( -- 6 relacion NN entre producion y compa?ia productora
     id                          NUMBER(4)       CONSTRAINT prodByCompany_id_nn NOT NULL,
     id_production               NUMBER(4)       CONSTRAINT prodByCompany_idProduction_nn NOT NULL,
     id_company                  NUMBER(4)       CONSTRAINT prodByCompany_idCompany_nn NOT NULL
@@ -65,9 +67,9 @@ CREATE TABLE episode ( -- 11    episodios de una serie
     episode_number              NUMBER(2)       CONSTRAINT episode_episodeNumber_nn NOT NULL,
     season                      NUMBER(2)       CONSTRAINT episode_Season_nn NOT NULL
 );
-ALTER TABLE episode 
-ADD (id_serie NUMBER(4) CONSTRAINT episodeSerieId NOT NULL
-);
+
+ALTER TABLE episode
+add series NUMBER(4) CONSTRAINT episode_idSeries_nn NOT NULL;
 
 CREATE TABLE prod_by_country ( -- 12 Relacion entre produccion y pais
     id                          NUMBER(4)       CONSTRAINT prodCountry_id_nn NOT NULL,
@@ -80,7 +82,7 @@ CREATE TABLE country ( -- 13 guarda los paises
     name                        VARCHAR2(30)    CONSTRAINT country_name_nn NOT NULL
 );
 
-CREATE TABLE province ( -- 14 provincia, para una subdivision más exacta
+CREATE TABLE province ( -- 14 provincia, para una subdivision m?s exacta
     id                          NUMBER(4)       CONSTRAINT province_id_nn NOT NULL,
     name                        VARCHAR2(30)    CONSTRAINT province_name_nn NOT NULL,
     id_country                  NUMBER(4)       CONSTRAINT province_idCountry_nn NOT NULL
@@ -120,7 +122,7 @@ drop column partner;
 ALTER TABLE PERSON 
 drop column id_city;
 
-CREATE TABLE gender ( -- 18 genero, es más apropiado.
+CREATE TABLE gender ( -- 18 genero, es m?s apropiado.
     id                          NUMBER(4)       CONSTRAINT gender_id_nn NOT NULL,
     name                        VARCHAR2(20)    CONSTRAINT gender_name_nn NOT NULL
 );
@@ -163,7 +165,7 @@ alter table film_person
 add (rol number(4));
 
 CREATE TABLE production_crew(
-    id                          NUMBER(4)       CONSTRAINT pcrew_id_nn NOT NULL,
+    id                          NUMBER(4)        CONSTRAINT pcrew_id_nn NOT NULL,
     id_crew_member              NUMBER(4)       CONSTRAINT pcrew_id_member_nn NOT NULL,
     id_production               NUMBER(4)       CONSTRAINT pcrew_id_prod_nn NOT NULL,
     id_rol                      NUMBER(4)       CONSTRAINT pcrew_id_rol_nn NOT NULL                 
@@ -233,7 +235,7 @@ CREATE TABLE production_in_cart(--28  for buying a series of movies
 CREATE TABLE purchase(--29 for remembering purchases(?)
     id                           NUMBER(4)       CONSTRAINT purchaseId_nn NOT NULL,
     dateOfPurchase               DATE            CONSTRAINT purchase_logDate_nn NOT NULL,
-  --tax                          NUMBER(8,2)     CONSTRAINT purchase_taxId_nn NOT NULL,para qué? ._.
+  --tax                          NUMBER(8,2)     CONSTRAINT purchase_taxId_nn NOT NULL,para qu?? ._.
     id_user                      NUMBER(4)       CONSTRAINT purchase_idUserId_nn NOT NULL,
     id_payment_method            NUMBER(4)       CONSTRAINT purchase_paymentMethod_nn NOT NULL
 );
@@ -266,8 +268,15 @@ CREATE TABLE identification_type(--33 for the type of identification the user is
     id                          NUMBER(4)       CONSTRAINT identy_id_nn NOT NULL,
     name                        VARCHAR(20)     CONSTRAINT identification_name_nn NOT NULL
     );  
+      
      
+CREATE TABLE cast_of_production(--33 for the type of identification the user is using.
+    id                          NUMBER(4)       CONSTRAINT cast_of_prod_nn NOT NULL,
+    id_cast_member              NUMBER(4)       CONSTRAINT id_cast_member_nn NOT NULL,
+    movie_character             VARCHAR(40)     CONSTRAINT movie_character_nn NOT NULL,
+    production_id               NUMBER(4)       CONSTRAINT prod_id_cop_nn NOT NULL
+    );  
+      
+          
      
-     
-     
-     
+

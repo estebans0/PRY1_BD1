@@ -232,6 +232,12 @@ USING INDEX
 TABLESPACE pry_ind PCTFREE 20
 STORAGE (INITIAL 10K NEXT 10K PCTINCREASE 0);
 
+ALTER TABLE cast_of_production
+ADD
+CONSTRAINT pk_cast_of_production PRIMARY KEY (id)
+USING INDEX
+TABLESPACE pry_ind PCTFREE 20
+STORAGE (INITIAL 10K NEXT 10K PCTINCREASE 0);
 
 
 -- Foreign keys 
@@ -272,6 +278,11 @@ ADD(
 CONSTRAINT fk_id_production_pip FOREIGN KEY (id_production) REFERENCES production(id),
 CONSTRAINT fk_id_platform_pip FOREIGN KEY(id_platform) REFERENCES platform(id)
 );  
+
+ALTER TABLE series
+ADD(
+CONSTRAINT fk_id_production_ser FOREIGN KEY (id) REFERENCES production(id)
+);
 
 ALTER TABLE movie
 ADD(
@@ -327,11 +338,14 @@ ADD(
 CONSTRAINT fk_id_person_fp FOREIGN KEY (id) REFERENCES person(id)
 );
 
+ALTER TABLE film_person
+drop column id_city;
+
 ALTER TABLE production_crew
 ADD(
 CONSTRAINT fk_id_crew_member FOREIGN KEY (id_crew_member) REFERENCES film_person(id),
 CONSTRAINT fk_id_production_pcrew FOREIGN KEY (id_production) REFERENCES production(id),
-CONSTRAINT fk_id_rol_pcrew FOREIGN KEY (id) REFERENCES rol(type)
+CONSTRAINT fk_id_rol_pcrew FOREIGN KEY (id_rol) REFERENCES rol(type)
 );
 
 
@@ -352,6 +366,8 @@ ADD(
 CONSTRAINT fk_id_partner1 FOREIGN KEY (id_partner1) REFERENCES person(id),
 CONSTRAINT fk_id_partner2 FOREIGN KEY (id_partner2) REFERENCES person(id)
 );
+
+
 
 -- no existe la tabla crew_member
 --ALTER TABLE crew_member
@@ -414,6 +430,12 @@ CONSTRAINT fk_owner_payMethod FOREIGN KEY (owner) REFERENCES regular_user(id)
 ALTER TABLE production_image
 ADD(
 CONSTRAINT fk_id_production_pimage FOREIGN KEY (id_production) REFERENCES production(id)
+);
+
+ALTER TABLE cast_of_production
+ADD(
+CONSTRAINT FK_id_cast_member_cop FOREIGN KEY (id_cast_member) REFERENCES production(id),
+CONSTRAINT FK_production_id_cop FOREIGN KEY (production_id) REFERENCES country(id)
 );
 
 
@@ -516,6 +538,16 @@ cache 2
 order
 nocycle;
 
+
+CREATE SEQUENCE s_prod_by_company
+start with 1
+increment by 1
+minvalue 1
+maxvalue 9999
+cache 2
+order
+nocycle;
+
 CREATE SEQUENCE s_country
 start with 1
 increment by 1
@@ -524,7 +556,7 @@ maxvalue 9999
 cache 2
 order
 nocycle;
-/* Comentadas porque no se usan
+
 CREATE SEQUENCE s_province
 start with 1
 increment by 1
@@ -542,7 +574,7 @@ maxvalue 9999
 cache 2
 order
 nocycle;
-*/
+
 CREATE SEQUENCE s_person
 start with 1
 increment by 1
@@ -706,6 +738,15 @@ order
 nocycle;
 
 CREATE SEQUENCE s_identification_type
+start with 1
+increment by 1
+minvalue 1
+maxvalue 9999
+cache 2
+order
+nocycle;
+
+CREATE SEQUENCE s_cast_of_production
 start with 1
 increment by 1
 minvalue 1

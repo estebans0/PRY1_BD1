@@ -46,22 +46,35 @@ public class Interface extends javax.swing.JFrame {
      */
     public Interface() {
         initComponents();
+        
+        // Cargar datos de BD
         try {
-            // Cargar datos de BD
             control.updateUsers();
             control.updatePeople();
+            control.updateCountries();
+            control.updateGenders();
+            control.updateGenres();
+            control.updateProdCompany();
+            control.updatePlatforms();
             
         } catch (SQLException ex) {
             Logger.getLogger(Interface.class.getName()).log(Level.SEVERE, null, ex);
         }
         
-        // Setear texto subrayado del link de nuevo usuario
+        // LOGIN: Setear texto subrayado del link de nuevo usuario
         newUser_link.setText("<html><u> Are you a new user? Register here</u></html>");
-        // Escalar icono al JPanel del boton de login
+        
+        // Agregar icono de la app
+        Image imagen2 = new ImageIcon(getClass().getResource("/Images/appLogo.png")).getImage(); // Buscar la imagen por su ruta
+        ImageIcon icono2 = new ImageIcon(imagen2.getScaledInstance(logo_img.getWidth(), logo_img.getHeight(), Image.SCALE_SMOOTH));
+        logo_img.setIcon(icono2);
+        
+        // Agregar icono de login
         Image imagen = new ImageIcon(getClass().getResource("/Images/login.png")).getImage(); // Buscar la imagen por su ruta
         ImageIcon icono = new ImageIcon(imagen.getScaledInstance(login_btn.getWidth(), login_btn.getHeight(), Image.SCALE_SMOOTH));
         login_btn.setIcon(icono);
         sideMenu_panel.setVisible(false);
+        
         // Cambiar color de los JTable
         cart_selector.getViewport().setBackground(Color.white);
         prevPurchases_selector.getViewport().setBackground(Color.white);
@@ -513,12 +526,12 @@ public class Interface extends javax.swing.JFrame {
         logo_img.setFont(new java.awt.Font("Cascadia Code", 0, 16)); // NOI18N
         logo_img.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
         logo_img.setText("Logo");
-        top_panel.add(logo_img, new org.netbeans.lib.awtextra.AbsoluteConstraints(130, 10, 100, 30));
+        top_panel.add(logo_img, new org.netbeans.lib.awtextra.AbsoluteConstraints(170, 10, 40, 30));
 
-        appName_txt.setFont(new java.awt.Font("Cascadia Code", 0, 16)); // NOI18N
+        appName_txt.setFont(new java.awt.Font("Cascadia Code", 1, 16)); // NOI18N
         appName_txt.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
-        appName_txt.setText("App Name");
-        top_panel.add(appName_txt, new org.netbeans.lib.awtextra.AbsoluteConstraints(20, 10, 100, 30));
+        appName_txt.setText("Sketch Reviews");
+        top_panel.add(appName_txt, new org.netbeans.lib.awtextra.AbsoluteConstraints(20, 10, 130, 30));
 
         getContentPane().add(top_panel, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, 1100, 50));
 

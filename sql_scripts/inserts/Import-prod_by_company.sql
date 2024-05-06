@@ -1,5 +1,7 @@
 SET DEFINE OFF
 
+
+
 INSERT INTO PROD_BY_COMPANY (ID, ID_PRODUCTION, ID_COMPANY) 
 VALUES (s_prod_by_company.nextval, 1, 3);
 

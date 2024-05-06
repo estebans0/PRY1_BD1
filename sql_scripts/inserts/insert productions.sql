@@ -1,5 +1,8 @@
 SET DEFINE OFF
 
+ALTER TABLE PRODUCTION MODIFY (SYNOPSIS VARCHAR2(2000));
+ALTER TABLE PRODUCTION MODIFY (TRAILER VARCHAR2(200));
+
 INSERT INTO PRODUCTION (ID, TITLE, SYNOPSIS, AIRDATE, RUN_TIME, IS_PUBLIC, TRAILER, CREATED_BY) 
 VALUES (1, 'Avatar', 'In the 22nd century, a paraplegic Marine is dispatched to the moon Pandora on a unique mission, but becomes torn between following orders and protecting an alien civilization.', to_date('12/10/2009', 'MM/DD/YYYY'), 162, 1, 'https://www.imdb.com/video/vi531039513/?playlistId=tt0499549&ref_=tt_pr_ov_vi', 2);
 

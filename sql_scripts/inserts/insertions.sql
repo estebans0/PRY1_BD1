@@ -3,6 +3,9 @@
 --**************
 DROP SEQUENCE s_genre;
 
+ALTER TABLE genre MODIFY (characteristics VARCHAR2(500));
+
+
 CREATE SEQUENCE s_genre
 start with 2
 increment by 1
@@ -399,7 +402,7 @@ values(s_identification_type.nextval ,  'pasaporte');
 DROP SEQUENCE s_person;
 
 CREATE SEQUENCE s_person
-start with 2
+start with 1
 increment by 1
 minvalue 1
 maxvalue 9999

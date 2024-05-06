@@ -453,7 +453,7 @@ cache 2
 order
 nocycle;
 
-CREATE SEQUENCE s_idProdCompany
+CREATE SEQUENCE s_prod_company
 start with 1
 increment by 1
 minvalue 1
@@ -462,7 +462,7 @@ cache 2
 order
 nocycle;
 
-CREATE SEQUENCE s_idPlatform
+CREATE SEQUENCE s_platform
 start with 1
 increment by 1
 minvalue 1
@@ -516,7 +516,7 @@ cache 2
 order
 nocycle;
 
-CREATE SEQUENCE s_idCountry
+CREATE SEQUENCE s_country
 start with 1
 increment by 1
 minvalue 1
@@ -543,7 +543,7 @@ cache 2
 order
 nocycle;
 */
-CREATE SEQUENCE s_idPerson
+CREATE SEQUENCE s_person
 start with 1
 increment by 1
 minvalue 1
@@ -552,7 +552,7 @@ cache 2
 order
 nocycle;
 
-CREATE SEQUENCE s_idGender
+CREATE SEQUENCE s_gender
 start with 1
 increment by 1
 minvalue 1
@@ -606,7 +606,7 @@ cache 2
 order
 nocycle;
 
-CREATE SEQUENCE s_idUser
+CREATE SEQUENCE s_userr
 start with 1
 increment by 1
 minvalue 1

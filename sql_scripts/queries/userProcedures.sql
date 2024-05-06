@@ -9,7 +9,7 @@ CREATE OR REPLACE PROCEDURE insertUser (
 AS
 BEGIN
     INSERT INTO userr (id, username, password, email, legal_id, id_type, user_type)
-    VALUES (s_idPerson.currval, pUsername, pPassword, pEmail, pLegalId, pIdType, 0);
+    VALUES (s_person.currval, pUsername, pPassword, pEmail, pLegalId, pIdType, 0);
     COMMIT;
     
 EXCEPTION

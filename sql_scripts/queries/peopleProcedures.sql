@@ -3,7 +3,7 @@ CREATE OR REPLACE PROCEDURE currPersonId (pCursor OUT SYS_REFCURSOR)
 AS
 BEGIN
     OPEN pCursor FOR
-        SELECT s_idPerson.currval FROM dual;
+        SELECT s_person.currval FROM dual;
 END currPersonId;
 /
 
@@ -19,7 +19,7 @@ CREATE OR REPLACE PROCEDURE insertPerson (
 AS
 BEGIN
     INSERT INTO person (id, birthdate, first_name, middle_name, last_name, nickname, image, gender)
-    VALUES (s_idPerson.nextval, TO_DATE(pDob, 'DD-MM-YYYY'), pFirstName, NULL, pLastName, NULL, NULL, pGender);
+    VALUES (s_person.nextval, TO_DATE(pDob, 'DD-MM-YYYY'), pFirstName, NULL, pLastName, NULL, NULL, pGender);
     COMMIT;
     
 EXCEPTION

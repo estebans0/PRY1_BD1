@@ -3,7 +3,7 @@ CREATE OR REPLACE PROCEDURE insertPlatform (pName IN VARCHAR2, pUrl IN VARCHAR2)
 AS
 BEGIN
     INSERT INTO platform (id, url, name)
-    VALUES (s_idPlatform.nextval, pUrl, pName);
+    VALUES (s_platform.nextval, pUrl, pName);
     COMMIT;
     
 EXCEPTION

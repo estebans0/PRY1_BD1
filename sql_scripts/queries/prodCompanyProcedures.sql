@@ -3,7 +3,7 @@ CREATE OR REPLACE PROCEDURE insertProdCompany (pName IN VARCHAR2)
 AS
 BEGIN
     INSERT INTO prod_company (id, name, id_country)
-    VALUES (s_idProdCompany.nextval, pName, NULL);
+    VALUES (s_prod_company.nextval, pName, NULL);
     COMMIT;
     
 EXCEPTION

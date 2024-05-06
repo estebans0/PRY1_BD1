@@ -3,7 +3,7 @@ CREATE OR REPLACE PROCEDURE insertGender (pName IN VARCHAR2)
 AS
 BEGIN
     INSERT INTO gender (id, name)
-    VALUES (s_idGender.nextval, pName);
+    VALUES (s_gender.nextval, pName);
     COMMIT;
     
 EXCEPTION

@@ -3,7 +3,7 @@ CREATE OR REPLACE PROCEDURE insertGenre (pName IN VARCHAR2, pDescription IN VARC
 AS
 BEGIN
     INSERT INTO genre (id, name, characteristics)
-    VALUES (s_idGenre.nextval, pName, pDescription);
+    VALUES (s_genre.nextval, pName, pDescription);
     COMMIT;
     
 EXCEPTION

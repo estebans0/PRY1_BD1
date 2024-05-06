@@ -3,7 +3,7 @@ CREATE OR REPLACE PROCEDURE insertCountry (pName IN VARCHAR2)
 AS
 BEGIN
     INSERT INTO country (id, name)
-    VALUES (s_idCountry.nextval, pName);
+    VALUES (s_country.nextval, pName);
     COMMIT;
     
 EXCEPTION

@@ -1,6 +1,16 @@
 --**************
 --* Tabla genre*
 --**************
+DROP SEQUENCE s_genre;
+
+CREATE SEQUENCE s_genre
+start with 2
+increment by 1
+minvalue 1
+maxvalue 9999
+cache 2
+order
+nocycle;
 INSERT INTO genre (id, name, characteristics)
 VALUES (s_genre.nextval, 'Accion', 'Implica una interacción moral entre el «bien» y el «mal».');
 INSERT INTO genre (id, name, characteristics)
@@ -44,6 +54,16 @@ VALUES (s_genre.nextval, 'Western', ' del período colonial a la era moderna de l
 --**************
 --* Platform   *
 --**************
+DROP SEQUENCE s_platform;
+
+CREATE SEQUENCE s_platform
+start with 2
+increment by 1
+minvalue 1
+maxvalue 9999
+cache 2
+order
+nocycle;
 
 INSERT INTO platform(id, url, name)
 values(s_platform.nextval , 'www.netflix.com','Netflix');
@@ -76,35 +96,57 @@ values(s_platform.nextval, 'https://www.paramountplus.com/','Paramount+');
 --**************
 
 INSERT INTO gender(id, name)
-values(s_gender.nextval , 'Masculino');
+values(2 , 'Masculino');
 
 INSERT INTO gender(id, name)
-values(s_gender.nextval , 'Femenino');
+values(3 , 'Femenino');
 
 INSERT INTO gender(id, name)
-values(s_gender.nextval , 'Gay');
+values(4 , 'Gay');
 
 INSERT INTO gender(id, name)
-values(s_gender.nextval , 'Lesbiana');
+values(5 , 'Lesbiana');
 
 INSERT INTO gender(id, name)
-values(s_gender.nextval , 'Bisexual');
+values(6, 'Bisexual');
 
 INSERT INTO gender(id, name)
-values(s_gender.nextval , 'Trans');
+values(7, 'Trans');
 
 INSERT INTO gender(id, name)
-values(s_gender.nextval , 'Intersex');
+values(8 , 'Intersex');
 
 INSERT INTO gender(id, name)
-values(s_gender.nextval , 'Otro');
+values(9, 'Otro');
 
 INSERT INTO gender(id, name)
-values(s_gender.nextval , 'No especifica');
+values(10 , 'No especifica');
 
+
+DROP SEQUENCE s_gender;
+
+CREATE SEQUENCE s_gender
+start with 12
+increment by 1
+minvalue 1
+maxvalue 9999
+cache 2
+order
+nocycle;
 --**************
 --* Rol        *
 --**************
+DROP SEQUENCE s_rol;
+
+CREATE SEQUENCE s_rol
+start with 99
+increment by 1
+minvalue 1
+maxvalue 9999
+cache 2
+order
+nocycle;
+
 alter table rol drop constraint ROL_CHARNAME_NN;
 
 INSERT INTO rol(type, name, character_name)
@@ -251,14 +293,22 @@ values(s_rol.nextval , 'Contador', '');
 INSERT INTO rol(type, name, character_name)
 values(s_rol.nextval , 'Office PA', '');
 
-INSERT INTO rol(type, name, character_name)
-values(s_rol.nextval , 'Guionista', '');
 
 INSERT INTO rol(type, name, character_name)
-values(s_rol.nextval , 'Designer', '');
+values(s_rol.nextval , 'Guionista', '');
 --**************
 --* Production_Company *
 --**************
+DROP SEQUENCE s_prod_company;
+
+CREATE SEQUENCE s_prod_company
+start with 3
+increment by 1
+minvalue 1
+maxvalue 9999
+cache 2
+order
+nocycle;
 
 INSERT INTO prod_company(id, name, id_country)
 select s_prod_company.nextval, 'Disney', id
@@ -326,6 +376,16 @@ from country where country.name = 'Spain' ;
 --***********************
 --* Identification Type * 
 --***********************
+DROP SEQUENCE s_identification_type;
+
+CREATE SEQUENCE s_identification_type
+start with 1
+increment by 1
+minvalue 1
+maxvalue 9999
+cache 2
+order
+nocycle;
 
 INSERT INTO identification_type(id, name)
 values(s_identification_type.nextval ,  'cédula');
@@ -336,16 +396,29 @@ values(s_identification_type.nextval ,  'pasaporte');
 --*   Person     * 
 --****************
 
-INSERT INTO person(id,birthdate, first_name, Middle_name, last_name, nickname,image, gender)
-values(s_person.nextval ,  to_date('12/10/2000', 'MM/DD/YYYY'), 'Jose', 'Julian', 'Castro', 'Jota', NULL, 2);
+DROP SEQUENCE s_person;
 
+CREATE SEQUENCE s_person
+start with 2
+increment by 1
+minvalue 1
+maxvalue 9999
+cache 2
+order
+nocycle;
 
 INSERT INTO person(id,birthdate, first_name, Middle_name, last_name, nickname,image, gender)
 values(s_person.nextval ,  to_date('12/10/2000', 'MM/DD/YYYY'), 'Jose', 'Julian', 'Castro', 'Jota', NULL, 2);
 
 INSERT INTO userr(id, username, password, email, legal_id, id_type, user_type)
-values(s_person.nextval ,  to_date('12/10/2000', 'MM/DD/YYYY'), 'Jose', 'Julian', 'Castro', 'Jota', NULL, 2);
+VALUES(s_person.currval ,  'user1','password', 'a@a.com', 2444333, 1, 1);
 
+
+INSERT INTO administrator(id)
+VALUES(s_person.currval);
+
+--INSERT INTO userr(id, username, password, email, legal_id, id_type, user_type)
+--values(s_person.nextval ,  to_date('12/10/2000', 'MM/DD/YYYY'), 'Jose', 'Julian', 'Castro', 'Jota', NULL, 2);
 
 INSERT INTO person(id,birthdate, first_name, Middle_name, last_name, nickname,image, gender)
 values(s_person.nextval ,  to_date('12/10/2000', 'MM/DD/YYYY'), 'María', 'Amalia', 'Chacón', '', NULL, 3);
@@ -385,10 +458,3 @@ values(s_person.nextval ,  to_date('12/10/2000', 'MM/DD/YYYY'), 'Esteban', 'Alon
 --****************
 --*   Admin      * 
 --****************
-
-INSERT INTO userr(id, username, password, email, legal_id, id_type, user_type)
-Select id ,  'user1','password', 'a@a.com', 2444333, 2, 1
-from person where person.id = 2;
-
-INSERT INTO administrator(id)
-select id from userr where userr.id = 2;

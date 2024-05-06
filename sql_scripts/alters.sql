@@ -233,6 +233,8 @@ TABLESPACE pry_ind PCTFREE 20
 STORAGE (INITIAL 10K NEXT 10K PCTINCREASE 0);
 
 
+ALTER TABLE ROL MODIFY (name VARCHAR2(300));
+ALTER TABLE GENRE MODIFY (name VARCHAR2(300));
 
 -- Foreign keys 
 ALTER TABLE production
@@ -1069,7 +1071,7 @@ ALTER TABLE film_person
 MODIFY (trivia VARCHAR2(1000));
 
 ALTER TABLE film_person
-MODIFY (biography VARCHAR2(1000));
+MODIFY (biography VARCHAR2(1000))
 drop column id_city;
 
 ALTER TABLE production_crew

@@ -1,26 +1,48 @@
 --------------------------------------------------------------------------------
-
-CREATE OR REPLACE PROCEDURE getProductionData (pCursor OUT SYS_REFCURSOR)
+--Get data from productions by id.
+CREATE OR REPLACE PROCEDURE getProductionData (ProdId IN NUMBER, pCursor OUT SYS_REFCURSOR)
 AS
 BEGIN
     OPEN pCursor FOR
-        SELECT id, airdate, title, run_time, is_public, synopsis, trailer, created_by
-        FROM production;
+        SELECT id, airdate, title, run_time, synopsis, trailer-- created_by?
+        FROM production
+        where id=ProdId;
 END getProductionData;
 /
+
+CREATE OR REPLACE PROCEDURE getSeries (pCursor OUT SYS_REFCURSOR)
+AS
+BEGIN
+    OPEN pCursor FOR
+        SELECT id
+        FROM series;
+END getSeries;
+/
+
+CREATE OR REPLACE PROCEDURE getMovies (pCursor OUT SYS_REFCURSOR)
+AS
+BEGIN
+    OPEN pCursor FOR
+        SELECT id_movie
+        FROM Movie;
+END getMovies;
+/
+
 --------------------------------------------------------------------------------
 
 CREATE OR REPLACE PROCEDURE getProductionReviews (Production IN NUMBER, pCursor OUT SYS_REFCURSOR)
 AS
 BEGIN
     OPEN pCursor FOR
-        SELECT raiting, title,author,id_production
+        SELECT review.raiting raiting, review.title title, userr.username username
         FROM review
-        where id_production = Production;
+        Inner Join userr
+        ON userr.id = review.author
+        AND id_production = Production;
+        
 END getProductionReviews;
 /
 --------------------------------------------------------------------------------
-
 
 CREATE OR REPLACE PROCEDURE pricingFromProduction (Production IN NUMBER, pCursor OUT SYS_REFCURSOR)
 AS
@@ -30,6 +52,7 @@ BEGIN
         FROM price_Log
         where id_production = Production
         ORDER BY log_date ASC;
+
 END pricingFromProduction;
 /
 --------------------------------------------------------------------------------
@@ -42,11 +65,6 @@ BEGIN
         SELECT image
         FROM production_image
         where id_production = Production;
-EXCEPTION
-    WHEN NO_DATA_FOUND THEN
-        dbms_output.put_line('not in a genre');
-    WHEN OTHERS then
-        dbms_output.put_line('God knows what happened with this :(');
 END imagesForProduction;
 /
 --------------------------------------------------------------------------------
@@ -57,6 +75,7 @@ BEGIN
     OPEN pCursor FOR
         SELECT id, name, characteristics
         FROM genre;
+
 END getGenres;
 /
 --------------------------------------------------------------------------------
@@ -65,13 +84,12 @@ CREATE OR REPLACE PROCEDURE getGenresForProduction(Genre IN NUMBER, pCursor OUT 
 AS
 BEGIN
     OPEN pCursor FOR
-        SELECT genre_by_prod.id_production
+        SELECT genre_by_prod.id_production id_production
         FROM genre_by_prod
         INNER JOIN genre
+        ON Genre.id = genre_by_prod.id_genre
         ;
-EXCEPTION
-    WHEN NO_DATA_FOUND THEN
-        dbms_output.put_line('not in any genre');
+
 END getGenresForProduction;
 /
 --------------------------------------------------------------------------------
@@ -80,16 +98,12 @@ CREATE OR REPLACE PROCEDURE getProductionCompanyNames (Production IN NUMBER, pCu
 AS
 BEGIN
     OPEN pCursor FOR
-        SELECT prod_company.name
+        SELECT prod_company.name name
         FROM prod_company
         INNER JOIN prod_by_company
         ON prod_company.id = prod_by_company.id
         AND prod_by_company.id_production = Production;
-EXCEPTION
-    WHEN NO_DATA_FOUND THEN
-        dbms_output.put_line('not in any genre');
-    WHEN OTHERS then
-        dbms_output.put_line('God knows what happened with this :(');
+        
 END getProductionCompanyNames ;
 /
 --------------------------------------------------------------------------------
@@ -98,16 +112,11 @@ CREATE OR REPLACE PROCEDURE getPlatforms (Production IN NUMBER, pCursor OUT SYS_
 AS
 BEGIN
     OPEN pCursor FOR
-        SELECT platform.name, platform.url
+        SELECT platform.name name, platform.url url
         FROM platform
         INNER JOIN prod_in_platform
         ON platform.id = prod_in_platform.id_platform
         AND prod_in_platform.id_production = Production;
-EXCEPTION
-    WHEN NO_DATA_FOUND THEN
-        dbms_output.put_line('not in any genre');
-    WHEN OTHERS then
-        dbms_output.put_line('God knows what happened with this :(');
         
 END getPlatforms;
 /
@@ -117,23 +126,23 @@ CREATE OR REPLACE PROCEDURE getProductionCountries (Production IN NUMBER, pCurso
 AS
 BEGIN
     OPEN pCursor FOR
-        SELECT country.name
+        SELECT country.name name
         FROM country
         INNER JOIN prod_by_country
         ON prod_by_country.id_country = country.id
         AND prod_by_country.id_production = Production;
 END getProductionCountries;
 /
---------------------------------------------------------------------------------
+----------------------------------------------------------------------------------------------
 --For getting The FP that were inserted into a production
 CREATE OR REPLACE PROCEDURE getProductionFP (Production IN NUMBER, pCursor OUT SYS_REFCURSOR)
 AS
 BEGIN
     OPEN pCursor FOR
-        SELECT person.first_name || person.last_name, person.id
+        SELECT person.first_name || " "||person.last_name name, person.id id
         FROM person
         INNER JOIN production_crew
         ON production_crew.id_crew_member = person.id;
 END getProductionFP;
 /
---------------------------------------------------------------------------------
+--------------------------------------------------------------------------------------------

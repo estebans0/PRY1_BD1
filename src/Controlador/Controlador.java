@@ -23,7 +23,7 @@ public class Controlador {
     // Atributos --------------------------------------------------------------------------------------------------------------
     private final PersonManager personMng = new PersonManager();
     private final UserManager userMng = new UserManager();
-    private final ProductionManager prodMng = new ProductionManager();
+    private final productionManager prodMng = new productionManager();
     private final java.sql.Connection conn = sysConexion.obtConexion();
     
     // Métodos de usuario -----------------------------------------------------------------------------------------------------

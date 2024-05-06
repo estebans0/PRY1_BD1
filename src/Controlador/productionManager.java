@@ -6,7 +6,7 @@ package Controlador;
 
 import Modelo.Movie;
 import Modelo.Production;
-import Modelo.Genre;
+import Modelo.genre;
 import Modelo.Serie;
 
 import java.util.ArrayList;
@@ -21,7 +21,7 @@ public class productionManager {
     //Primero una lista con todas las producciones, despues  metodos para getiar los 3 tipos y un esqueleto para los inserts.
     //Por ultimo, unos metodos para insertar que deberian de hacerse por Esteban.
     private ArrayList<Production> productions;
-    private ArrayList<Genre> genres;
+    private ArrayList<genre> genres;
 
 
     

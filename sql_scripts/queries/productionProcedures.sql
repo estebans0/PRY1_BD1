@@ -69,7 +69,7 @@ END imagesForProduction;
 /
 --------------------------------------------------------------------------------
 
-CREATE OR REPLACE PROCEDURE getGenres(Production IN NUMBER, pCursor OUT SYS_REFCURSOR)
+CREATE OR REPLACE PROCEDURE getGenres(pCursor OUT SYS_REFCURSOR)
 AS
 BEGIN
     OPEN pCursor FOR
@@ -80,14 +80,15 @@ END getGenres;
 /
 --------------------------------------------------------------------------------
 
-CREATE OR REPLACE PROCEDURE getGenresForProduction(Genre IN NUMBER, pCursor OUT SYS_REFCURSOR)
+CREATE OR REPLACE PROCEDURE getGenresForProduction(GenreId IN NUMBER, pCursor OUT SYS_REFCURSOR)
 AS
 BEGIN
     OPEN pCursor FOR
         SELECT genre_by_prod.id_production id_production
         FROM genre_by_prod
         INNER JOIN genre
-        ON Genre.id = genre_by_prod.id_genre
+        ON genre.id = genre_by_prod.id_genre
+        AND genre.id = GenreId
         ;
 
 END getGenresForProduction;
@@ -139,7 +140,7 @@ CREATE OR REPLACE PROCEDURE getProductionFP (Production IN NUMBER, pCursor OUT S
 AS
 BEGIN
     OPEN pCursor FOR
-        SELECT person.first_name || " "||person.last_name name, person.id id
+        SELECT person.first_name name, person.id id
         FROM person
         INNER JOIN production_crew
         ON production_crew.id_crew_member = person.id;

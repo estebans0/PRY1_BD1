@@ -5,8 +5,9 @@ BEGIN
         SELECT episode.id_episode id_episode, episode.episode_number episode_number, episode.season season
         FROM episode
         where episode.id_serie = Serie
-        ORDER BY season ASC, episode_number ASC;
-        --GROUP BY season;
+        ORDER BY season ASC;
+        
+        
 END getSerieEpisodes;
 /
 

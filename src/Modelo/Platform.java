@@ -9,7 +9,14 @@ package Modelo;
  * @author wess
  */
 public class Platform {
-
+    private String name;
+    private String url;
+    
+    public Platform(String name, String url) {
+        this.name = name;
+        this.url = url;
+    }
+    
     /**
      * @return the name
      */
@@ -37,6 +44,4 @@ public class Platform {
     public void setUrl(String url) {
         this.url = url;
     }
-    private String name;
-    private String url;
 }

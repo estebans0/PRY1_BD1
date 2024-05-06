@@ -47,6 +47,9 @@ public class Controlador {
         return userMng.showUsersTable(userType);
     }
     
+    // En este momento no se esta usando la tabla admin de la BD
+    // podríamos implementarlo en el PRY2 si lo ven necesario, si no no
+    // yo siento que no es necesario
     public int makeOrRemoveAdmin(int id, int type) throws SQLException {
         return userMng.makeOrRemoveAdmin(conn, id, type);
     }
@@ -185,11 +188,10 @@ public class Controlador {
         personMng.updatePeople(conn);
     }
     
-    public void registerFilmPerson(String user, String pass, String email, int idType, 
-            String legalId, String fName, String lName, String mName, String nName, 
-            int gender, String dob) throws SQLException {
+    public void registerFilmPerson(String fName, String lName, String mName, String nName, 
+            int gender, String dob, String country, String trivia, String biography, int height) throws SQLException {
         registerPerson(fName, lName, mName, nName, gender, dob);
-        userMng.registerUser(conn, user, pass, email, idType, legalId);
+        personMng.registerFilmPerson(conn, height, trivia, biography, userMng.getCountryId(country));
         updateUsers();
     }
     

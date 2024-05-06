@@ -1,3 +1,4 @@
+--- *********************************************** PERSON PROCEDURES ***********************************************
 -- GET CURRENT PERSON ID
 CREATE OR REPLACE PROCEDURE currPersonId (pCursor OUT SYS_REFCURSOR)
 AS
@@ -7,7 +8,7 @@ BEGIN
 END currPersonId;
 /
 
--- INSERT PERSON
+-- INSERT
 CREATE OR REPLACE PROCEDURE insertPerson (
     pFirstName IN VARCHAR2,
     pLastName IN VARCHAR2,
@@ -42,7 +43,27 @@ BEGIN
 END getPeopleData;
 /
 
-
-
-
+--- *********************************************** FILM PERSON PROCEDURES ***********************************************
+-- INSERT
+CREATE OR REPLACE PROCEDURE insertFilmPerson (
+    pHeight IN NUMBER,
+    pTrivia IN VARCHAR2,
+    pBiography IN VARCHAR2,
+    pNationality IN VARCHAR2
+)
+AS
+BEGIN
+    INSERT INTO film_person(id, heigth_cm, trivia, biography, nacionality, id_city, rol)
+    VALUES (s_person.currval, pHeight, pTrivia, pBiography, pNationality, NULL, NULL); -- city null porque no se usa
+    COMMIT;
+    
+EXCEPTION
+    WHEN DUP_VAL_ON_INDEX THEN
+        dbms_output.put_line('Person already exists');
+    WHEN OTHERS THEN
+        dbms_output.put_line('Unexpected error when trying to add a new person');
+        ROLLBACK;
+        RAISE;
+END insertFilmPerson;
+/
 
